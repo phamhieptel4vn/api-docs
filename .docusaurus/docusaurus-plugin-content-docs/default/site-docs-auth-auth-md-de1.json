@@ -1,0 +1,27 @@
+{
+  "unversionedId": "auth/auth",
+  "id": "auth/auth",
+  "title": "Xác thực",
+  "description": "Xác thực",
+  "source": "@site/docs/auth/auth.md",
+  "sourceDirName": "auth",
+  "slug": "/auth/",
+  "permalink": "/auth/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/auth/auth.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "auth",
+    "title": "Xác thực"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/category/authentication"
+  },
+  "next": {
+    "title": "Autocall API",
+    "permalink": "/category/autocall-api"
+  }
+}

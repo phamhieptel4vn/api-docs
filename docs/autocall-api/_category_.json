@@ -1,0 +1,8 @@
+{
+    "label": "Autocall API",
+    "position": 3,
+    "link": {
+      "type": "generated-index",
+      "description": "Xin chào! Đây là bộ API Autocall, OTP, Voice call Text-to-speech của TEL4VN. Nếu bạn cần thông tin để tích hợp hoặc cần hỗ trợ vui lòng liên hệ mail: support@tel4vn.com. Các thông tin như {API_HOST}, {API_KEY}, tài khoản admin, tài khoản test sẽ được bên phía Tổng đài cung cấp."
+    }
+  }

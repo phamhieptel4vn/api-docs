@@ -1,0 +1,28 @@
+{
+  "unversionedId": "autocall-api/audio",
+  "id": "autocall-api/audio",
+  "title": "Audio",
+  "description": "Upload Audio",
+  "source": "@site/docs/autocall-api/audio.md",
+  "sourceDirName": "autocall-api",
+  "slug": "/autocall-api/audio",
+  "permalink": "/autocall-api/audio",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/audio.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Audio",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/autocall-api/auth"
+  },
+  "next": {
+    "title": "Template",
+    "permalink": "/autocall-api/template"
+  }
+}

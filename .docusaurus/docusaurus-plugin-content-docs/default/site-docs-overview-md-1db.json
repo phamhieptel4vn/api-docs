@@ -1,0 +1,29 @@
+{
+  "unversionedId": "overview",
+  "id": "overview",
+  "title": "Overview",
+  "description": "Hướng dẫn tích hợp Pitel PBX APIs",
+  "source": "@site/docs/overview.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "slug": "/",
+    "title": "Overview"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial Intro",
+    "permalink": "/intro"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/category/authentication"
+  }
+}
