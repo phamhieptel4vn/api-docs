@@ -113,9 +113,57 @@
         "items": [
           {
             "type": "link",
-            "label": "CallCenter API",
-            "href": "/callcenter-api/callcenter",
-            "docId": "callcenter-api/callcenter"
+            "label": "Authentication",
+            "href": "/callcenter-api/auth",
+            "docId": "callcenter-api/auth"
+          },
+          {
+            "type": "link",
+            "label": "CDRs - Call Detail Records",
+            "href": "/callcenter-api/cdr",
+            "docId": "callcenter-api/cdr"
+          },
+          {
+            "type": "link",
+            "label": "Call",
+            "href": "/callcenter-api/call",
+            "docId": "callcenter-api/call"
+          },
+          {
+            "type": "link",
+            "label": "Click-to-call",
+            "href": "/callcenter-api/click2call",
+            "docId": "callcenter-api/click2call"
+          },
+          {
+            "type": "link",
+            "label": "Autodial",
+            "href": "/callcenter-api/autodial",
+            "docId": "callcenter-api/autodial"
+          },
+          {
+            "type": "link",
+            "label": "Autocall",
+            "href": "/callcenter-api/autocall",
+            "docId": "callcenter-api/autocall"
+          },
+          {
+            "type": "link",
+            "label": "Event",
+            "href": "/callcenter-api/event",
+            "docId": "callcenter-api/event"
+          },
+          {
+            "type": "link",
+            "label": "User",
+            "href": "/callcenter-api/user",
+            "docId": "callcenter-api/user"
+          },
+          {
+            "type": "link",
+            "label": "Customer",
+            "href": "/callcenter-api/customer",
+            "docId": "callcenter-api/customer"
           }
         ],
         "href": "/category/callcenter-api"
@@ -288,10 +336,58 @@
       "description": "Create Template TTS",
       "sidebar": "tutorialSidebar"
     },
-    "callcenter-api/callcenter": {
-      "id": "callcenter-api/callcenter",
-      "title": "CallCenter API",
-      "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - Call Center vào các hệ thống CRM, WebApp.",
+    "callcenter-api/auth": {
+      "id": "callcenter-api/auth",
+      "title": "Authentication",
+      "description": "Get Access Token",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/autocall": {
+      "id": "callcenter-api/autocall",
+      "title": "Autocall",
+      "description": "Nhận dữ liệu queue",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/autodial": {
+      "id": "callcenter-api/autodial",
+      "title": "Autodial",
+      "description": "Nhận dữ liệu queue",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/call": {
+      "id": "callcenter-api/call",
+      "title": "Call",
+      "description": "List Calls",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/cdr": {
+      "id": "callcenter-api/cdr",
+      "title": "CDRs - Call Detail Records",
+      "description": "Lịch sử cuộc gọi",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/click2call": {
+      "id": "callcenter-api/click2call",
+      "title": "Click-to-call",
+      "description": "Synchronous - GET",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/customer": {
+      "id": "callcenter-api/customer",
+      "title": "Customer",
+      "description": "Get List Customers",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/event": {
+      "id": "callcenter-api/event",
+      "title": "Event",
+      "description": "Get Events",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/user": {
+      "id": "callcenter-api/user",
+      "title": "User",
+      "description": "Get User Status",
       "sidebar": "tutorialSidebar"
     },
     "intro": {

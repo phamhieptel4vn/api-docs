@@ -1,0 +1,28 @@
+{
+  "unversionedId": "callcenter-api/click2call",
+  "id": "callcenter-api/click2call",
+  "title": "Click-to-call",
+  "description": "Synchronous - GET",
+  "source": "@site/docs/callcenter-api/click2call.md",
+  "sourceDirName": "callcenter-api",
+  "slug": "/callcenter-api/click2call",
+  "permalink": "/callcenter-api/click2call",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/click2call.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Click-to-call",
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Call",
+    "permalink": "/callcenter-api/call"
+  },
+  "next": {
+    "title": "Autodial",
+    "permalink": "/callcenter-api/autodial"
+  }
+}

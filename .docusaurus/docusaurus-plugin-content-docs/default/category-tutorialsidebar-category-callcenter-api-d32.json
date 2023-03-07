@@ -9,8 +9,8 @@
       "permalink": "/autocall-api/carrier"
     },
     "next": {
-      "title": "CallCenter API",
-      "permalink": "/callcenter-api/callcenter"
+      "title": "Authentication",
+      "permalink": "/callcenter-api/auth"
     }
   }
 }

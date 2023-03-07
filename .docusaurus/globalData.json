@@ -66,8 +66,48 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "callcenter-api/callcenter",
-              "path": "/callcenter-api/callcenter",
+              "id": "callcenter-api/auth",
+              "path": "/callcenter-api/auth",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/autocall",
+              "path": "/callcenter-api/autocall",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/autodial",
+              "path": "/callcenter-api/autodial",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/call",
+              "path": "/callcenter-api/call",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/cdr",
+              "path": "/callcenter-api/cdr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/click2call",
+              "path": "/callcenter-api/click2call",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/customer",
+              "path": "/callcenter-api/customer",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/event",
+              "path": "/callcenter-api/event",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/user",
+              "path": "/callcenter-api/user",
               "sidebar": "tutorialSidebar"
             },
             {

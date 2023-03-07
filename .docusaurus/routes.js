@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'da5'),
+    component: ComponentCreator('/', 'c8e'),
     routes: [
       {
         path: '/',
@@ -119,8 +119,56 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/callcenter-api/callcenter',
-        component: ComponentCreator('/callcenter-api/callcenter', 'cbd'),
+        path: '/callcenter-api/auth',
+        component: ComponentCreator('/callcenter-api/auth', 'd3f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/autocall',
+        component: ComponentCreator('/callcenter-api/autocall', '04b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/autodial',
+        component: ComponentCreator('/callcenter-api/autodial', '546'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/call',
+        component: ComponentCreator('/callcenter-api/call', '035'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/cdr',
+        component: ComponentCreator('/callcenter-api/cdr', 'fff'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/click2call',
+        component: ComponentCreator('/callcenter-api/click2call', '421'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/customer',
+        component: ComponentCreator('/callcenter-api/customer', '214'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/event',
+        component: ComponentCreator('/callcenter-api/event', '60e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/user',
+        component: ComponentCreator('/callcenter-api/user', 'fd3'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

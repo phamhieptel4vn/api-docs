@@ -1,0 +1,28 @@
+{
+  "unversionedId": "callcenter-api/call",
+  "id": "callcenter-api/call",
+  "title": "Call",
+  "description": "List Calls",
+  "source": "@site/docs/callcenter-api/call.md",
+  "sourceDirName": "callcenter-api",
+  "slug": "/callcenter-api/call",
+  "permalink": "/callcenter-api/call",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/call.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Call",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CDRs - Call Detail Records",
+    "permalink": "/callcenter-api/cdr"
+  },
+  "next": {
+    "title": "Click-to-call",
+    "permalink": "/callcenter-api/click2call"
+  }
+}

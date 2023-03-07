@@ -2,7 +2,7 @@
   "unversionedId": "callcenter-api/callcenter",
   "id": "callcenter-api/callcenter",
   "title": "CallCenter API",
-  "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - Call Center vào các hệ thống CRM, WebApp.",
+  "description": "Get User Status",
   "source": "@site/docs/callcenter-api/callcenter.md",
   "sourceDirName": "callcenter-api",
   "slug": "/callcenter-api/callcenter",
@@ -11,18 +11,18 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/callcenter.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 1,
+  "sidebarPosition": 10,
   "frontMatter": {
     "title": "CallCenter API",
-    "sidebar_position": 1
+    "sidebar_position": 10
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "CallCenter API",
-    "permalink": "/category/callcenter-api"
+    "title": "Event",
+    "permalink": "/callcenter-api/event"
   },
   "next": {
-    "title": "PBX API",
-    "permalink": "/category/pbx-api"
+    "title": "User",
+    "permalink": "/callcenter-api/user"
   }
 }

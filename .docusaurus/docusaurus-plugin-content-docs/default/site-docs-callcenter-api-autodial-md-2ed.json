@@ -1,0 +1,28 @@
+{
+  "unversionedId": "callcenter-api/autodial",
+  "id": "callcenter-api/autodial",
+  "title": "Autodial",
+  "description": "Nhận dữ liệu queue",
+  "source": "@site/docs/callcenter-api/autodial.md",
+  "sourceDirName": "callcenter-api",
+  "slug": "/callcenter-api/autodial",
+  "permalink": "/callcenter-api/autodial",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/autodial.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Autodial",
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Click-to-call",
+    "permalink": "/callcenter-api/click2call"
+  },
+  "next": {
+    "title": "Autocall",
+    "permalink": "/callcenter-api/autocall"
+  }
+}

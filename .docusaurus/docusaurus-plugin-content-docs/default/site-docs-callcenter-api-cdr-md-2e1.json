@@ -1,0 +1,28 @@
+{
+  "unversionedId": "callcenter-api/cdr",
+  "id": "callcenter-api/cdr",
+  "title": "CDRs - Call Detail Records",
+  "description": "Lịch sử cuộc gọi",
+  "source": "@site/docs/callcenter-api/cdr.md",
+  "sourceDirName": "callcenter-api",
+  "slug": "/callcenter-api/cdr",
+  "permalink": "/callcenter-api/cdr",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/cdr.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "CDRs - Call Detail Records",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/callcenter-api/auth"
+  },
+  "next": {
+    "title": "Call",
+    "permalink": "/callcenter-api/call"
+  }
+}
