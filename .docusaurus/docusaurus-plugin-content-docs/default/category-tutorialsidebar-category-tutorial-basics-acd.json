@@ -5,8 +5,8 @@
   "permalink": "/category/tutorial---basics",
   "navigation": {
     "previous": {
-      "title": "Call Detail Report",
-      "permalink": "/autocall-api/cdrs"
+      "title": "Carrier",
+      "permalink": "/autocall-api/carrier"
     },
     "next": {
       "title": "Create a Page",

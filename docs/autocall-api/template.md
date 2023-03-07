@@ -263,6 +263,80 @@ Tạo kịch bản Audio file
 | invalid_sound.enable     | Bật xử lý khi bấm sai phím trong kịch bản                |          |
 | invalid_sound.voice_type | Loại autocall : audio_file                               |          |
 | invalid_sound.audio_file | File âm thanh phát khi bấm sai phím trong kịch bản setup |          |
+| press_timeout            | Thời gian chờ bấm phím                                   |          |
+| max_timeout              | Số lần lặp lại                                           |          |
+| inter_digit_timeout      | Thời gian chờ bấm phím                                   |          |
+
+## Create Template VoiceOTP
+
+```shell
+curl --location 'https://{{API_HOST}}/v3/template' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{TOKEN}}' \
+--data '{
+    "template_name": "otp_script_01",
+    "voice_type": "tts",
+    "enable_option": false,
+    "voice_tts": "south-f-03",
+    "speed_tts": 0.9,
+    "content": "Công ty ABC xin gửi đến bạn mã đăng nhập là {{code_otp}}. Xin nhắc lại mã đăng nhập của bạn là {{code_otp}}. Xin cảm ơn.",
+    "press_timeout": 1,
+    "max_timeout": 1,
+    "inter_digit_timeout": 1
+}'
+```
+
+> Response trả về:
+
+```json
+{
+    "created": "true",
+    "template_uuid": "62b59ac6-86c4-4930-9038-3efcec3bcf99"
+}
+```
+> Error Response trả về:
+```json
+{
+    "error": "template is existed!"
+}
+```
+```
+Tạo kịch bản VoiceOTP
+
+### HTTP Request
+
+`POST https://{{API_HOST}}/v3/template`
+
+### Body
+
+> Sample data:
+
+```json
+{
+    "template_name": "otp_script_01",
+    "voice_type": "tts",
+    "enable_option": false,
+    "voice_tts": "south-f-03",
+    "speed_tts": 0.9,
+    "content": "Công ty ABC xin gửi đến bạn mã đăng nhập là {{code_otp}}. Xin nhắc lại mã đăng nhập của bạn là {{code_otp}}. Xin cảm ơn.",
+    "press_timeout": 1,
+    "max_timeout": 1,
+    "inter_digit_timeout": 1
+}
+```
+
+| Parameter           | Description                                      | Required |
+| ------------------- | ------------------------------------------------ | -------- |
+| template_name       | Tên kịch bản muốn tạo. (Phải là duy nhất)        | x        |
+| voice_type          | Loại autocall : tts                              |          |
+| enable_option       | Xử lý kịch bản kèm phím bấm                      |          |
+| voice_tts           | Loại giọng nói                                   |          |
+| speed_tts           | Tốc độ đọc                                       |          |
+| content             | Nội dung kịch bản                                |          |
+| press_timeout       | Thời gian chờ bấm phím, OTP nên để mặc định là 1 |          |
+| max_timeout         | Số lần lặp lại, OTP nên để mặc định là 1         |          |
+| inter_digit_timeout | Thời gian chờ bấm phím, OTP nên để mặc định là 1 |          |
+
 
 
 ## Get Templates

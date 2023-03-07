@@ -1,24 +1,20 @@
 ---
-title: Autocall OTP 
+title: Autocall OTP
+sidebar_position: 6
 ---
-
-# OTP
 
 ## Run OTP
 
 ```shell
-curl --location --request POST 'http://{API_HOST}/api/v2/campaigns/1/otp' \
---header 'Authorization: 1ebe8f88MzA1MTNkZjMtZjc3My00MTmY' \
+curl --location 'https://{{API_HOST}}/v3/autocall/otp' \
+--header 'Authorization: Bearer {{TOKEN}}' \
 --header 'Content-Type: application/json' \
---data-raw '{
-    "caller": "0123456789",
-    "callees": [ "0987654321" ],
-    "params": {
-    "template_name": "template_otp_1",
-    "code_otp": "M43TUI"
-  },
-  "callback_url": "https://demo.webhook.com",
-  "callback_apikey": "api_key_123"
+--data '{
+    "campaign_uuid": "f77dfcf4-0759-4179-93cb-741f481a776e",
+    "phone_number": "0332665711",
+    "template": "otp_script_01",
+    "code_otp": "LUAN001",
+    "ref_id": "ABC123"
 }'
 ```
 
@@ -26,17 +22,10 @@ curl --location --request POST 'http://{API_HOST}/api/v2/campaigns/1/otp' \
 
 ```json
 {
-  "data": {
-    "campaign_id": "1",
-    "results": {
-      "fail": [
-        {
-          "1234567890": "Wrong Format"
-        }
-      ],
-      "success": ["1_1_1_5_cb76e372-b798-4a88-9c8a-410740f0300d_0987654321"]
-    }
-  }
+    "call_id": "d6142fb6-6b3a-48fb-bd21-30f83ccb28c9",
+    "lead_uuid": "1fc20735-a93f-4b9e-b348-e63b503a1ee1",
+    "message": "success",
+    "ref_id": "ABC123"
 }
 ```
 
@@ -44,13 +33,7 @@ API thực hiện cuộc gọi OTP
 
 ### HTTP Request
 
-`GET http://{API_HOST}/api/v2/campaigns/{campaignId}/otp`
-
-### URL Parameters
-
-| Parameter  | Description          |
-| ---------- | -------------------- |
-| campaignId | Campaign Id được cấp |
+`POST https://{{API_HOST}}/v3/autocall/otp`
 
 ### Body
 
@@ -58,23 +41,89 @@ API thực hiện cuộc gọi OTP
 
 ```json
 {
-  "caller": "0123456789",
-  "callees": ["0987654321", "1234567890"],
-  "params": {
-    "template_name": "template_otp_1",
-    "code_otp": "M43TUI"
-  },
-  "callback_url": "https://demo.webhook.com",
-  "callback_apikey": "api_key_123"
+    "campaign_uuid": "f77dfcf4-0759-4179-93cb-741f481a776e",
+    "phone_number": "0332665711",
+    "template": "otp_script_01",
+    "code_otp": "LUAN001",
+    "ref_id": "ABC123"
 }
 ```
 
-| Parameter            | Description                                    |
-| -------------------- | ---------------------------------------------- |
-| caller               | Đầu số thực hiện cuộc gọi                      |
-| callees              | Số điện thoại nhận cuộc gọi                    |
-| params               |                                                |
-| params.template_name | Kịch bản đọc code OTP                          |
-| params.code_otp      | Code OTP                                       |
-| callback_url         | Domain webhook mà tổng đài sẽ hook dữ liệu tới |
-| callback_apikey      | API Key của webhook (optional)                 |
+| Parameter       | Description                                               | Required |
+| --------------- | --------------------------------------------------------- | -------- |
+| campaign_uuid   | UUID của campaign                                         | x        |
+| phone_number    | Số điện thoại nhận cuộc gọi                               | x        |
+| template_name   | Kịch bản đọc code OTP                                     | x        |
+| code_otp        | Code OTP                                                  | x        |
+| ref_id          | Mã tham chiếu của cuộc gọi (optional)                     |          |
+
+
+## Get CDR by Ref ID
+
+```shell
+curl --location 'https://{{API_HOST}}/v3/autocall/log/ABC123/ref_id' \
+--header 'Authorization: Bearer {{TOKEN}}' \
+--header 'Content-Type: application/json'
+```
+
+> Response trả về:
+
+```json
+{
+    "id": "d6142fb6-6b3a-48fb-bd21-30f83ccb28c9",
+    "parent_id": "d6142fb6-6b3a-48fb-bd21-30f83ccb28c9",
+    "sip_call_id": "f3c8f4e8-3737-123c-fc9b-fa163e71cc82",
+    "cause": "NORMAL_CLEARING",
+    "duration": 6,
+    "direction": "outbound",
+    "recording_url": "",
+    "extension": "",
+    "from_number": "02873003586",
+    "to_number": "0332665711",
+    "receive_dest": "",
+    "time_started": "2023-03-07 10:06:53",
+    "time_answered": "2023-03-07 10:06:58",
+    "time_ended": "2023-03-07 10:06:59",
+    "time_ringging": "2023-03-07 10:06:53",
+    "status": "answered",
+    "billsec": 1,
+    "app": "autocall",
+    "press_key": "{}",
+    "fullname": "",
+    "email": "",
+    "username": "",
+    "sip_hangup_disposition": "recv_bye",
+    "campaign_uuid": "f77dfcf4-0759-4179-93cb-741f481a776e",
+    "lead_uuid": "1fc20735-a93f-4b9e-b348-e63b503a1ee1",
+    "rate": "",
+    "digits": "",
+    "note": "",
+    "customer_fullname": "",
+    "customer_email": "",
+    "demand_customer": "",
+    "interest_segment": "",
+    "additional": {
+        "campaign_uuid": "f77dfcf4-0759-4179-93cb-741f481a776e",
+        "code_otp": "LUAN001",
+        "phone_number": "0332665711",
+        "ref_id": "ABC123",
+        "template": "otp_script_01"
+    },
+    "autocall_presskey_epoch": "",
+    "time_presskey": "",
+    "presskey_delay": 0,
+    "autocall_recording_url": ""
+}
+```
+
+API thực hiện cuộc gọi OTP
+
+### HTTP Request
+
+`GET https://{{API_HOST}}/v3/autocall/log/{{ref_id}}/ref_id`
+
+### Query Parameters
+
+| Parameter | Description                                    |
+| --------- | ---------------------------------------------- |
+| ref_id    | Ref ID - Mã tham chiếu của cuộc gọi (optional) |

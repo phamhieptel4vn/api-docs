@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '021'),
+    component: ComponentCreator('/', 'fbe'),
     routes: [
       {
         path: '/',
@@ -77,20 +77,32 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
-        path: '/autocall-api/autocalltts',
-        component: ComponentCreator('/autocall-api/autocalltts', 'dae'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
         path: '/autocall-api/campaign',
         component: ComponentCreator('/autocall-api/campaign', '88a'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/autocall-api/carrier',
+        component: ComponentCreator('/autocall-api/carrier', '141'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/autocall-api/cdrs',
         component: ComponentCreator('/autocall-api/cdrs', '950'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/autocall-api/list',
+        component: ComponentCreator('/autocall-api/list', '93e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/autocall-api/report',
+        component: ComponentCreator('/autocall-api/report', '023'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

@@ -49,7 +49,7 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/-021": {
+  "/-fbe": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---c-87-aee"
@@ -76,17 +76,25 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---autocall-api-autocallotp-810-bcc"
   },
-  "/autocall-api/autocalltts-dae": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---autocall-api-autocallttsba-9-731"
-  },
   "/autocall-api/campaign-88a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---autocall-api-campaign-43-c-9b0"
   },
+  "/autocall-api/carrier-141": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---autocall-api-carrier-400-6ce"
+  },
   "/autocall-api/cdrs-950": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---autocall-api-cdrs-3-d-1-85c"
+  },
+  "/autocall-api/list-93e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---autocall-api-list-5-c-5-dba"
+  },
+  "/autocall-api/report-023": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---autocall-api-report-0-b-0-6a3"
   },
   "/autocall-api/runautocall-717": {
     "__comp": "__comp---theme-doc-item-178-a40",

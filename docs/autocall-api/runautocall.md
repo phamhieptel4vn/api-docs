@@ -1,8 +1,7 @@
 ---
 title: Run Autocall
-sidebar_position: 4
+sidebar_position: 5
 ---
-# Autocall
 
 ## Import Lead & Run Autocall
 
@@ -146,55 +145,3 @@ API này dùng để chuyển đổi trạng thái chiến dịch autocall từ 
 | Parameter     | Description         |
 | ------------- | ------------------- |
 | campaign_uuid | UUID của chiến dịch |
-
-
-## Báo cáo chiến dịch autocall
-
-```shell
-curl --location --request GET 'https://{{API_HOST}}/v1/autocall/report?campaign_uuid=avavavav-1111-2222-3333-eeeeeeee&start_date=2022-01-01%2010:00:00&end_date=2022-01-01%2012:00:00' \
---header 'Authorization: Bearer {{TOKEN}}' \
---header 'Content-Type: application/json'
-```
-
-> Response trả về:
-
-```json
-{
-  "data": {
-    "status": {
-      "answered": 3,
-      "busy": 1,
-      "not_available": 0,
-      "no_answer": 0,
-      "cancel": 0,
-      "failed": 0
-    },
-    "total_calls": 4,
-    "total_duration": 43,
-    "total_billsec": 10,
-    "total_waitsec": 0
-  }
-}
-```
-
-> Error Response trả về:
-
-```json
-{
-  "error": "campaign is not found"
-}
-```
-
-API này dùng để nhận thông tin chiến dịch và đẩy cuộc gọi autocall theo kịch bản và thông tin được truyền.
-
-### HTTP Request
-
-`GET https://{{API_HOST}}/v1/autocall/report`
-
-### Query Parameters
-
-| Parameter     | Description                         | Example                          | Required |
-| ------------- | ----------------------------------- | -------------------------------- | -------- |
-| campaign_uuid | Chiến dịch thực hiện cuộc gọi       | aaaaaaaa-1111-2222-3333-eeeeeeee | x        |
-| start_date    | Tìm kiếm cdrs theo khoảng thời gian | 2021-02-18 17:20:58              |          |
-| end_date      | Tìm kiếm cdrs theo khoảng thời gian | 2021-02-18 17:20:58              |          |

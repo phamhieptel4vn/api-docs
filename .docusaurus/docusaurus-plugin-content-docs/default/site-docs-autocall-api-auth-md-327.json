@@ -2,7 +2,7 @@
   "unversionedId": "autocall-api/auth",
   "id": "autocall-api/auth",
   "title": "Authentication",
-  "description": "Login",
+  "description": "Get Access Token",
   "source": "@site/docs/autocall-api/auth.md",
   "sourceDirName": "autocall-api",
   "slug": "/autocall-api/auth",

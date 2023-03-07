@@ -78,7 +78,7 @@
               "unversionedId": "autocall-api/auth",
               "id": "autocall-api/auth",
               "title": "Authentication",
-              "description": "Login",
+              "description": "Get Access Token",
               "source": "@site/docs/autocall-api/auth.md",
               "sourceDirName": "autocall-api",
               "slug": "/autocall-api/auth",
@@ -115,8 +115,10 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/autocallotp.md",
               "tags": [],
               "version": "current",
+              "sidebarPosition": 6,
               "frontMatter": {
-                "title": "Autocall OTP"
+                "title": "Autocall OTP",
+                "sidebar_position": 6
               },
               "sidebar": "tutorialSidebar",
               "previous": {
@@ -124,33 +126,7 @@
                 "permalink": "/autocall-api/runautocall"
               },
               "next": {
-                "title": "Text-To-Speech",
-                "permalink": "/autocall-api/autocalltts"
-              }
-            },
-            {
-              "unversionedId": "autocall-api/autocalltts",
-              "id": "autocall-api/autocalltts",
-              "title": "Text-To-Speech",
-              "description": "Import TTS Voice",
-              "source": "@site/docs/autocall-api/autocalltts.md",
-              "sourceDirName": "autocall-api",
-              "slug": "/autocall-api/autocalltts",
-              "permalink": "/autocall-api/autocalltts",
-              "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/autocalltts.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Text-To-Speech"
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Autocall OTP",
-                "permalink": "/autocall-api/autocallotp"
-              },
-              "next": {
-                "title": "Call Detail Report",
+                "title": "CDRs",
                 "permalink": "/autocall-api/cdrs"
               }
             },
@@ -178,14 +154,42 @@
                 "permalink": "/autocall-api/template"
               },
               "next": {
-                "title": "Run Autocall",
-                "permalink": "/autocall-api/runautocall"
+                "title": "List",
+                "permalink": "/autocall-api/list"
+              }
+            },
+            {
+              "unversionedId": "autocall-api/carrier",
+              "id": "autocall-api/carrier",
+              "title": "Carrier",
+              "description": "Create Carrier",
+              "source": "@site/docs/autocall-api/carrier.md",
+              "sourceDirName": "autocall-api",
+              "slug": "/autocall-api/carrier",
+              "permalink": "/autocall-api/carrier",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/carrier.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 9,
+              "frontMatter": {
+                "title": "Carrier",
+                "sidebar_position": 9
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Report Autocall",
+                "permalink": "/autocall-api/report"
+              },
+              "next": {
+                "title": "Tutorial - Basics",
+                "permalink": "/category/tutorial---basics"
               }
             },
             {
               "unversionedId": "autocall-api/cdrs",
               "id": "autocall-api/cdrs",
-              "title": "Call Detail Report",
+              "title": "CDRs",
               "description": "Lịch sử cuộc gọi",
               "source": "@site/docs/autocall-api/cdrs.md",
               "sourceDirName": "autocall-api",
@@ -195,17 +199,75 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/cdrs.md",
               "tags": [],
               "version": "current",
+              "sidebarPosition": 7,
               "frontMatter": {
-                "title": "Call Detail Report"
+                "title": "CDRs",
+                "sidebar_position": 7
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Text-To-Speech",
-                "permalink": "/autocall-api/autocalltts"
+                "title": "Autocall OTP",
+                "permalink": "/autocall-api/autocallotp"
               },
               "next": {
-                "title": "Tutorial - Basics",
-                "permalink": "/category/tutorial---basics"
+                "title": "Report Autocall",
+                "permalink": "/autocall-api/report"
+              }
+            },
+            {
+              "unversionedId": "autocall-api/list",
+              "id": "autocall-api/list",
+              "title": "List",
+              "description": "Create List",
+              "source": "@site/docs/autocall-api/list.md",
+              "sourceDirName": "autocall-api",
+              "slug": "/autocall-api/list",
+              "permalink": "/autocall-api/list",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/list.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "List",
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Campaign",
+                "permalink": "/autocall-api/campaign"
+              },
+              "next": {
+                "title": "Run Autocall",
+                "permalink": "/autocall-api/runautocall"
+              }
+            },
+            {
+              "unversionedId": "autocall-api/report",
+              "id": "autocall-api/report",
+              "title": "Report Autocall",
+              "description": "Report Campaign",
+              "source": "@site/docs/autocall-api/report.md",
+              "sourceDirName": "autocall-api",
+              "slug": "/autocall-api/report",
+              "permalink": "/autocall-api/report",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/report.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "title": "Report Autocall",
+                "sidebar_position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "CDRs",
+                "permalink": "/autocall-api/cdrs"
+              },
+              "next": {
+                "title": "Carrier",
+                "permalink": "/autocall-api/carrier"
               }
             },
             {
@@ -221,15 +283,15 @@
               "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/runautocall.md",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 4,
+              "sidebarPosition": 5,
               "frontMatter": {
                 "title": "Run Autocall",
-                "sidebar_position": 4
+                "sidebar_position": 5
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Campaign",
-                "permalink": "/autocall-api/campaign"
+                "title": "List",
+                "permalink": "/autocall-api/list"
               },
               "next": {
                 "title": "Autocall OTP",
@@ -528,6 +590,10 @@
                   },
                   {
                     "type": "doc",
+                    "id": "autocall-api/list"
+                  },
+                  {
+                    "type": "doc",
                     "id": "autocall-api/runautocall"
                   },
                   {
@@ -536,11 +602,15 @@
                   },
                   {
                     "type": "doc",
-                    "id": "autocall-api/autocalltts"
+                    "id": "autocall-api/cdrs"
                   },
                   {
                     "type": "doc",
-                    "id": "autocall-api/cdrs"
+                    "id": "autocall-api/report"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "autocall-api/carrier"
                   }
                 ],
                 "link": {

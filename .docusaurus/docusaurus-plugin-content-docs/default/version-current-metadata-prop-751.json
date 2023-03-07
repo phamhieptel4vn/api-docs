@@ -68,6 +68,12 @@
           },
           {
             "type": "link",
+            "label": "List",
+            "href": "/autocall-api/list",
+            "docId": "autocall-api/list"
+          },
+          {
+            "type": "link",
             "label": "Run Autocall",
             "href": "/autocall-api/runautocall",
             "docId": "autocall-api/runautocall"
@@ -80,15 +86,21 @@
           },
           {
             "type": "link",
-            "label": "Text-To-Speech",
-            "href": "/autocall-api/autocalltts",
-            "docId": "autocall-api/autocalltts"
+            "label": "CDRs",
+            "href": "/autocall-api/cdrs",
+            "docId": "autocall-api/cdrs"
           },
           {
             "type": "link",
-            "label": "Call Detail Report",
-            "href": "/autocall-api/cdrs",
-            "docId": "autocall-api/cdrs"
+            "label": "Report Autocall",
+            "href": "/autocall-api/report",
+            "docId": "autocall-api/report"
+          },
+          {
+            "type": "link",
+            "label": "Carrier",
+            "href": "/autocall-api/carrier",
+            "docId": "autocall-api/carrier"
           }
         ],
         "href": "/category/autocall-api"
@@ -156,7 +168,7 @@
     "autocall-api/auth": {
       "id": "autocall-api/auth",
       "title": "Authentication",
-      "description": "Login",
+      "description": "Get Access Token",
       "sidebar": "tutorialSidebar"
     },
     "autocall-api/autocallotp": {
@@ -165,22 +177,34 @@
       "description": "Run OTP",
       "sidebar": "tutorialSidebar"
     },
-    "autocall-api/autocalltts": {
-      "id": "autocall-api/autocalltts",
-      "title": "Text-To-Speech",
-      "description": "Import TTS Voice",
-      "sidebar": "tutorialSidebar"
-    },
     "autocall-api/campaign": {
       "id": "autocall-api/campaign",
       "title": "Campaign",
       "description": "Create Campaign",
       "sidebar": "tutorialSidebar"
     },
+    "autocall-api/carrier": {
+      "id": "autocall-api/carrier",
+      "title": "Carrier",
+      "description": "Create Carrier",
+      "sidebar": "tutorialSidebar"
+    },
     "autocall-api/cdrs": {
       "id": "autocall-api/cdrs",
-      "title": "Call Detail Report",
+      "title": "CDRs",
       "description": "Lịch sử cuộc gọi",
+      "sidebar": "tutorialSidebar"
+    },
+    "autocall-api/list": {
+      "id": "autocall-api/list",
+      "title": "List",
+      "description": "Create List",
+      "sidebar": "tutorialSidebar"
+    },
+    "autocall-api/report": {
+      "id": "autocall-api/report",
+      "title": "Report Autocall",
+      "description": "Report Campaign",
       "sidebar": "tutorialSidebar"
     },
     "autocall-api/runautocall": {

@@ -526,13 +526,60 @@ curl -L -X GET 'https://{{API_HOST}}/v3/campaign/853b76cc-bffb-4d1b-9f9e-19b1a0f
 | ------------- | ------------------- |
 | campaign_uuid | UUID của chiến dịch |
 
-## Path Campagin
+## Patch Campagin
 
 ```shell
-curl --location --request PATCH 'https://{{API_HOST}}/v3/campaign/1bd4af65-5182-4763-a5c7-1a7549e8ff1d/active' \
---header 'Content-type: application/json' \
---header 'Authorization: Bearer {{TOKEN}}'
+curl --location --request PATCH 'https://{{API_HOST}}/v3/campaign/5ec47358-d062-4385-9fe7-b5e571055f01/active' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{TOKEN}}' \
+--data '{
+  "active": false
+}'
 ```
+
+> Response trả về:
+
+```json
+{
+    "active": false,
+    "campaign_uuid": "5ec47358-d062-4385-9fe7-b5e571055f01"
+}
+```
+
+> Error Response trả về:
+
+```json
+{
+    "error": "Not Found"
+}
+```
+
+```json
+{
+    "error": "active is missing"
+}
+```
+
+API này dùng để chuyển đổi trạng thái chiến dịch từ Active sang Deactive và ngược lại.
+
+### HTTP Request
+
+`PATCH https://{{API_HOST}}/v3/campaign/{{campaign_uuid}}/active`
+
+### Body
+
+> Sample data:
+
+```json
+{
+  "active": false
+}
+```
+
+| Parameter     | Description                                      | Required |
+| ------------- | ------------------------------------------------ | -------- |
+| campaign_uuid | UUID của chiến dịch                              | x        |
+| active        | Trạng thái của chiến dịch, bao gồm true và false | x        |
 
 ## Delete Campaign
 
@@ -560,6 +607,7 @@ curl --location --request DELETE 'https://{{API_HOST}}/v3/campaign/4be67f66-4228
     "error": "Not Found"
 }
 ```
+API này dùng để xóa chiến dịch.
 ### HTTP Request
 
 `DELETE https://{{API_HOST}}/v3/campaign/{{campaign_uuid}}`

@@ -22,7 +22,7 @@
     "permalink": "/autocall-api/template"
   },
   "next": {
-    "title": "Run Autocall",
-    "permalink": "/autocall-api/runautocall"
+    "title": "List",
+    "permalink": "/autocall-api/list"
   }
 }

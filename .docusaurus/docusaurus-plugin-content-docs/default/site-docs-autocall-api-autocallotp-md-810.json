@@ -11,8 +11,10 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/autocallotp.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 6,
   "frontMatter": {
-    "title": "Autocall OTP"
+    "title": "Autocall OTP",
+    "sidebar_position": 6
   },
   "sidebar": "tutorialSidebar",
   "previous": {
@@ -20,7 +22,7 @@
     "permalink": "/autocall-api/runautocall"
   },
   "next": {
-    "title": "Text-To-Speech",
-    "permalink": "/autocall-api/autocalltts"
+    "title": "CDRs",
+    "permalink": "/autocall-api/cdrs"
   }
 }

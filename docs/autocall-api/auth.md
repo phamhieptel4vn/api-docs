@@ -2,43 +2,6 @@
 title: Authentication
 sidebar_position: 1
 ---
-## Login
-    
-```shell
-curl -L -X POST 'https://{{API_HOST}}/v3/auth' \
--H 'Content-Type: application/json' \
---data-raw '{
-    "username" : "foo@test.tel4vn.com",
-    "password" : "foo123"
-}'
-```
-
-> Response trả về:
-
-```json
-{
-  "data": {
-    "user_uuid": "aaaaaaaa-1111-2222-3333-eeeeeeee",
-    "domain_uuid": "dddddddd-1111-2222-3333-eeeeeeee",
-    "username": "foo",
-    "api_key": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeee",
-    "user_enabled": "true",
-    "level": "admin"
-  }
-}
-```
-Login thành công sẽ trả về thông tin account.
-
-### HTTP Request
-
-`POST https://{{API_HOST}}/v3/auth`
-
-### Body
-
-| Parameter | Description        |
-| --------- | ------------------ |
-| username  | Account's username |
-| password  | Account's password |
 
 ## Get Access Token
 
@@ -81,3 +44,41 @@ Bạn vui lòng thay đổi {TOKEN} bằng token đã lấy được.
 | Parameter | Description      |
 | --------- | ---------------- |
 | api_key   | API key được cấp |
+
+## Login
+    
+```shell
+curl -L -X POST 'https://{{API_HOST}}/v3/auth' \
+-H 'Content-Type: application/json' \
+--data-raw '{
+    "username" : "foo@test.tel4vn.com",
+    "password" : "foo123"
+}'
+```
+
+> Response trả về:
+
+```json
+{
+  "data": {
+    "user_uuid": "aaaaaaaa-1111-2222-3333-eeeeeeee",
+    "domain_uuid": "dddddddd-1111-2222-3333-eeeeeeee",
+    "username": "foo",
+    "api_key": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeee",
+    "user_enabled": "true",
+    "level": "admin"
+  }
+}
+```
+Login thành công sẽ trả về thông tin account.
+
+### HTTP Request
+
+`POST https://{{API_HOST}}/v3/auth`
+
+### Body
+
+| Parameter | Description        |
+| --------- | ------------------ |
+| username  | Account's username |
+| password  | Account's password |

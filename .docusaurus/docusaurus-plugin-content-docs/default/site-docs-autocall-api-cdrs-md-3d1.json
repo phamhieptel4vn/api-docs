@@ -1,7 +1,7 @@
 {
   "unversionedId": "autocall-api/cdrs",
   "id": "autocall-api/cdrs",
-  "title": "Call Detail Report",
+  "title": "CDRs",
   "description": "Lịch sử cuộc gọi",
   "source": "@site/docs/autocall-api/cdrs.md",
   "sourceDirName": "autocall-api",
@@ -11,16 +11,18 @@
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/autocall-api/cdrs.md",
   "tags": [],
   "version": "current",
+  "sidebarPosition": 7,
   "frontMatter": {
-    "title": "Call Detail Report"
+    "title": "CDRs",
+    "sidebar_position": 7
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Text-To-Speech",
-    "permalink": "/autocall-api/autocalltts"
+    "title": "Autocall OTP",
+    "permalink": "/autocall-api/autocallotp"
   },
   "next": {
-    "title": "Tutorial - Basics",
-    "permalink": "/category/tutorial---basics"
+    "title": "Report Autocall",
+    "permalink": "/autocall-api/report"
   }
 }

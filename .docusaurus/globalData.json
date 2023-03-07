@@ -31,18 +31,28 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "autocall-api/autocalltts",
-              "path": "/autocall-api/autocalltts",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "autocall-api/campaign",
               "path": "/autocall-api/campaign",
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "autocall-api/carrier",
+              "path": "/autocall-api/carrier",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "autocall-api/cdrs",
               "path": "/autocall-api/cdrs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autocall-api/list",
+              "path": "/autocall-api/list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autocall-api/report",
+              "path": "/autocall-api/report",
               "sidebar": "tutorialSidebar"
             },
             {
