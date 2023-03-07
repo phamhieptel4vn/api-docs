@@ -49,7 +49,7 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/-949": {
+  "/-da5": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---c-87-aee"
@@ -104,6 +104,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---autocall-api-template-38-b-228"
   },
+  "/callcenter-api/callcenter-cbd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---callcenter-api-callcenter-905-e41"
+  },
   "/category/authentication-f1a": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---category-authentication-4-b-7-a5c"
@@ -112,8 +116,76 @@
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---category-autocall-api-8-b-4-efa"
   },
+  "/category/callcenter-api-58f": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-callcenter-apibc-0-138"
+  },
+  "/category/pbx-api-3b7": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-pbx-api-0-df-24b"
+  },
   "/intro-283": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---intro-0-e-3-7b8"
+  },
+  "/pbx-api/auth-a95": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-auth-84-e-69f"
+  },
+  "/pbx-api/autodial-b5d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-autodialdb-5-cc7"
+  },
+  "/pbx-api/blacklist-de3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-blacklistb-03-e12"
+  },
+  "/pbx-api/call-28c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-callbdc-993"
+  },
+  "/pbx-api/callcenter-e49": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-callcenter-8-ec-a5f"
+  },
+  "/pbx-api/campaign-d81": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-campaign-09-a-2d1"
+  },
+  "/pbx-api/cdr-349": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-cdr-0-a-1-8c9"
+  },
+  "/pbx-api/click2call-46c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-click-2-callbd-7-eec"
+  },
+  "/pbx-api/event-7b9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-eventbb-9-bea"
+  },
+  "/pbx-api/extension-b87": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-extensionb-18-56e"
+  },
+  "/pbx-api/monitor-41d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-monitor-840-a68"
+  },
+  "/pbx-api/report-742": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-report-80-d-7be"
+  },
+  "/pbx-api/smartrouting-b74": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-smartroutingd-1-d-399"
+  },
+  "/pbx-api/tenant-74b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-tenant-329-25d"
+  },
+  "/pbx-api/voicemail-793": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---pbx-api-voicemail-2-ed-0c6"
   }
 }

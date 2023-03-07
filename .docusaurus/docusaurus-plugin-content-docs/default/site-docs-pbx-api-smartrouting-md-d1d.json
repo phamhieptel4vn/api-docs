@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/smartrouting",
+  "id": "pbx-api/smartrouting",
+  "title": "Smart Routing",
+  "description": "Get Smart Routings",
+  "source": "@site/docs/pbx-api/smartrouting.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/smartrouting",
+  "permalink": "/pbx-api/smartrouting",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/smartrouting.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Smart Routing",
+    "sidebar_position": 12
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Report",
+    "permalink": "/pbx-api/report"
+  },
+  "next": {
+    "title": "Tenant",
+    "permalink": "/pbx-api/tenant"
+  }
+}

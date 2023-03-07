@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/extension",
+  "id": "pbx-api/extension",
+  "title": "Extension",
+  "description": "Get Extensions",
+  "source": "@site/docs/pbx-api/extension.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/extension",
+  "permalink": "/pbx-api/extension",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/extension.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Extension",
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Event",
+    "permalink": "/pbx-api/event"
+  },
+  "next": {
+    "title": "Monitor",
+    "permalink": "/pbx-api/monitor"
+  }
+}

@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '949'),
+    component: ComponentCreator('/', 'da5'),
     routes: [
       {
         path: '/',
@@ -119,6 +119,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/callcenter-api/callcenter',
+        component: ComponentCreator('/callcenter-api/callcenter', 'cbd'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/category/authentication',
         component: ComponentCreator('/category/authentication', 'f1a'),
         exact: true,
@@ -131,8 +137,110 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/category/callcenter-api',
+        component: ComponentCreator('/category/callcenter-api', '58f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/category/pbx-api',
+        component: ComponentCreator('/category/pbx-api', '3b7'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/intro',
         component: ComponentCreator('/intro', '283'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/auth',
+        component: ComponentCreator('/pbx-api/auth', 'a95'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/autodial',
+        component: ComponentCreator('/pbx-api/autodial', 'b5d'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/blacklist',
+        component: ComponentCreator('/pbx-api/blacklist', 'de3'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/call',
+        component: ComponentCreator('/pbx-api/call', '28c'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/callcenter',
+        component: ComponentCreator('/pbx-api/callcenter', 'e49'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/campaign',
+        component: ComponentCreator('/pbx-api/campaign', 'd81'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/cdr',
+        component: ComponentCreator('/pbx-api/cdr', '349'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/click2call',
+        component: ComponentCreator('/pbx-api/click2call', '46c'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/event',
+        component: ComponentCreator('/pbx-api/event', '7b9'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/extension',
+        component: ComponentCreator('/pbx-api/extension', 'b87'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/monitor',
+        component: ComponentCreator('/pbx-api/monitor', '41d'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/report',
+        component: ComponentCreator('/pbx-api/report', '742'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/smartrouting',
+        component: ComponentCreator('/pbx-api/smartrouting', 'b74'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/tenant',
+        component: ComponentCreator('/pbx-api/tenant', '74b'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/pbx-api/voicemail',
+        component: ComponentCreator('/pbx-api/voicemail', '793'),
         exact: true,
         sidebar: "tutorialSidebar"
       }

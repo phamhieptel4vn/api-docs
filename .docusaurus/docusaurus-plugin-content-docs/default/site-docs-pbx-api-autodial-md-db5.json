@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/autodial",
+  "id": "pbx-api/autodial",
+  "title": "Autodial",
+  "description": "Khởi chạy chiến dịch autodial",
+  "source": "@site/docs/pbx-api/autodial.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/autodial",
+  "permalink": "/pbx-api/autodial",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/autodial.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Autodial",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/pbx-api/auth"
+  },
+  "next": {
+    "title": "Backlist",
+    "permalink": "/pbx-api/blacklist"
+  }
+}

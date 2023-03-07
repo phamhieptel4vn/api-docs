@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/tenant",
+  "id": "pbx-api/tenant",
+  "title": "Tenant",
+  "description": "Create Tenant",
+  "source": "@site/docs/pbx-api/tenant.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/tenant",
+  "permalink": "/pbx-api/tenant",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/tenant.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "Tenant",
+    "sidebar_position": 13
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Smart Routing",
+    "permalink": "/pbx-api/smartrouting"
+  },
+  "next": {
+    "title": "Voicemail",
+    "permalink": "/pbx-api/voicemail"
+  }
+}

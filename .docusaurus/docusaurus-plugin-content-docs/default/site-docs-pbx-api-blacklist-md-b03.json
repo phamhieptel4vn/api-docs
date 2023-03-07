@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/blacklist",
+  "id": "pbx-api/blacklist",
+  "title": "Backlist",
+  "description": "Get Blacklists",
+  "source": "@site/docs/pbx-api/blacklist.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/blacklist",
+  "permalink": "/pbx-api/blacklist",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/blacklist.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Backlist",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Autodial",
+    "permalink": "/pbx-api/autodial"
+  },
+  "next": {
+    "title": "Call",
+    "permalink": "/pbx-api/call"
+  }
+}

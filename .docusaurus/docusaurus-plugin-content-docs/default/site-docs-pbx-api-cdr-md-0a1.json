@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/cdr",
+  "id": "pbx-api/cdr",
+  "title": "CDRs - Call Detail Records",
+  "description": "Lịch sử cuộc gọi",
+  "source": "@site/docs/pbx-api/cdr.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/cdr",
+  "permalink": "/pbx-api/cdr",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/cdr.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "CDRs - Call Detail Records",
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Campaign",
+    "permalink": "/pbx-api/campaign"
+  },
+  "next": {
+    "title": "Click-to-call",
+    "permalink": "/pbx-api/click2call"
+  }
+}

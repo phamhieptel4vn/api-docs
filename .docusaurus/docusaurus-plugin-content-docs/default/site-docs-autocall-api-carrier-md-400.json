@@ -20,5 +20,9 @@
   "previous": {
     "title": "Report Autocall",
     "permalink": "/autocall-api/report"
+  },
+  "next": {
+    "title": "CallCenter API",
+    "permalink": "/category/callcenter-api"
   }
 }

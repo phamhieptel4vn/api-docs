@@ -180,6 +180,10 @@
               "previous": {
                 "title": "Report Autocall",
                 "permalink": "/autocall-api/report"
+              },
+              "next": {
+                "title": "CallCenter API",
+                "permalink": "/category/callcenter-api"
               }
             },
             {
@@ -323,6 +327,34 @@
               }
             },
             {
+              "unversionedId": "callcenter-api/callcenter",
+              "id": "callcenter-api/callcenter",
+              "title": "CallCenter API",
+              "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - Call Center vào các hệ thống CRM, WebApp.",
+              "source": "@site/docs/callcenter-api/callcenter.md",
+              "sourceDirName": "callcenter-api",
+              "slug": "/callcenter-api/callcenter",
+              "permalink": "/callcenter-api/callcenter",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/callcenter.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "CallCenter API",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "CallCenter API",
+                "permalink": "/category/callcenter-api"
+              },
+              "next": {
+                "title": "PBX API",
+                "permalink": "/category/pbx-api"
+              }
+            },
+            {
               "unversionedId": "intro",
               "id": "intro",
               "title": "Tutorial Intro",
@@ -372,6 +404,422 @@
               "next": {
                 "title": "Authentication",
                 "permalink": "/category/authentication"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/auth",
+              "id": "pbx-api/auth",
+              "title": "Authentication",
+              "description": "Login Account",
+              "source": "@site/docs/pbx-api/auth.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/auth",
+              "permalink": "/pbx-api/auth",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/auth.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Authentication",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "PBX API",
+                "permalink": "/category/pbx-api"
+              },
+              "next": {
+                "title": "Autodial",
+                "permalink": "/pbx-api/autodial"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/autodial",
+              "id": "pbx-api/autodial",
+              "title": "Autodial",
+              "description": "Khởi chạy chiến dịch autodial",
+              "source": "@site/docs/pbx-api/autodial.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/autodial",
+              "permalink": "/pbx-api/autodial",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/autodial.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Autodial",
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Authentication",
+                "permalink": "/pbx-api/auth"
+              },
+              "next": {
+                "title": "Backlist",
+                "permalink": "/pbx-api/blacklist"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/blacklist",
+              "id": "pbx-api/blacklist",
+              "title": "Backlist",
+              "description": "Get Blacklists",
+              "source": "@site/docs/pbx-api/blacklist.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/blacklist",
+              "permalink": "/pbx-api/blacklist",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/blacklist.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Backlist",
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Autodial",
+                "permalink": "/pbx-api/autodial"
+              },
+              "next": {
+                "title": "Call",
+                "permalink": "/pbx-api/call"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/call",
+              "id": "pbx-api/call",
+              "title": "Call",
+              "description": "List Calls",
+              "source": "@site/docs/pbx-api/call.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/call",
+              "permalink": "/pbx-api/call",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/call.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Call",
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Backlist",
+                "permalink": "/pbx-api/blacklist"
+              },
+              "next": {
+                "title": "CallCenter",
+                "permalink": "/pbx-api/callcenter"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/callcenter",
+              "id": "pbx-api/callcenter",
+              "title": "CallCenter",
+              "description": "Get CallCenter Queues",
+              "source": "@site/docs/pbx-api/callcenter.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/callcenter",
+              "permalink": "/pbx-api/callcenter",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/callcenter.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "CallCenter",
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Call",
+                "permalink": "/pbx-api/call"
+              },
+              "next": {
+                "title": "Campaign",
+                "permalink": "/pbx-api/campaign"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/campaign",
+              "id": "pbx-api/campaign",
+              "title": "Campaign",
+              "description": "Get Campaigns",
+              "source": "@site/docs/pbx-api/campaign.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/campaign",
+              "permalink": "/pbx-api/campaign",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/campaign.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "Campaign",
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "CallCenter",
+                "permalink": "/pbx-api/callcenter"
+              },
+              "next": {
+                "title": "CDRs - Call Detail Records",
+                "permalink": "/pbx-api/cdr"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/cdr",
+              "id": "pbx-api/cdr",
+              "title": "CDRs - Call Detail Records",
+              "description": "Lịch sử cuộc gọi",
+              "source": "@site/docs/pbx-api/cdr.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/cdr",
+              "permalink": "/pbx-api/cdr",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/cdr.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "CDRs - Call Detail Records",
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Campaign",
+                "permalink": "/pbx-api/campaign"
+              },
+              "next": {
+                "title": "Click-to-call",
+                "permalink": "/pbx-api/click2call"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/click2call",
+              "id": "pbx-api/click2call",
+              "title": "Click-to-call",
+              "description": "Synchronous",
+              "source": "@site/docs/pbx-api/click2call.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/click2call",
+              "permalink": "/pbx-api/click2call",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/click2call.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "title": "Click-to-call",
+                "sidebar_position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "CDRs - Call Detail Records",
+                "permalink": "/pbx-api/cdr"
+              },
+              "next": {
+                "title": "Event",
+                "permalink": "/pbx-api/event"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/event",
+              "id": "pbx-api/event",
+              "title": "Event",
+              "description": "Get Events",
+              "source": "@site/docs/pbx-api/event.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/event",
+              "permalink": "/pbx-api/event",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/event.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "title": "Event",
+                "sidebar_position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Click-to-call",
+                "permalink": "/pbx-api/click2call"
+              },
+              "next": {
+                "title": "Extension",
+                "permalink": "/pbx-api/extension"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/extension",
+              "id": "pbx-api/extension",
+              "title": "Extension",
+              "description": "Get Extensions",
+              "source": "@site/docs/pbx-api/extension.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/extension",
+              "permalink": "/pbx-api/extension",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/extension.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 9,
+              "frontMatter": {
+                "title": "Extension",
+                "sidebar_position": 9
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Event",
+                "permalink": "/pbx-api/event"
+              },
+              "next": {
+                "title": "Monitor",
+                "permalink": "/pbx-api/monitor"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/monitor",
+              "id": "pbx-api/monitor",
+              "title": "Monitor",
+              "description": "Monitor Agent",
+              "source": "@site/docs/pbx-api/monitor.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/monitor",
+              "permalink": "/pbx-api/monitor",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/monitor.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 10,
+              "frontMatter": {
+                "title": "Monitor",
+                "sidebar_position": 10
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Extension",
+                "permalink": "/pbx-api/extension"
+              },
+              "next": {
+                "title": "Report",
+                "permalink": "/pbx-api/report"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/report",
+              "id": "pbx-api/report",
+              "title": "Report",
+              "description": "List Call Id",
+              "source": "@site/docs/pbx-api/report.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/report",
+              "permalink": "/pbx-api/report",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/report.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 11,
+              "frontMatter": {
+                "title": "Report",
+                "sidebar_position": 11
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Monitor",
+                "permalink": "/pbx-api/monitor"
+              },
+              "next": {
+                "title": "Smart Routing",
+                "permalink": "/pbx-api/smartrouting"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/smartrouting",
+              "id": "pbx-api/smartrouting",
+              "title": "Smart Routing",
+              "description": "Get Smart Routings",
+              "source": "@site/docs/pbx-api/smartrouting.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/smartrouting",
+              "permalink": "/pbx-api/smartrouting",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/smartrouting.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 12,
+              "frontMatter": {
+                "title": "Smart Routing",
+                "sidebar_position": 12
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Report",
+                "permalink": "/pbx-api/report"
+              },
+              "next": {
+                "title": "Tenant",
+                "permalink": "/pbx-api/tenant"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/tenant",
+              "id": "pbx-api/tenant",
+              "title": "Tenant",
+              "description": "Create Tenant",
+              "source": "@site/docs/pbx-api/tenant.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/tenant",
+              "permalink": "/pbx-api/tenant",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/tenant.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 13,
+              "frontMatter": {
+                "title": "Tenant",
+                "sidebar_position": 13
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Smart Routing",
+                "permalink": "/pbx-api/smartrouting"
+              },
+              "next": {
+                "title": "Voicemail",
+                "permalink": "/pbx-api/voicemail"
+              }
+            },
+            {
+              "unversionedId": "pbx-api/voicemail",
+              "id": "pbx-api/voicemail",
+              "title": "Voicemail",
+              "description": "Get Voicemails",
+              "source": "@site/docs/pbx-api/voicemail.md",
+              "sourceDirName": "pbx-api",
+              "slug": "/pbx-api/voicemail",
+              "permalink": "/pbx-api/voicemail",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/voicemail.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 14,
+              "frontMatter": {
+                "title": "Voicemail",
+                "sidebar_position": 14
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Tenant",
+                "permalink": "/pbx-api/tenant"
               }
             }
           ],
@@ -456,6 +904,98 @@
                   "description": "Xin chào! Đây là bộ API Autocall, OTP, Voice call Text-to-speech của TEL4VN. Nếu bạn cần thông tin để tích hợp hoặc cần hỗ trợ vui lòng liên hệ mail: support@tel4vn.com. Các thông tin như {API_HOST}, {API_KEY}, tài khoản admin, tài khoản test sẽ được bên phía Tổng đài cung cấp.",
                   "slug": "/category/autocall-api",
                   "permalink": "/category/autocall-api"
+                }
+              },
+              {
+                "type": "category",
+                "label": "CallCenter API",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "callcenter-api/callcenter"
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - CallCenter vào các hệ thống CRM, WebApp. Nếu bạn cần thông tin để tích hợp hoặc cần hỗ trợ vui lòng liên hệ mail: support@tel4vn.com. Các thông tin như {{API_HOST}}, {{API_KEY}}, tài khoản admin, tài khoản SIP test sẽ được bên phía Tổng đài cung cấp.",
+                  "slug": "/category/callcenter-api",
+                  "permalink": "/category/callcenter-api"
+                }
+              },
+              {
+                "type": "category",
+                "label": "PBX API",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/auth"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/autodial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/blacklist"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/call"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/callcenter"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/campaign"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/cdr"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/click2call"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/event"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/extension"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/monitor"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/report"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/smartrouting"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/tenant"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pbx-api/voicemail"
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - PBX vào các hệ thống CRM, WebApp. Nếu bạn cần thông tin để tích hợp hoặc cần hỗ trợ vui lòng liên hệ mail: support@tel4vn.com. Các thông tin như {{API_HOST}}, {{API_KEY}}, tài khoản admin, tài khoản SIP test sẽ được bên phía Tổng đài cung cấp.",
+                  "slug": "/category/pbx-api",
+                  "permalink": "/category/pbx-api"
                 }
               }
             ]

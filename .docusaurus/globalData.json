@@ -66,6 +66,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "callcenter-api/callcenter",
+              "path": "/callcenter-api/callcenter",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "intro",
               "path": "/intro",
               "sidebar": "tutorialSidebar"
@@ -76,6 +81,81 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "pbx-api/auth",
+              "path": "/pbx-api/auth",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/autodial",
+              "path": "/pbx-api/autodial",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/blacklist",
+              "path": "/pbx-api/blacklist",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/call",
+              "path": "/pbx-api/call",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/callcenter",
+              "path": "/pbx-api/callcenter",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/campaign",
+              "path": "/pbx-api/campaign",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/cdr",
+              "path": "/pbx-api/cdr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/click2call",
+              "path": "/pbx-api/click2call",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/event",
+              "path": "/pbx-api/event",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/extension",
+              "path": "/pbx-api/extension",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/monitor",
+              "path": "/pbx-api/monitor",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/report",
+              "path": "/pbx-api/report",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/smartrouting",
+              "path": "/pbx-api/smartrouting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/tenant",
+              "path": "/pbx-api/tenant",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "pbx-api/voicemail",
+              "path": "/pbx-api/voicemail",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "/category/authentication",
               "path": "/category/authentication",
               "sidebar": "tutorialSidebar"
@@ -83,6 +163,16 @@
             {
               "id": "/category/autocall-api",
               "path": "/category/autocall-api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/callcenter-api",
+              "path": "/category/callcenter-api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/pbx-api",
+              "path": "/category/pbx-api",
               "sidebar": "tutorialSidebar"
             }
           ],

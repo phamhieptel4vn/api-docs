@@ -104,6 +104,120 @@
           }
         ],
         "href": "/category/autocall-api"
+      },
+      {
+        "type": "category",
+        "label": "CallCenter API",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "CallCenter API",
+            "href": "/callcenter-api/callcenter",
+            "docId": "callcenter-api/callcenter"
+          }
+        ],
+        "href": "/category/callcenter-api"
+      },
+      {
+        "type": "category",
+        "label": "PBX API",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Authentication",
+            "href": "/pbx-api/auth",
+            "docId": "pbx-api/auth"
+          },
+          {
+            "type": "link",
+            "label": "Autodial",
+            "href": "/pbx-api/autodial",
+            "docId": "pbx-api/autodial"
+          },
+          {
+            "type": "link",
+            "label": "Backlist",
+            "href": "/pbx-api/blacklist",
+            "docId": "pbx-api/blacklist"
+          },
+          {
+            "type": "link",
+            "label": "Call",
+            "href": "/pbx-api/call",
+            "docId": "pbx-api/call"
+          },
+          {
+            "type": "link",
+            "label": "CallCenter",
+            "href": "/pbx-api/callcenter",
+            "docId": "pbx-api/callcenter"
+          },
+          {
+            "type": "link",
+            "label": "Campaign",
+            "href": "/pbx-api/campaign",
+            "docId": "pbx-api/campaign"
+          },
+          {
+            "type": "link",
+            "label": "CDRs - Call Detail Records",
+            "href": "/pbx-api/cdr",
+            "docId": "pbx-api/cdr"
+          },
+          {
+            "type": "link",
+            "label": "Click-to-call",
+            "href": "/pbx-api/click2call",
+            "docId": "pbx-api/click2call"
+          },
+          {
+            "type": "link",
+            "label": "Event",
+            "href": "/pbx-api/event",
+            "docId": "pbx-api/event"
+          },
+          {
+            "type": "link",
+            "label": "Extension",
+            "href": "/pbx-api/extension",
+            "docId": "pbx-api/extension"
+          },
+          {
+            "type": "link",
+            "label": "Monitor",
+            "href": "/pbx-api/monitor",
+            "docId": "pbx-api/monitor"
+          },
+          {
+            "type": "link",
+            "label": "Report",
+            "href": "/pbx-api/report",
+            "docId": "pbx-api/report"
+          },
+          {
+            "type": "link",
+            "label": "Smart Routing",
+            "href": "/pbx-api/smartrouting",
+            "docId": "pbx-api/smartrouting"
+          },
+          {
+            "type": "link",
+            "label": "Tenant",
+            "href": "/pbx-api/tenant",
+            "docId": "pbx-api/tenant"
+          },
+          {
+            "type": "link",
+            "label": "Voicemail",
+            "href": "/pbx-api/voicemail",
+            "docId": "pbx-api/voicemail"
+          }
+        ],
+        "href": "/category/pbx-api"
       }
     ]
   },
@@ -174,6 +288,12 @@
       "description": "Create Template TTS",
       "sidebar": "tutorialSidebar"
     },
+    "callcenter-api/callcenter": {
+      "id": "callcenter-api/callcenter",
+      "title": "CallCenter API",
+      "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - Call Center vào các hệ thống CRM, WebApp.",
+      "sidebar": "tutorialSidebar"
+    },
     "intro": {
       "id": "intro",
       "title": "Tutorial Intro",
@@ -184,6 +304,96 @@
       "id": "overview",
       "title": "Overview",
       "description": "Hướng dẫn tích hợp Pitel PBX APIs",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/auth": {
+      "id": "pbx-api/auth",
+      "title": "Authentication",
+      "description": "Login Account",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/autodial": {
+      "id": "pbx-api/autodial",
+      "title": "Autodial",
+      "description": "Khởi chạy chiến dịch autodial",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/blacklist": {
+      "id": "pbx-api/blacklist",
+      "title": "Backlist",
+      "description": "Get Blacklists",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/call": {
+      "id": "pbx-api/call",
+      "title": "Call",
+      "description": "List Calls",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/callcenter": {
+      "id": "pbx-api/callcenter",
+      "title": "CallCenter",
+      "description": "Get CallCenter Queues",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/campaign": {
+      "id": "pbx-api/campaign",
+      "title": "Campaign",
+      "description": "Get Campaigns",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/cdr": {
+      "id": "pbx-api/cdr",
+      "title": "CDRs - Call Detail Records",
+      "description": "Lịch sử cuộc gọi",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/click2call": {
+      "id": "pbx-api/click2call",
+      "title": "Click-to-call",
+      "description": "Synchronous",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/event": {
+      "id": "pbx-api/event",
+      "title": "Event",
+      "description": "Get Events",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/extension": {
+      "id": "pbx-api/extension",
+      "title": "Extension",
+      "description": "Get Extensions",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/monitor": {
+      "id": "pbx-api/monitor",
+      "title": "Monitor",
+      "description": "Monitor Agent",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/report": {
+      "id": "pbx-api/report",
+      "title": "Report",
+      "description": "List Call Id",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/smartrouting": {
+      "id": "pbx-api/smartrouting",
+      "title": "Smart Routing",
+      "description": "Get Smart Routings",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/tenant": {
+      "id": "pbx-api/tenant",
+      "title": "Tenant",
+      "description": "Create Tenant",
+      "sidebar": "tutorialSidebar"
+    },
+    "pbx-api/voicemail": {
+      "id": "pbx-api/voicemail",
+      "title": "Voicemail",
+      "description": "Get Voicemails",
       "sidebar": "tutorialSidebar"
     }
   }

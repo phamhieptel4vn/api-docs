@@ -1,0 +1,16 @@
+{
+  "title": "CallCenter API",
+  "description": "Xin chào! Đây là bộ API tích hợp tổng đài VoIP - CallCenter vào các hệ thống CRM, WebApp. Nếu bạn cần thông tin để tích hợp hoặc cần hỗ trợ vui lòng liên hệ mail: support@tel4vn.com. Các thông tin như {{API_HOST}}, {{API_KEY}}, tài khoản admin, tài khoản SIP test sẽ được bên phía Tổng đài cung cấp.",
+  "slug": "/category/callcenter-api",
+  "permalink": "/category/callcenter-api",
+  "navigation": {
+    "previous": {
+      "title": "Carrier",
+      "permalink": "/autocall-api/carrier"
+    },
+    "next": {
+      "title": "CallCenter API",
+      "permalink": "/callcenter-api/callcenter"
+    }
+  }
+}

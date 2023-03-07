@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pbx-api/call",
+  "id": "pbx-api/call",
+  "title": "Call",
+  "description": "List Calls",
+  "source": "@site/docs/pbx-api/call.md",
+  "sourceDirName": "pbx-api",
+  "slug": "/pbx-api/call",
+  "permalink": "/pbx-api/call",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/pbx-api/call.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Call",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Backlist",
+    "permalink": "/pbx-api/blacklist"
+  },
+  "next": {
+    "title": "CallCenter",
+    "permalink": "/pbx-api/callcenter"
+  }
+}
