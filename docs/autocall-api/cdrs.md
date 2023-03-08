@@ -169,19 +169,20 @@ curl --location 'https://{{API_HOST}}/v3/cdr?limit=2&offset=0' \
 
 ### Query Parameters
 
-| Parameter        | Description                                             | Example                             |
-| ---------------- | ------------------------------------------------------- | ----------------------------------- |
-| start_date       | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi) | 2023-03-06 hoặc 2023-03-06 17:20:58 |
-| end_date         | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi) | 2023-03-07 hoặc 2023-03-07 00:00:00 |
-| extension        | Cuộc gọi từ extension nào                               | 101                                 |
-| status           | Trạng thái cuộc gọi                                     | ANSWERED                            |
-| hotline          | Tìm theo đầu số thực hiện cuộc gọi                      | 02873003586                         |
-| phone            | Từ hoặc tới số điện thoại nào                           | 0899888999                          |
-| direction        | Chiều cuộc gọi (inbound, outbound, local)               | outbound                            |
-| start_date_ended | Tìm kiếm cdrs theo khoảng thời gian (Kết thúc cuộc gọi) | 2023-03-06 hoặc 2023-03-06 17:20:58 |
-| end_date_ended   | Tìm kiếm cdrs theo khoảng thời gian (Kết thúc cuộc gọi) | 2023-03-07 hoặc 2023-03-07 00:00:00 |
-| limit            | Số lượng record trả về                                  | 50                                  |
-| offset           | Vị trí bắt đầu khi query                                | 0                                   |
+| Parameter        | Description                                             | Example                              |
+| ---------------- | ------------------------------------------------------- | ------------------------------------ |
+| start_date       | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi) | 2023-03-06 hoặc 2023-03-06 17:20:58  |
+| end_date         | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi) | 2023-03-07 hoặc 2023-03-07 00:00:00  |
+| extension        | Cuộc gọi từ extension nào                               | 101                                  |
+| status           | Trạng thái cuộc gọi                                     | ANSWERED                             |
+| hotline          | Tìm theo đầu số thực hiện cuộc gọi                      | 02873003586                          |
+| phone            | Từ hoặc tới số điện thoại nào                           | 0899888999                           |
+| direction        | Chiều cuộc gọi (inbound, outbound, local)               | outbound                             |
+| campaign_uuid    | Tìm kiếm theo campaign uuid                             | fdccdbf2-bc4b-4a0f-a7ea-cb0239daaa7d |
+| start_date_ended | Tìm kiếm cdrs theo khoảng thời gian (Kết thúc cuộc gọi) | 2023-03-06 hoặc 2023-03-06 17:20:58  |
+| end_date_ended   | Tìm kiếm cdrs theo khoảng thời gian (Kết thúc cuộc gọi) | 2023-03-07 hoặc 2023-03-07 00:00:00  |
+| limit            | Số lượng record trả về                                  | 50                                   |
+| offset           | Vị trí bắt đầu khi query                                | 0                                    |
 
 ## Get a Specific CDR By ID
 

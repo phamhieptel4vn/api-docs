@@ -1,0 +1,24 @@
+{
+  "unversionedId": "callcenter-portal-admin-guide/create-role",
+  "id": "callcenter-portal-admin-guide/create-role",
+  "title": "create-role",
+  "description": "",
+  "source": "@site/docs/callcenter-portal-admin-guide/create-role.md",
+  "sourceDirName": "callcenter-portal-admin-guide",
+  "slug": "/callcenter-portal-admin-guide/create-role",
+  "permalink": "/callcenter-portal-admin-guide/create-role",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-portal-admin-guide/create-role.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "create-list",
+    "permalink": "/callcenter-portal-admin-guide/create-list"
+  },
+  "next": {
+    "title": "create-user",
+    "permalink": "/callcenter-portal-admin-guide/create-user"
+  }
+}

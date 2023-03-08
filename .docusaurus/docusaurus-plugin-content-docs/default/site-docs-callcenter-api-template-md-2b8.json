@@ -1,0 +1,28 @@
+{
+  "unversionedId": "callcenter-api/template",
+  "id": "callcenter-api/template",
+  "title": "Template",
+  "description": "Create Template TTS",
+  "source": "@site/docs/callcenter-api/template.md",
+  "sourceDirName": "callcenter-api",
+  "slug": "/callcenter-api/template",
+  "permalink": "/callcenter-api/template",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-api/template.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Template",
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Click-to-call",
+    "permalink": "/callcenter-api/click2call"
+  },
+  "next": {
+    "title": "Autodial",
+    "permalink": "/callcenter-api/autodial"
+  }
+}

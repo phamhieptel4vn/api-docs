@@ -137,6 +137,12 @@
           },
           {
             "type": "link",
+            "label": "Template",
+            "href": "/callcenter-api/template",
+            "docId": "callcenter-api/template"
+          },
+          {
+            "type": "link",
             "label": "Autodial",
             "href": "/callcenter-api/autodial",
             "docId": "callcenter-api/autodial"
@@ -146,6 +152,12 @@
             "label": "Autocall",
             "href": "/callcenter-api/autocall",
             "docId": "callcenter-api/autocall"
+          },
+          {
+            "type": "link",
+            "label": "Carrier",
+            "href": "/callcenter-api/carrier",
+            "docId": "callcenter-api/carrier"
           },
           {
             "type": "link",
@@ -164,6 +176,42 @@
             "label": "Customer",
             "href": "/callcenter-api/customer",
             "docId": "callcenter-api/customer"
+          },
+          {
+            "type": "link",
+            "label": "Group",
+            "href": "/callcenter-api/group",
+            "docId": "callcenter-api/group"
+          },
+          {
+            "type": "link",
+            "label": "Agent",
+            "href": "/callcenter-api/agent",
+            "docId": "callcenter-api/agent"
+          },
+          {
+            "type": "link",
+            "label": "List",
+            "href": "/callcenter-api/list",
+            "docId": "callcenter-api/list"
+          },
+          {
+            "type": "link",
+            "label": "Lead",
+            "href": "/callcenter-api/lead",
+            "docId": "callcenter-api/lead"
+          },
+          {
+            "type": "link",
+            "label": "Report",
+            "href": "/callcenter-api/report",
+            "docId": "callcenter-api/report"
+          },
+          {
+            "type": "link",
+            "label": "Statistic",
+            "href": "/callcenter-api/statistic",
+            "docId": "callcenter-api/statistic"
           }
         ],
         "href": "/category/callcenter-api"
@@ -266,6 +314,171 @@
           }
         ],
         "href": "/category/pbx-api"
+      },
+      {
+        "type": "category",
+        "label": "CallCenter Portal Admin Guide",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Login Account",
+            "href": "/callcenter-portal-admin-guide/login-account",
+            "docId": "callcenter-portal-admin-guide/login-account"
+          },
+          {
+            "type": "link",
+            "label": "Dashboard",
+            "href": "/callcenter-portal-admin-guide/dashboard",
+            "docId": "callcenter-portal-admin-guide/dashboard"
+          },
+          {
+            "type": "link",
+            "label": "Monitor Agent",
+            "href": "/callcenter-portal-admin-guide/monitor-agent",
+            "docId": "callcenter-portal-admin-guide/monitor-agent"
+          },
+          {
+            "type": "link",
+            "label": "Giám sát - Monitor Call Queue",
+            "href": "/callcenter-portal-admin-guide/monitor-queue",
+            "docId": "callcenter-portal-admin-guide/monitor-queue"
+          },
+          {
+            "type": "link",
+            "label": "Giám sát - Monitor Call Center",
+            "href": "/callcenter-portal-admin-guide/monitor-callcenter",
+            "docId": "callcenter-portal-admin-guide/monitor-callcenter"
+          },
+          {
+            "type": "link",
+            "label": "Monitor Campaign Autocall",
+            "href": "/callcenter-portal-admin-guide/monitor-campaign",
+            "docId": "callcenter-portal-admin-guide/monitor-campaign"
+          },
+          {
+            "type": "link",
+            "label": "Create Campaign",
+            "href": "/callcenter-portal-admin-guide/create-campaign",
+            "docId": "callcenter-portal-admin-guide/create-campaign"
+          },
+          {
+            "type": "link",
+            "label": "add-user-to-group",
+            "href": "/callcenter-portal-admin-guide/add-user-to-group",
+            "docId": "callcenter-portal-admin-guide/add-user-to-group"
+          },
+          {
+            "type": "link",
+            "label": "blacklist",
+            "href": "/callcenter-portal-admin-guide/blacklist",
+            "docId": "callcenter-portal-admin-guide/blacklist"
+          },
+          {
+            "type": "link",
+            "label": "cdrs",
+            "href": "/callcenter-portal-admin-guide/cdrs",
+            "docId": "callcenter-portal-admin-guide/cdrs"
+          },
+          {
+            "type": "link",
+            "label": "create-category",
+            "href": "/callcenter-portal-admin-guide/create-category",
+            "docId": "callcenter-portal-admin-guide/create-category"
+          },
+          {
+            "type": "link",
+            "label": "create-customfield",
+            "href": "/callcenter-portal-admin-guide/create-customfield",
+            "docId": "callcenter-portal-admin-guide/create-customfield"
+          },
+          {
+            "type": "link",
+            "label": "create-department",
+            "href": "/callcenter-portal-admin-guide/create-department",
+            "docId": "callcenter-portal-admin-guide/create-department"
+          },
+          {
+            "type": "link",
+            "label": "create-disposition",
+            "href": "/callcenter-portal-admin-guide/create-disposition",
+            "docId": "callcenter-portal-admin-guide/create-disposition"
+          },
+          {
+            "type": "link",
+            "label": "create-group",
+            "href": "/callcenter-portal-admin-guide/create-group",
+            "docId": "callcenter-portal-admin-guide/create-group"
+          },
+          {
+            "type": "link",
+            "label": "create-list",
+            "href": "/callcenter-portal-admin-guide/create-list",
+            "docId": "callcenter-portal-admin-guide/create-list"
+          },
+          {
+            "type": "link",
+            "label": "create-role",
+            "href": "/callcenter-portal-admin-guide/create-role",
+            "docId": "callcenter-portal-admin-guide/create-role"
+          },
+          {
+            "type": "link",
+            "label": "create-user",
+            "href": "/callcenter-portal-admin-guide/create-user",
+            "docId": "callcenter-portal-admin-guide/create-user"
+          },
+          {
+            "type": "link",
+            "label": "import-lead",
+            "href": "/callcenter-portal-admin-guide/import-lead",
+            "docId": "callcenter-portal-admin-guide/import-lead"
+          },
+          {
+            "type": "link",
+            "label": "manager-lead",
+            "href": "/callcenter-portal-admin-guide/manager-lead",
+            "docId": "callcenter-portal-admin-guide/manager-lead"
+          },
+          {
+            "type": "link",
+            "label": "manager-user",
+            "href": "/callcenter-portal-admin-guide/manager-user",
+            "docId": "callcenter-portal-admin-guide/manager-user"
+          },
+          {
+            "type": "link",
+            "label": "qc",
+            "href": "/callcenter-portal-admin-guide/qc",
+            "docId": "callcenter-portal-admin-guide/qc"
+          },
+          {
+            "type": "link",
+            "label": "recordings",
+            "href": "/callcenter-portal-admin-guide/recordings",
+            "docId": "callcenter-portal-admin-guide/recordings"
+          },
+          {
+            "type": "link",
+            "label": "report",
+            "href": "/callcenter-portal-admin-guide/report",
+            "docId": "callcenter-portal-admin-guide/report"
+          },
+          {
+            "type": "link",
+            "label": "speech-to-text",
+            "href": "/callcenter-portal-admin-guide/speech-to-text",
+            "docId": "callcenter-portal-admin-guide/speech-to-text"
+          },
+          {
+            "type": "link",
+            "label": "voicemail",
+            "href": "/callcenter-portal-admin-guide/voicemail",
+            "docId": "callcenter-portal-admin-guide/voicemail"
+          }
+        ],
+        "href": "/category/callcenter-portal-admin-guide"
       }
     ]
   },
@@ -336,6 +549,12 @@
       "description": "Create Template TTS",
       "sidebar": "tutorialSidebar"
     },
+    "callcenter-api/agent": {
+      "id": "callcenter-api/agent",
+      "title": "Agent",
+      "description": "Attributes",
+      "sidebar": "tutorialSidebar"
+    },
     "callcenter-api/auth": {
       "id": "callcenter-api/auth",
       "title": "Authentication",
@@ -345,19 +564,25 @@
     "callcenter-api/autocall": {
       "id": "callcenter-api/autocall",
       "title": "Autocall",
-      "description": "Nhận dữ liệu queue",
+      "description": "Create Campaign Autocall",
       "sidebar": "tutorialSidebar"
     },
     "callcenter-api/autodial": {
       "id": "callcenter-api/autodial",
       "title": "Autodial",
-      "description": "Nhận dữ liệu queue",
+      "description": "Create Campaign Autodialer",
       "sidebar": "tutorialSidebar"
     },
     "callcenter-api/call": {
       "id": "callcenter-api/call",
       "title": "Call",
       "description": "List Calls",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/carrier": {
+      "id": "callcenter-api/carrier",
+      "title": "Carrier",
+      "description": "Create Carrier",
       "sidebar": "tutorialSidebar"
     },
     "callcenter-api/cdr": {
@@ -369,7 +594,7 @@
     "callcenter-api/click2call": {
       "id": "callcenter-api/click2call",
       "title": "Click-to-call",
-      "description": "Synchronous - GET",
+      "description": "Synchronous",
       "sidebar": "tutorialSidebar"
     },
     "callcenter-api/customer": {
@@ -384,10 +609,202 @@
       "description": "Get Events",
       "sidebar": "tutorialSidebar"
     },
+    "callcenter-api/group": {
+      "id": "callcenter-api/group",
+      "title": "Group",
+      "description": "Create Group",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/lead": {
+      "id": "callcenter-api/lead",
+      "title": "Lead",
+      "description": "Create Lead",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/list": {
+      "id": "callcenter-api/list",
+      "title": "List",
+      "description": "Create List",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/report": {
+      "id": "callcenter-api/report",
+      "title": "Report",
+      "description": "Report Based On Users",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/statistic": {
+      "id": "callcenter-api/statistic",
+      "title": "Statistic",
+      "description": "Report Based On Users",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-api/template": {
+      "id": "callcenter-api/template",
+      "title": "Template",
+      "description": "Create Template TTS",
+      "sidebar": "tutorialSidebar"
+    },
     "callcenter-api/user": {
       "id": "callcenter-api/user",
       "title": "User",
-      "description": "Get User Status",
+      "description": "Get User",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/add-user-to-group": {
+      "id": "callcenter-portal-admin-guide/add-user-to-group",
+      "title": "add-user-to-group",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/blacklist": {
+      "id": "callcenter-portal-admin-guide/blacklist",
+      "title": "blacklist",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/cdrs": {
+      "id": "callcenter-portal-admin-guide/cdrs",
+      "title": "cdrs",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-campaign": {
+      "id": "callcenter-portal-admin-guide/create-campaign",
+      "title": "Create Campaign",
+      "description": "Bước 1: Chọn vào menu Campaign",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-category": {
+      "id": "callcenter-portal-admin-guide/create-category",
+      "title": "create-category",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-customfield": {
+      "id": "callcenter-portal-admin-guide/create-customfield",
+      "title": "create-customfield",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-department": {
+      "id": "callcenter-portal-admin-guide/create-department",
+      "title": "create-department",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-disposition": {
+      "id": "callcenter-portal-admin-guide/create-disposition",
+      "title": "create-disposition",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-group": {
+      "id": "callcenter-portal-admin-guide/create-group",
+      "title": "create-group",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-list": {
+      "id": "callcenter-portal-admin-guide/create-list",
+      "title": "create-list",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-role": {
+      "id": "callcenter-portal-admin-guide/create-role",
+      "title": "create-role",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/create-user": {
+      "id": "callcenter-portal-admin-guide/create-user",
+      "title": "create-user",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/dashboard": {
+      "id": "callcenter-portal-admin-guide/dashboard",
+      "title": "Dashboard",
+      "description": "Trong dashboard sẽ mô tả tổng quan web quản trị",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/import-lead": {
+      "id": "callcenter-portal-admin-guide/import-lead",
+      "title": "import-lead",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/login-account": {
+      "id": "callcenter-portal-admin-guide/login-account",
+      "title": "Login Account",
+      "description": "Sử dụng URL web Portal, Username và Password của user admin mà nhà cung cấp cấp để login vào hệ thống",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/manager-lead": {
+      "id": "callcenter-portal-admin-guide/manager-lead",
+      "title": "manager-lead",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/manager-user": {
+      "id": "callcenter-portal-admin-guide/manager-user",
+      "title": "manager-user",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/monitor-agent": {
+      "id": "callcenter-portal-admin-guide/monitor-agent",
+      "title": "Monitor Agent",
+      "description": "Bước 1: User Admin login vào extension tương ứng. Khi agent đang trong cuộc gọi, user Admin chọn mục Live Call trong Dashboard",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/monitor-callcenter": {
+      "id": "callcenter-portal-admin-guide/monitor-callcenter",
+      "title": "Giám sát - Monitor Call Center",
+      "description": "Bước 1: Chon vào menu Giám sát - Monitor, sau đó chọn vào menu Call Center",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/monitor-campaign": {
+      "id": "callcenter-portal-admin-guide/monitor-campaign",
+      "title": "Monitor Campaign Autocall",
+      "description": "Chọn vào menu Monitor, sau đó chọn vào menu Campaign",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/monitor-queue": {
+      "id": "callcenter-portal-admin-guide/monitor-queue",
+      "title": "Giám sát - Monitor Call Queue",
+      "description": "Bước 1: Chọn vào menu Dashboard",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/qc": {
+      "id": "callcenter-portal-admin-guide/qc",
+      "title": "qc",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/recordings": {
+      "id": "callcenter-portal-admin-guide/recordings",
+      "title": "recordings",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/report": {
+      "id": "callcenter-portal-admin-guide/report",
+      "title": "report",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/speech-to-text": {
+      "id": "callcenter-portal-admin-guide/speech-to-text",
+      "title": "speech-to-text",
+      "description": "",
+      "sidebar": "tutorialSidebar"
+    },
+    "callcenter-portal-admin-guide/voicemail": {
+      "id": "callcenter-portal-admin-guide/voicemail",
+      "title": "voicemail",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
     "intro": {

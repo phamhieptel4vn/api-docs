@@ -2,7 +2,7 @@
   "unversionedId": "callcenter-api/user",
   "id": "callcenter-api/user",
   "title": "User",
-  "description": "Get User Status",
+  "description": "Get User",
   "source": "@site/docs/callcenter-api/user.md",
   "sourceDirName": "callcenter-api",
   "slug": "/callcenter-api/user",

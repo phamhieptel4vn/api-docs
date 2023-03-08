@@ -1,0 +1,24 @@
+{
+  "unversionedId": "callcenter-portal-admin-guide/cdrs",
+  "id": "callcenter-portal-admin-guide/cdrs",
+  "title": "cdrs",
+  "description": "",
+  "source": "@site/docs/callcenter-portal-admin-guide/cdrs.md",
+  "sourceDirName": "callcenter-portal-admin-guide",
+  "slug": "/callcenter-portal-admin-guide/cdrs",
+  "permalink": "/callcenter-portal-admin-guide/cdrs",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-portal-admin-guide/cdrs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "blacklist",
+    "permalink": "/callcenter-portal-admin-guide/blacklist"
+  },
+  "next": {
+    "title": "create-category",
+    "permalink": "/callcenter-portal-admin-guide/create-category"
+  }
+}

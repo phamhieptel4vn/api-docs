@@ -22,7 +22,7 @@
     "permalink": "/callcenter-api/user"
   },
   "next": {
-    "title": "PBX API",
-    "permalink": "/category/pbx-api"
+    "title": "Group",
+    "permalink": "/callcenter-api/group"
   }
 }

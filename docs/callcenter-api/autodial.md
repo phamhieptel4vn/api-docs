@@ -3,24 +3,19 @@ title: Autodial
 sidebar_position: 8
 ---
 
-## Nhận dữ liệu queue
-
-```shell
-curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue' \
---header 'Authorization: Bearer {{TOKEN}}' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "campaign_id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeee",
-  "queue_code": "Autodialer",
-  "precall_ratio": "150",
-  "max_recall_count": "2",
-  "queue_agents": "5001",
-  "customers": [
-    {
-      "id": "TEL4VN_Test",
-      "mobiles": ["0899123456"],
-    }
-  ]
+## Create Campaign Autodialer
+  
+```shell 
+  curl --location 'https://{{API_HOST}}/v3/campaign' \
+--header 'content-type: application/json' \
+--header 'authorization: Bearer {{TOKEN}}' \
+--data '{
+    "campaign_name": "Get Log Autodilaer",
+    "type": "autodialer",
+    "ratio": 100,
+    "custom_ratio": 100,
+    "concurrent_call": 1,
+    "description": "",
 }'
 ```
 
@@ -28,61 +23,63 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue' \
 
 ```json
 {
-  "message": "successfully"
+    "call_center_queue_uuid": "ed9c141b-2699-4ad4-beee-15fd4e2ef630",
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07",
+    "created": true,
+    "dialplan_uuid": "07f87476-90e0-4786-b697-1cb84dd0d24c"
 }
 ```
 
-> Error Response trả về:
+> Error response trả về:
 
 ```json
 {
-  "message": "campaign is invalid"
+    "error": "campaign_name is already taken"
 }
 ```
-
-API này nhằm mục đích nhận thông tin về queue để tiến hành tự động gọi ra.
-
-### HTTP Request
-
-`POST https://{{API_HOST}}/v2/autodialer/queue`
-
-### Body
-
-> Sample data:
 
 ```json
 {
-  "campaign_id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeee",
-  "queue_code": "Autodialer",
-  "precall_ratio": "150",
-  "max_recall_count": "2",
-  "queue_agents": "5001",
-  "customers": [
-    {
-      "id": "TEL4VN_Test",
-      "mobiles": ["0899123456"]
-    }
-  ]
+    "error": [
+        {
+            "campaign_name": "String length must be greater than or equal to 1"
+        }
+    ]
 }
 ```
 
-| Parameter         | Description                                      | Required |
-| ----------------- | ------------------------------------------------ | -------- |
-| campaign_id       | Id của campaign                                  | x        |
-| queue_code        | Mã queue                                         | x        |
-| precall_ratio     | Tỉ lệ thực hiện cuộc gọi đựa trên số lượng agent | x        |
-| max_recall_count  | Số lượng cuộc gọi lại nếu không thành công       | x        |
-| customers.id      | ID của khách hàng                                | x        |
-| customers.mobiles | Danh sách các số điện thoại của khách hàng       | x        |
-
-## Stop Queue
+## Update Campaign
 
 ```shell
-curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/stop' \
+curl --location --request PUT 'https://{{API_HOST}}/v3/campaign/7bbe986b-8a6e-404c-840b-781102b5aa07' \
 --header 'Authorization: Bearer {{TOKEN}}' \
 --header 'Content-Type: application/json' \
---data-raw '{
-    "queue_code": "Autodialer"
+--data '{
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07",
+    "campaign_name": "Campaign Autodialer",
+    "type": "autodialer",
+    "description": "Campaign Autodialer",
+    "active": false,
+    "concurrent_call": 0,
+    "ratio": 100,
+    "carrier_uuid": "",
+    "call_center_queue_uuid": "ed9c141b-2699-4ad4-beee-15fd4e2ef630",
+    "recall_times": 0,
+    "limit_recall_duration": 0,
+    "schedule_recall": "after",
+    "schedule_recall_duration": 0,
+    "hopper": 20,
+    "answer_callback_url": "",
+    "local_start_time": "08:00:00",
+    "local_end_time": "17:30:00",
+    "customer_order": "id",
+    "allow_manual_dial": false,
+    "allow_search_lead": false,
+    "enable_callback_alert": false,
+    "call_center_queue_strategy": "ring-all",
+    "users": null,
+    "groups": null,
+    "statuses": null
 }'
 ```
 
@@ -90,7 +87,7 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/stop' \
 
 ```json
 {
-  "message": "successfully"
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07"
 }
 ```
 
@@ -98,15 +95,14 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/stop' \
 
 ```json
 {
-  "message": "queue not found"
+    "error": "campaign_name is already taken"
 }
 ```
-
-API này nhằm mục đích yêu cầu tạm dừng một queue đang thực hiện.
+API này dùng để update chiến dịch autocall.
 
 ### HTTP Request
 
-`POST https://{{API_HOST}}/v2/autodialer/queue/stop`
+`PUT https://{{API_HOST}}/v3/campaign/{{campaign_uuid}}`
 
 ### Body
 
@@ -114,22 +110,235 @@ API này nhằm mục đích yêu cầu tạm dừng một queue đang thực hi
 
 ```json
 {
-  "queue_code": "Autodialer"
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07",
+    "campaign_name": "Campaign Autodialer",
+    "type": "autodialer",
+    "description": "Campaign Autodialer",
+    "active": false,
+    "concurrent_call": 0,
+    "ratio": 100,
+    "carrier_uuid": "",
+    "call_center_queue_uuid": "ed9c141b-2699-4ad4-beee-15fd4e2ef630",
+    "recall_times": 0,
+    "limit_recall_duration": 0,
+    "schedule_recall": "after",
+    "schedule_recall_duration": 0,
+    "hopper": 20,
+    "answer_callback_url": "",
+    "local_start_time": "08:00:00",
+    "local_end_time": "17:30:00",
+    "customer_order": "id",
+    "allow_manual_dial": false,
+    "allow_search_lead": false,
+    "enable_callback_alert": false,
+    "call_center_queue_strategy": "ring-all",
+    "users": null,
+    "groups": null,
+    "statuses": null
 }
 ```
 
-| Parameter  | Description | Required |
-| ---------- | ----------- | -------- |
-| queue_code | Mã queue    | x        |
+| Parameter                | Description                                                                                | Required |
+| ------------------------ | ------------------------------------------------------------------------------------------ | -------- |
+| campaign_name            | Tên chiến dịch                                                                             | x        |
+| concurrent_call          | Số lượng cuộc gọi đồng thời                                                                |          |
+| type                     | Loại chiến dich, bao gồm autodialer, autocall, inbound, manual                             | x        |
+| template_uuid            | Kịch bản gọi autocall                                                                      |          |
+| description              | Mô tả chiến dịch                                                                           |          |
+| type_autocall            | Loại chiến dịch autocall, bao gồm autocall_voice_tts, autocall_audio va autocall_voice_otp |          |
+| carrier_uuid             | UUID của carrier hay đầu số thực hiện cuộc gọi                                             |          |
+| recall_times             | Số lần gọi lại                                                                             |          |
+| limit_recall_duration    | Thời gian giới hạn gọi lại, tính theo giây                                                 |          |
+| schedule_recall          | Lịch gọi lại                                                                               |          |
+| schedule_recall_duration | Thời gian lịch gọi lại, tính theo phút                                                     |          |
+| status                   | Trạng thái của chiến dịch, bao gồm stop, start, pause                                      |          |
+| created_at               | Thời gian tạo chiến dịch                                                                   |          |
+| updated_at               | Thời gian cập nhật chiến dịch                                                              |          |
+| template_name            | Tên kịch bản gọi autocall                                                                  |          |
+| carrier_name             | Tên carrier hay đầu số thực hiện cuộc gọi                                                  |          |
+| mode_call                | Chế độ gọi, bao gồm direct, serial, parralel                                               |          |
+| network                  | Gọi theo mạng di động, bao gồm viettel, mobi, vina, tel, offnet                            |          |
+| run_id                   | ID của chiến dịch đang chạy                                                                |          |
+| type_autocall            | Loại chiến dịch autocall, bao gồm autocall_voice_tts, autocall_audio va autocall_voice_otp |          |
+| call_timeout             | Thời gian timeout cuộc gọi, tính theo giây                                                 |          |
+| schedules                | Lịch gọi mỗi ngày của campaign, tính theo đơn vị nanosecond giây                           |          |
+| priority_recall          | Độ ưu tiên gọi lại của campaign, bao gồm normal, recall                                    |          |
+| recall_status            | Các trạng thái gọi lại của campaign                                                        |          |
+| callback_url             | URL callback khi có CDR cuộc gọi                                                           |          |
 
-## Delete Queue
+## Get Campaign
 
 ```shell
-curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/delete' \
+curl --location 'https://{{API_HOST}}/v3/campaign' \
+--header 'Content-type: application/json' \
+--header 'Authorization: Bearer {{TOKEN}}'
+```
+
+> Response trả về:
+
+```json
+{
+    "data": [
+        {
+            "domain_uuid": "c275b950-9885-4775-b1bd-09fc865afa48",
+            "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07",
+            "campaign_name": "Campaign Autodialer",
+            "type": "autodialer",
+            "description": "Campaign Autodialer",
+            "active": false,
+            "concurrent_call": 0,
+            "ratio": 100,
+            "carrier_uuid": "",
+            "call_center_queue_uuid": "ed9c141b-2699-4ad4-beee-15fd4e2ef630",
+            "template_uuid": "",
+            "recall_times": 0,
+            "limit_recall_duration": 0,
+            "schedule_recall": "after",
+            "schedule_recall_duration": 0,
+            "hopper": 20,
+            "answer_callback_url": "",
+            "local_start_time": "08:00:00",
+            "local_end_time": "17:30:00",
+            "customer_order": "id",
+            "allow_manual_dial": false,
+            "allow_search_lead": false,
+            "enable_callback_alert": false,
+            "default_list_uuid": "",
+            "script_uuid": "",
+            "status": "",
+            "created_at": "2023-03-06T17:57:54.65043+07:00",
+            "updated_at": "2023-03-06T21:48:05.663105+07:00",
+            "call_center_queue_strategy": "ring-all",
+            "template_name": "",
+            "carrier_name": "",
+            "mode_call": "",
+            "network": {
+                "viettel": 0,
+                "mobi": 0,
+                "vina": 0,
+                "tel": 0,
+                "offnet": 0
+            },
+            "run_id": "",
+            "type_autocall": "",
+            "call_timeout": 0,
+            "domain_name": "",
+            "users": null,
+            "groups": null,
+            "statuses": null,
+            "schedules": null,
+            "priority_recall": "",
+            "recall_status": null,
+            "enable_encrypt": false,
+            "callback_url": "",
+            "orig_campaign_uuid": ""
+        }
+    ],
+    "limit": 10,
+    "offset": 0,
+    "total": 1
+}
+```
+
+### HTTP Request
+
+`GET https://{{API_HOST}}/v3/template`
+
+### Query Parameters
+
+| Parameter | Description                                                     | Example  |
+| --------- | --------------------------------------------------------------- | -------- |
+| type      | Loại chiến dịch bao gồm autocall, autodialer, inbound và manual | autocall |
+| limit     | Số lượng record trả về                                          | 10       |
+| offset    | Vị trí bắt đầu khi query                                        | 0        |
+
+## Get Campaign By Id
+
+```shell
+curl -L -X GET 'https://{{API_HOST}}/v3/campaign/7bbe986b-8a6e-404c-840b-781102b5aa07' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Bearer {{TOKEN}}'
+```
+
+> Response trả về:
+
+```json
+{
+    "domain_uuid": "c275b950-9885-4775-b1bd-09fc865afa48",
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07",
+    "campaign_name": "Campaign Autodialer",
+    "type": "autodialer",
+    "description": "Campaign Autodialer",
+    "active": false,
+    "concurrent_call": 0,
+    "ratio": 100,
+    "carrier_uuid": "",
+    "call_center_queue_uuid": "ed9c141b-2699-4ad4-beee-15fd4e2ef630",
+    "template_uuid": "",
+    "recall_times": 0,
+    "limit_recall_duration": 0,
+    "schedule_recall": "after",
+    "schedule_recall_duration": 0,
+    "hopper": 20,
+    "answer_callback_url": "",
+    "local_start_time": "08:00:00",
+    "local_end_time": "17:30:00",
+    "customer_order": "id",
+    "allow_manual_dial": false,
+    "allow_search_lead": false,
+    "enable_callback_alert": false,
+    "default_list_uuid": "",
+    "script_uuid": "",
+    "status": "",
+    "created_at": "2023-03-06T17:57:54.65043+07:00",
+    "updated_at": "2023-03-06T21:48:05.663105+07:00",
+    "call_center_queue_strategy": "ring-all",
+    "template_name": "",
+    "carrier_name": "",
+    "mode_call": "",
+    "network": {
+        "viettel": 0,
+        "mobi": 0,
+        "vina": 0,
+        "tel": 0,
+        "offnet": 0
+    },
+    "run_id": "",
+    "type_autocall": "",
+    "call_timeout": 0,
+    "domain_name": "",
+    "users": null,
+    "groups": null,
+    "statuses": null,
+    "schedules": null,
+    "priority_recall": "",
+    "recall_status": null,
+    "enable_encrypt": false,
+    "callback_url": "",
+    "orig_campaign_uuid": ""
+}
+```
+
+### HTTP Request
+
+`GET https://{{API_HOST}}/v3/campaign/{{campaign_uuid}}`
+
+### Query Parameters
+
+| Parameter     | Description         |
+| ------------- | ------------------- |
+| campaign_uuid | UUID của chiến dịch |
+
+## Assign Extension Of User To Campaign
+
+```shell
+curl --location --request PUT 'https://{{API_HOST}}/v3/campaign/7bbe986b-8a6e-404c-840b-781102b5aa07/assign_extension' \
 --header 'Authorization: Bearer {{TOKEN}}' \
 --header 'Content-Type: application/json' \
---data-raw '{
-    "queue_code": "Autodialer"
+--data '{
+    "extensions" : [
+        "102","103","101"
+    ]
 }'
 ```
 
@@ -137,7 +346,21 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/delete'
 
 ```json
 {
-  "message": "successfully"
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07",
+    "users": [
+        {
+            "extension": "102",
+            "user_uuid": "93b8984b-7a10-4b57-b6fc-6f767d94ea1b"
+        },
+        {
+            "extension": "103",
+            "user_uuid": "9d21687d-c4a7-44de-b8f9-bd31f767d9ae"
+        },
+        {
+            "extension": "101",
+            "user_uuid": "e0406808-4be4-4e43-9ec5-512d91e2b95e"
+        }
+    ]
 }
 ```
 
@@ -145,38 +368,23 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/delete'
 
 ```json
 {
-  "message": "queue not found"
+    "error": [
+        {
+            "extensions": "Invalid type. Expected: array, given: null"
+        }
+    ]
 }
 ```
+```shell
 
-API này nhằm mục đích yêu cầu thu hồi (xoá) một queue sau khi đã tạm dừng.
-
-### HTTP Request
-
-`POST https://{{API_HOST}}/v2/autodialer/queue/delete`
-
-### Body
-
-> Sample data:
-
-```json
-{
-  "queue_code": "Autodialer"
-}
-```
-
-| Parameter  | Description | Required |
-| ---------- | ----------- | -------- |
-| queue_code | Mã queue    | x        |
-
-## Start Queue
+## Patch Campagin
 
 ```shell
-curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/start' \
---header 'Authorization: Bearer {{TOKEN}}' \
+curl --location --request PATCH 'https://{{API_HOST}}/v3/campaign/7bbe986b-8a6e-404c-840b-781102b5aa07/active' \
 --header 'Content-Type: application/json' \
---data-raw '{
-    "queue_code": "Autodialer"
+--header 'Authorization: Bearer {{TOKEN}}' \
+--data '{
+  "active": false
 }'
 ```
 
@@ -184,7 +392,8 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/start' 
 
 ```json
 {
-  "message": "successfully"
+    "active": false,
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07"
 }
 ```
 
@@ -192,15 +401,21 @@ curl --location --request POST 'https://{{API_HOST}}/v2/autodialer/queue/start' 
 
 ```json
 {
-  "message": "queue not found"
+    "error": "Not Found"
 }
 ```
 
-API này nhằm mục đích yêu cầu tiếp tục một queue đang tạm dừng.
+```json
+{
+    "error": "active is missing"
+}
+```
+
+API này dùng để chuyển đổi trạng thái chiến dịch từ Active sang Deactive và ngược lại.
 
 ### HTTP Request
 
-`POST https://{{API_HOST}}/v2/autodialer/queue/start`
+`PATCH https://{{API_HOST}}/v3/campaign/{{campaign_uuid}}/active`
 
 ### Body
 
@@ -208,10 +423,42 @@ API này nhằm mục đích yêu cầu tiếp tục một queue đang tạm d�
 
 ```json
 {
-  "queue_code": "Autodialer"
+  "active": false
 }
 ```
 
-| Parameter  | Description | Required |
-| ---------- | ----------- | -------- |
-| queue_code | Mã queue    | x        |
+| Parameter     | Description                                      | Required |
+| ------------- | ------------------------------------------------ | -------- |
+| campaign_uuid | UUID của chiến dịch                              | x        |
+| active        | Trạng thái của chiến dịch, bao gồm true và false | x        |
+
+## Delete Campaign
+
+```shell
+curl --location --request DELETE 'https://{{API_HOST}}/v3/campaign/7bbe986b-8a6e-404c-840b-781102b5aa07' \
+--header 'Content-type: application/json' \
+--header 'Authorization: Bearer {{TOKEN}}'
+```
+
+> Response trả về:
+
+```json
+{
+    "campaign_uuid": "7bbe986b-8a6e-404c-840b-781102b5aa07"
+}
+```
+> Error Response trả về:
+```json
+{
+    "error": "campaign must be deactive"
+}
+```
+```json
+{
+    "error": "Not Found"
+}
+```
+API này dùng để xóa chiến dịch.
+### HTTP Request
+
+`DELETE https://{{API_HOST}}/v3/campaign/{{campaign_uuid}}`

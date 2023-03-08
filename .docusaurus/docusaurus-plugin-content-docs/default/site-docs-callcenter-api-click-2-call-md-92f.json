@@ -2,7 +2,7 @@
   "unversionedId": "callcenter-api/click2call",
   "id": "callcenter-api/click2call",
   "title": "Click-to-call",
-  "description": "Synchronous - GET",
+  "description": "Synchronous",
   "source": "@site/docs/callcenter-api/click2call.md",
   "sourceDirName": "callcenter-api",
   "slug": "/callcenter-api/click2call",
@@ -22,7 +22,7 @@
     "permalink": "/callcenter-api/call"
   },
   "next": {
-    "title": "Autodial",
-    "permalink": "/callcenter-api/autodial"
+    "title": "Template",
+    "permalink": "/callcenter-api/template"
   }
 }

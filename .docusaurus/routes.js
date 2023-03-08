@@ -44,7 +44,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'c8e'),
+    component: ComponentCreator('/', '347'),
     routes: [
       {
         path: '/',
@@ -119,6 +119,12 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/callcenter-api/agent',
+        component: ComponentCreator('/callcenter-api/agent', '49c'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/callcenter-api/auth',
         component: ComponentCreator('/callcenter-api/auth', 'd3f'),
         exact: true,
@@ -139,6 +145,12 @@ export default [
       {
         path: '/callcenter-api/call',
         component: ComponentCreator('/callcenter-api/call', '035'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/carrier',
+        component: ComponentCreator('/callcenter-api/carrier', '9cf'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -167,8 +179,200 @@ export default [
         sidebar: "tutorialSidebar"
       },
       {
+        path: '/callcenter-api/group',
+        component: ComponentCreator('/callcenter-api/group', '374'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/lead',
+        component: ComponentCreator('/callcenter-api/lead', 'b3e'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/list',
+        component: ComponentCreator('/callcenter-api/list', '704'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/report',
+        component: ComponentCreator('/callcenter-api/report', 'f50'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/statistic',
+        component: ComponentCreator('/callcenter-api/statistic', '161'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-api/template',
+        component: ComponentCreator('/callcenter-api/template', 'a33'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
         path: '/callcenter-api/user',
         component: ComponentCreator('/callcenter-api/user', 'fd3'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/add-user-to-group',
+        component: ComponentCreator('/callcenter-portal-admin-guide/add-user-to-group', '3f0'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/blacklist',
+        component: ComponentCreator('/callcenter-portal-admin-guide/blacklist', '384'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/cdrs',
+        component: ComponentCreator('/callcenter-portal-admin-guide/cdrs', 'f81'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-campaign',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-campaign', '51d'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-category',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-category', '351'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-customfield',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-customfield', '2eb'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-department',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-department', '134'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-disposition',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-disposition', '1a8'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-group',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-group', 'd83'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-list',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-list', '734'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-role',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-role', '36f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/create-user',
+        component: ComponentCreator('/callcenter-portal-admin-guide/create-user', 'fb9'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/dashboard',
+        component: ComponentCreator('/callcenter-portal-admin-guide/dashboard', '394'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/import-lead',
+        component: ComponentCreator('/callcenter-portal-admin-guide/import-lead', '285'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/login-account',
+        component: ComponentCreator('/callcenter-portal-admin-guide/login-account', '144'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/manager-lead',
+        component: ComponentCreator('/callcenter-portal-admin-guide/manager-lead', '226'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/manager-user',
+        component: ComponentCreator('/callcenter-portal-admin-guide/manager-user', '03d'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/monitor-agent',
+        component: ComponentCreator('/callcenter-portal-admin-guide/monitor-agent', 'cba'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/monitor-callcenter',
+        component: ComponentCreator('/callcenter-portal-admin-guide/monitor-callcenter', 'c2f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/monitor-campaign',
+        component: ComponentCreator('/callcenter-portal-admin-guide/monitor-campaign', '3b5'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/monitor-queue',
+        component: ComponentCreator('/callcenter-portal-admin-guide/monitor-queue', '28f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/qc',
+        component: ComponentCreator('/callcenter-portal-admin-guide/qc', '950'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/recordings',
+        component: ComponentCreator('/callcenter-portal-admin-guide/recordings', '1ec'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/report',
+        component: ComponentCreator('/callcenter-portal-admin-guide/report', 'b06'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/speech-to-text',
+        component: ComponentCreator('/callcenter-portal-admin-guide/speech-to-text', 'b2f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/callcenter-portal-admin-guide/voicemail',
+        component: ComponentCreator('/callcenter-portal-admin-guide/voicemail', 'c08'),
         exact: true,
         sidebar: "tutorialSidebar"
       },
@@ -187,6 +391,12 @@ export default [
       {
         path: '/category/callcenter-api',
         component: ComponentCreator('/category/callcenter-api', '58f'),
+        exact: true,
+        sidebar: "tutorialSidebar"
+      },
+      {
+        path: '/category/callcenter-portal-admin-guide',
+        component: ComponentCreator('/category/callcenter-portal-admin-guide', '92a'),
         exact: true,
         sidebar: "tutorialSidebar"
       },

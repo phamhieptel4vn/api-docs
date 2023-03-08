@@ -3,247 +3,242 @@ title: CDRs - Call Detail Records
 sidebar_position: 2
 ---
 
+# Call Detail Records
 Lịch sử cuộc gọi
 
-## CDR Mapping
+### Attributes
 
-### Default Mapping
+| Attribute               | Description                                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------ |
+| id                      | Id của CDR                                                                                             |
+| parent_id               | Id của CDR gốc                                                                                         |
+| sip_call_id             | call_id trong bản tin SIP                                                                              |
+| cause                   | Trạng thái cuộc gọi dựa theo mã phản hồi giao thức SIP. Vd: NORMAL_CLEARING, NO_ANSWER, USER_BUSY, ... |
+| duration                | Thời hạn thực hiện cuộc gọi.                                                                           |
+| billsec                 | Thời gian đàm thoại trong cuộc gọi.                                                                    |
+| direction               | Chiều cuộc gọi (inbound, outbound, local)                                                              |
+| recording_url           | Đường dẫn file ghi âm cuộc gọi                                                                         |
+| extension               | Extension nhận hoặc thực hiện cuộc gọi                                                                 |
+| from_number             | Cuộc gọi từ số nào - Đầu số thực hiện cuộc gọi                                                         |
+| to_number               | Cuộc gọi đến số nào                                                                                    |
+| receive_dest            | Ringroup hoặc queue của extension nhận cuộc gọi                                                        |
+| time_started            | Thời gian bắt đầu cuộc gọi                                                                             |
+| time_answered           | Thời gian khi cuộc gọi kết nối                                                                         |
+| time_ended              | Thời gian kết thúc cuộc gọi                                                                            |
+| time_ringging           | Thời gian khi cuộc gọi đổ chuông                                                                       |
+| status                  | Trạng thái cuộc gọi                                                                                    |
+| app                     | Phương thức gọi, bao gồm autocall, autodialer, click_to_call, dial                                     |
+| press_key               | Phím bấm trong cuộc gọi                                                                                |
+| fullname                | Tên của Agent thực hiện hoặc nhận cuộc gọi                                                             |
+| email                   | Email của Agent thực hiện hoặc nhận cuộc gọi                                                           |
+| username                | Username của Agent thực hiện hoặc nhận cuộc gọi                                                        |
+| sip_hangup_disposition  | Nguyên nhân kết thúc cuộc gọi của FS                                                                   |
+| campaign_uuid           | UUID của campaign                                                                                      |
+| lead_uuid               | UUID của lead                                                                                          |
+| rate                    | Số điểm được khách hàng đánh giá                                                                       |
+| digit                   | Số điểm được khách hàng đánh giá                                                                       |
+| note                    | Ghi chú của Agent sau cuộc gọi                                                                         |
+| customer_fullname       | Tên của khách hàng                                                                                     |
+| customer_email          | Email của khách hàng                                                                                   |
+| demand_customer         | Yêu cầu của khách hàng                                                                                 |
+| interest_segment        | Lĩnh vực quan tâm của khách hàng                                                                       |
+| additional              | Thông tin bổ sung của khách hàng                                                                       |
+| additional.param1,2,3   | Các thông tin bổ sung                                                                                  |
+| autocall_presskey_epoch | Thời gian bấm phím trong cuộc gọi với dạng timestamp                                                   |
+| time_presskey           | Thời gian bấm phím trong cuộc gọi                                                                      |
+| presskey_delay          | Độ trễ bấm phím                                                                                        |
+| autocall_recording_url  | Đường dẫn file ghi âm cuộc gọi autocall                                                                |
 
-| Thông tin     | Mô tả                                                                                       |
-| ------------- | ------------------------------------------------------------------------------------------- |
-| id            | Id của CDR                                                                                  |
-| sip_call_id   | call_id trong bản tin SIP                                                                   |
-| cause         | Trạng thái cuộc gọi dựa theo mã phản hồi giao thức SIP. Vd: NORMAL_CLEARING, NO_ANSWER, ... |
-| duration      | Thời hạn thực hiện cuộc gọi.                                                                |
-| direction     | Chiều cuộc gọi (inbound, outbound, local)                                                   |
-| recording_url | Đường dẫn file ghi âm cuộc gọi                                                              |
-| extension     | Extension nhận hoặc thực hiện cuộc gọi                                                      |
-| from_number   | Cuộc gọi từ số nào                                                                          |
-| to_number     | Cuộc gọi đến số nào                                                                         |
-| receive_dest  | Ringroup hoặc queue của extension nhận cuộc gọi                                             |
-| time_started  | Thời gian bắt đầu cuộc gọi                                                                  |
-| time_ringing  | Thời gian khi cuộc gọi ring.                                                                |
-| time_answered | Thời gian khi cuộc gọi kết nối                                                              |
-| time_ended    | Thời gian kết thúc cuộc gọi                                                                 |
-| status        | Trạng thái cuộc gọi                                                                         |
-| app           | Ứng dụng được sử dụng. (dial, autocall, autodialer)                                         |
-| press_key     | Object lưu trữ phím cuộc gọi                                                                |
-| lead_id       | Id khách hàng                                                                               |
-| username      | Username agent nhận hoặc thực hiện cuộc gọi                                                 |
-| firstname     | Tên agent nhận hoặc thực hiện cuộc gọi                                                      |
-| middlename    | Tên lót agent nhận hoặc thực hiện cuộc gọi                                                  |
-| lastname      | Họ agent nhận hoặc thực hiện cuộc gọi                                                       |
-
-### Flex Mapping
-
-| Thông tin   | Mô tả                                                |
-| ----------- | ---------------------------------------------------- |
-| cdrId       | Id của cuộc gọi.                                     |
-| sip_call_id | call_id trong bản tin SIP                            |
-| customerId  | Mã khách hàng                                        |
-| extensionId | Số máy lẻ (username) của agent sẽ tiếp nhận cuộc gọi |
-| recordFile  | Đường dẫn file ghi âm cuộc gọi                       |
-| to          | Mã khách hàng                                        |
-| dialAt      | Thời gian bắt đầu cuộc gọi                           |
-| ringAt      | Thời gian bắt đầu có chuông                          |
-| answeredAt  | Thời gian khi cuộc gọi kết nối                       |
-| hangupAt    | Thời gian kết thúc cuộc gọi                          |
-| duration    | Thời hạn thực hiện cuộc gọi.                         |
-| direction   | Chiều cuộc gọi (inbound, outbound, local)            |
-| status      | Trạng thái cuộc gọi                                  |
-
-| Status        | Mô tả                                                                                |
-| ------------- | ------------------------------------------------------------------------------------ |
-| answered      | Có kết nối và nói chuyện với khách hàng                                              |
-| busy          | Máy bận hoặc khách hàng bấm từ chối trả lời                                          |
-| no-answered   | Outbound - Khách hàng không nghe máy, để hết chuông. Inbound - agent để hết chuông   |
-| cancel        | Outbound - agent ngắt máy trước khi kết nối. Inbound - agent ngắt máy                |
-| not-available | Cuộc gọi báo thuê bao không liên lạc được, chế độ máy bay                            |
-| invalid       | Không hợp lệ, cuộc gọi bị lỗi, (Ví dụ: click-to-call agent không nghe máy, ngắt máy) |
 
 ## Get CDRs
 
 ```shell
-curl -L -X GET 'http://{{API_HOST}}/v2/cdr?' \
--H 'Authorization: Bearer {{TOKEN}}'
+curl --location 'https://{{API_HOST}}/v3/cdr?limit=2&offset=0' \
+--header 'Content-type: application/json' \
+--header 'Authorization: Bearer {{TOKEN}}'
 ```
 
-> Default response trả về:
+> Response trả về:
 
 ```json
 {
-  "data": [
-    {
-      "id": "ad4c9b90-c071-405a-9723-980d2e5e1623",
-      "sip_call_id": "112233aabbccddee..",
-      "cause": "NORMAL_CLEARING",
-      "duration": 11,
-      "direction": 3,
-      "recording_url": "http://recording.demo/ad4c9b90-c071-405a-9723-980d2e5e1623",
-      "extension": "",
-      "from_number": "19001919",
-      "to_number": "0899888999",
-      "receive_dest": "",
-      "time_started": "2021-02-17 17:30:35",
-      "time_answered": "2021-02-17 17:30:43",
-      "time_ended": "2021-02-17 17:30:46",
-      "status": "ANSWERED",
-      "app": "autocall",
-      "press_key": "{}",
-      "lead_id": "c1450608-098e-413d-9e2c-66333b79afe1",
-      "username": "",
-      "firstname": "",
-      "middlename": "",
-      "lastname": ""
-    },
-    {
-      "id": "01b7d166-b564-42ec-80a1-4ad343225934 ",
-      "sip_call_id": "aabbccddee112233..",
-      "cause": "NORMAL_CLEARING",
-      "duration": 7,
-      "direction": 3,
-      "recording_url": "",
-      "extension": "101",
-      "from_number": "19001919",
-      "to_number": "0899888999",
-      "receive_dest": "",
-      "time_started": "2021-02-18 17:20:58",
-      "time_answered": "",
-      "time_ended": "2021-02-18 17:21:05",
-      "status": "BUSY",
-      "app": "dial",
-      "press_key": "",
-      "customer_id": "c1450608-098e-413d-9e2c-66333b79afe1",
-      "username": "agent101",
-      "firstname": "A",
-      "middlename": "Van",
-      "lastname": "Nguyen"
-    },
-    ...
-  ],
-  "limit": 10,
-  "offset": 10,
-  "total": 35
+    "data": [
+        {
+            "id": "366d2a16-7d73-47ad-bc94-9bab059f0f85",
+            "parent_id": "366d2a16-7d73-47ad-bc94-9bab059f0f85",
+            "sip_call_id": "436447b4-3755-123c-18b6-fa163e71cc82",
+            "cause": "USER_BUSY",
+            "duration": 27,
+            "direction": "outbound",
+            "recording_url": "",
+            "extension": "",
+            "from_number": "02873003586",
+            "to_number": "0775702541",
+            "receive_dest": "",
+            "time_started": "2023-03-07 13:36:42",
+            "time_answered": "",
+            "time_ended": "2023-03-07 13:37:09",
+            "time_ringging": "2023-03-07 13:36:42",
+            "status": "busy",
+            "billsec": 0,
+            "app": "autocall",
+            "press_key": "{}",
+            "fullname": "",
+            "email": "",
+            "username": "",
+            "sip_hangup_disposition": "recv_refuse",
+            "campaign_uuid": "fdccdbf2-bc4b-4a0f-a7ea-cb0239daaa7d",
+            "lead_uuid": "2f8b1c0f-da79-4dfb-959d-1b611cf0cd6a",
+            "rate": "",
+            "digits": "",
+            "note": "",
+            "customer_fullname": "",
+            "customer_email": "",
+            "demand_customer": "",
+            "interest_segment": "",
+            "additional": {
+                "data1": 1,
+                "miengiam": "Giảm 50% gốc",
+                "phone_number": "0775702541",
+                "sdt": "0981218709",
+                "ten": "Đỗ Thị Ngà"
+            },
+            "autocall_presskey_epoch": "",
+            "time_presskey": "",
+            "presskey_delay": 0,
+            "autocall_recording_url": "https://pbx-loadtest.tel4vn.com/app/xml_cdr/download.php?id=QySNgNBK4NHgm"
+        },
+        {
+            "id": "35a4bf10-d536-40a6-826f-7ff10ed43d94",
+            "parent_id": "35a4bf10-d536-40a6-826f-7ff10ed43d94",
+            "sip_call_id": "3188d6eb-3755-123c-18b6-fa163e71cc82",
+            "cause": "USER_BUSY",
+            "duration": 20,
+            "direction": "outbound",
+            "recording_url": "",
+            "extension": "",
+            "from_number": "02873003586",
+            "to_number": "0775702541",
+            "receive_dest": "",
+            "time_started": "2023-03-07 13:36:12",
+            "time_answered": "",
+            "time_ended": "2023-03-07 13:36:32",
+            "time_ringging": "2023-03-07 13:36:12",
+            "status": "busy",
+            "billsec": 0,
+            "app": "autocall",
+            "press_key": "{}",
+            "fullname": "",
+            "email": "",
+            "username": "",
+            "sip_hangup_disposition": "recv_refuse",
+            "campaign_uuid": "fdccdbf2-bc4b-4a0f-a7ea-cb0239daaa7d",
+            "lead_uuid": "2f8b1c0f-da79-4dfb-959d-1b611cf0cd6a",
+            "rate": "",
+            "digits": "",
+            "note": "",
+            "customer_fullname": "",
+            "customer_email": "",
+            "demand_customer": "",
+            "interest_segment": "",
+            "additional": {
+                "data1": 1,
+                "miengiam": "Giảm 50% gốc",
+                "phone_number": "0775702541",
+                "sdt": "0981218709",
+                "ten": "Đỗ Thị Ngà"
+            },
+            "autocall_presskey_epoch": "",
+            "time_presskey": "",
+            "presskey_delay": 0,
+            "autocall_recording_url": "https://pbx-loadtest.tel4vn.com/app/xml_cdr/download.php?id=Nc73cZ9Ba44aD"
+        }
+    ],
+    "limit": 2,
+    "offset": -1,
+    "total": 6
 }
 ```
-
-> Flex response trả về:
-
-```json
-{
-  "data": [
-    {
-      "cdrId": "0c1d6ff3-c9b0-4fd1-8f5c-7be53f5f6973",
-      "sip_call_id": "80bea701-49de-123a-89ab-fa163e3b9b38",
-      "recordFile": "http://recording.demo/0c1d6ff3-c9b0-4fd1-8f5c-7be53f5f6973",
-      "extensionId": "101",
-      "to": "0899888999",
-      "hangupAt": "2021-06-17 14:14:56",
-      "answeredAt": "2021-06-17 14:14:33",
-      "ringAt": "2021-06-17 14:14:36",
-      "dialAt": "2021-06-17 14:14:31",
-      "status": "answered",
-      "duration": 25,
-      "direction": "outbound",
-      "billsec": 23,
-      "customerId": "KH1"
-    },
-    {
-      "cdrId": "b689a2e3-0e12-47f4-8dc7-516c1dd10828",
-      "sip_call_id": "c92973c8-49e1-123a-89ab-fa163e3b9b38",
-      "recordFile": "",
-      "extensionId": "101",
-      "to": "0899888999",
-      "hangupAt": "2021-06-17 14:38:10",
-      "answeredAt": "",
-      "ringAt": "2021-06-17 14:38:05",
-      "dialAt": "2021-06-17 14:38:01",
-      "status": "busy",
-      "duration": 9,
-      "direction": "outbound",
-      "billsec": 0,
-      "customerId": "KH1"
-    },
-    ...
-  ],
-  "limit": 10,
-  "offset": 10,
-  "total": 35
-}
-```
-
-Trả về danh sách lịch sử cuộc gọi.
-API CDRs sử dụng 2 cơ chế để trả về dữ liệu.
-Pagination: Phân trang.
-Scroll: Cuộn trang. (Mặc định)
-
-Nếu user cung cấp trong param: page - Số trang, limit - số lượng trả về thì API sẽ trả về dữ liêu theo cơ chế Pagination.
+:::note
+- Khi Get CDR cần phải truyền thêm tham số limit và offset trong param query. Nếu không truyền, hệ thống sẽ tự set limit bằng -1 và offset bằng -1 nên sẽ không response về data CDR cần lấy
+:::
 
 ### HTTP Request
 
-`GET http://{{API_HOST}}/v2/cdr`
+`GET https://{{API_HOST}}/v3/cdr?limit=2&offset=0`
 
 ### Query Parameters
 
-| Parameter   | Mô tả                                                                        | Example                             |
-| ----------- | ---------------------------------------------------------------------------- | ----------------------------------- |
-| start_date  | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi)                      | 2021-02-18 hoặc 2021-02-18 17:20:58 |
-| end_date    | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi)                      | 2021-02-19 hoặc 2021-02-19 00:00:00 |
-| duration    | Thời hạn của cuộc gọi                                                        | 10                                  |
-| extension   | Cuộc gọi từ extension nào                                                    | 101                                 |
-| phone       | Từ hoặc tới số điện thoại nào                                                | 0899888999                          |
-| direction   | Chiều cuộc gọi (inbound, outbound, local)                                    | outbound                            |
-| limit       | Số lượng record trả về                                                       | 50                                  |
-| offset      | Vị trí bắt đầu khi query. (offset sẽ thay thế page nếu có data) (Pagination) | 0                                   |
-| application | Ứng dụng được sử dụng. (dial, autocall, autodialer)                          | autocall                            |
+| Parameter        | Description                                             | Example                              |
+| ---------------- | ------------------------------------------------------- | ------------------------------------ |
+| start_date       | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi) | 2023-03-06 hoặc 2023-03-06 17:20:58  |
+| end_date         | Tìm kiếm cdrs theo khoảng thời gian (Khởi tạo cuộc gọi) | 2023-03-07 hoặc 2023-03-07 00:00:00  |
+| extension        | Cuộc gọi từ extension nào                               | 101                                  |
+| status           | Trạng thái cuộc gọi                                     | ANSWERED                             |
+| hotline          | Tìm theo đầu số thực hiện cuộc gọi                      | 02873003586                          |
+| phone            | Từ hoặc tới số điện thoại nào                           | 0899888999                           |
+| direction        | Chiều cuộc gọi (inbound, outbound, local)               | outbound                             |
+| campaign_uuid    | Tìm kiếm theo campaign uuid                             | fdccdbf2-bc4b-4a0f-a7ea-cb0239daaa7d |
+| start_date_ended | Tìm kiếm cdrs theo khoảng thời gian (Kết thúc cuộc gọi) | 2023-03-06 hoặc 2023-03-06 17:20:58  |
+| end_date_ended   | Tìm kiếm cdrs theo khoảng thời gian (Kết thúc cuộc gọi) | 2023-03-07 hoặc 2023-03-07 00:00:00  |
+| limit            | Số lượng record trả về                                  | 50                                   |
+| offset           | Vị trí bắt đầu khi query                                | 0                                    |
 
-## Get a Specific CDR
+## Get a Specific CDR By ID
 
 ```shell
-curl -L -X GET 'http://{{API_HOST}}/v2/cdr/01b7d166-b564-42ec-80a1-4ad343225934' \
--H 'Authorization: Bearer {{TOKEN}}'
+curl --location 'https://{{API_HOST}}/v3/cdr/35a4bf10-d536-40a6-826f-7ff10ed43d94' \
+--header 'Content-type: application/json' \
+--header 'Authorization: Bearer {{TOKEN}}'
 ```
 
-> Default Response trả về:
+> Response trả về:
 
 ```json
 {
-  "id": "01b7d166-b564-42ec-80a1-4ad343225934",
-  "sip_call_id": "aabbccddee112233..",
-  "cause": "NORMAL_CLEARING",
-  "duration": 7,
-  "direction": 3,
-  "recording_url": "",
-  "extension": "101",
-  "from_number": "19001919",
-  "to_number": "0899888999",
-  "receive_dest": "",
-  "time_started": "2021-02-18 17:20:58",
-  "time_answered": "",
-  "time_ended": "2021-02-18 17:21:05",
-  "status": "BUSY",
-  "customer_id": "KH1"
-}
-```
-
-> Flex response trả về:
-
-```json
-{
-  "cdrId": "0c1d6ff3-c9b0-4fd1-8f5c-7be53f5f6973",
-  "sip_call_id": "80bea701-49de-123a-89ab-fa163e3b9b38",
-  "recordFile": "http://recording.demo/0c1d6ff3-c9b0-4fd1-8f5c-7be53f5f6973",
-  "extensionId": "101",
-  "to": "0899888999",
-  "hangupAt": "2021-06-17 14:14:56",
-  "answeredAt": "2021-06-17 14:14:33",
-  "ringAt": "2021-06-17 14:14:36",
-  "dialAt": "2021-06-17 14:14:31",
-  "status": "answered",
-  "duration": 25,
-  "direction": "outbound",
-  "billsec": 23,
-  "customerId": "KH1"
+    "id": "35a4bf10-d536-40a6-826f-7ff10ed43d94",
+    "parent_id": "35a4bf10-d536-40a6-826f-7ff10ed43d94",
+    "sip_call_id": "3188d6eb-3755-123c-18b6-fa163e71cc82",
+    "cause": "USER_BUSY",
+    "duration": 20,
+    "direction": "outbound",
+    "recording_url": "",
+    "extension": "",
+    "from_number": "02873003586",
+    "to_number": "0775702222",
+    "receive_dest": "",
+    "time_started": "2023-03-07 13:36:12",
+    "time_answered": "",
+    "time_ended": "2023-03-07 13:36:32",
+    "time_ringging": "2023-03-07 13:36:12",
+    "status": "busy",
+    "billsec": 0,
+    "app": "autocall",
+    "press_key": "{}",
+    "fullname": "",
+    "email": "",
+    "username": "",
+    "sip_hangup_disposition": "recv_refuse",
+    "campaign_uuid": "fdccdbf2-bc4b-4a0f-a7ea-cb0239daaa7d",
+    "lead_uuid": "2f8b1c0f-da79-4dfb-959d-1b611cf0cd6a",
+    "rate": "",
+    "digits": "",
+    "note": "",
+    "customer_fullname": "",
+    "customer_email": "",
+    "demand_customer": "",
+    "interest_segment": "",
+    "additional": {
+        "data1": 1,
+        "miengiam": "Giảm 50% gốc",
+        "phone_number": "0775702222",
+        "sdt": "0981218888",
+        "ten": "Đỗ Thị Ngà"
+    },
+    "autocall_presskey_epoch": "",
+    "time_presskey": "",
+    "presskey_delay": 0,
+    "autocall_recording_url": ""
 }
 ```
 
@@ -252,10 +247,10 @@ Id có thể id của CDR hoặc sip_call_id trong bản tin
 
 ### HTTP Request
 
-`GET http://{{API_HOST}}/v2/cdr/<ID>`
+`GET https://{{API_HOST}}/v3/cdr/{{id}}`
 
 ### URL Parameters
 
-| Parameter | Mô tả                                     |
+| Parameter | Description                               |
 | --------- | ----------------------------------------- |
-| ID        | Id của CDR hoặc sip_call_id trong bản tin |
+| id        | Id của CDR hoặc sip_call_id trong bản tin |

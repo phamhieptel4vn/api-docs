@@ -1,0 +1,27 @@
+{
+  "unversionedId": "callcenter-portal-admin-guide/monitor-callcenter",
+  "id": "callcenter-portal-admin-guide/monitor-callcenter",
+  "title": "Giám sát - Monitor Call Center",
+  "description": "Bước 1: Chon vào menu Giám sát - Monitor, sau đó chọn vào menu Call Center",
+  "source": "@site/docs/callcenter-portal-admin-guide/monitor-callcenter.md",
+  "sourceDirName": "callcenter-portal-admin-guide",
+  "slug": "/callcenter-portal-admin-guide/monitor-callcenter",
+  "permalink": "/callcenter-portal-admin-guide/monitor-callcenter",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-portal-admin-guide/monitor-callcenter.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Giám sát - Monitor Call Queue",
+    "permalink": "/callcenter-portal-admin-guide/monitor-queue"
+  },
+  "next": {
+    "title": "Monitor Campaign Autocall",
+    "permalink": "/callcenter-portal-admin-guide/monitor-campaign"
+  }
+}

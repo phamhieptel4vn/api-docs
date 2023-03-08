@@ -1,0 +1,24 @@
+{
+  "unversionedId": "callcenter-portal-admin-guide/create-list",
+  "id": "callcenter-portal-admin-guide/create-list",
+  "title": "create-list",
+  "description": "",
+  "source": "@site/docs/callcenter-portal-admin-guide/create-list.md",
+  "sourceDirName": "callcenter-portal-admin-guide",
+  "slug": "/callcenter-portal-admin-guide/create-list",
+  "permalink": "/callcenter-portal-admin-guide/create-list",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-portal-admin-guide/create-list.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "create-group",
+    "permalink": "/callcenter-portal-admin-guide/create-group"
+  },
+  "next": {
+    "title": "create-role",
+    "permalink": "/callcenter-portal-admin-guide/create-role"
+  }
+}

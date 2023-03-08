@@ -20,5 +20,9 @@
   "previous": {
     "title": "Tenant",
     "permalink": "/pbx-api/tenant"
+  },
+  "next": {
+    "title": "CallCenter Portal Admin Guide",
+    "permalink": "/category/callcenter-portal-admin-guide"
   }
 }

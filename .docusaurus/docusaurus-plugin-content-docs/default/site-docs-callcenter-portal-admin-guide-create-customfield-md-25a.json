@@ -1,0 +1,24 @@
+{
+  "unversionedId": "callcenter-portal-admin-guide/create-customfield",
+  "id": "callcenter-portal-admin-guide/create-customfield",
+  "title": "create-customfield",
+  "description": "",
+  "source": "@site/docs/callcenter-portal-admin-guide/create-customfield.md",
+  "sourceDirName": "callcenter-portal-admin-guide",
+  "slug": "/callcenter-portal-admin-guide/create-customfield",
+  "permalink": "/callcenter-portal-admin-guide/create-customfield",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-portal-admin-guide/create-customfield.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "create-category",
+    "permalink": "/callcenter-portal-admin-guide/create-category"
+  },
+  "next": {
+    "title": "create-department",
+    "permalink": "/callcenter-portal-admin-guide/create-department"
+  }
+}

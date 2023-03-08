@@ -2,7 +2,7 @@
   "unversionedId": "callcenter-api/autodial",
   "id": "callcenter-api/autodial",
   "title": "Autodial",
-  "description": "Nhận dữ liệu queue",
+  "description": "Create Campaign Autodialer",
   "source": "@site/docs/callcenter-api/autodial.md",
   "sourceDirName": "callcenter-api",
   "slug": "/callcenter-api/autodial",
@@ -18,8 +18,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Click-to-call",
-    "permalink": "/callcenter-api/click2call"
+    "title": "Template",
+    "permalink": "/callcenter-api/template"
   },
   "next": {
     "title": "Autocall",

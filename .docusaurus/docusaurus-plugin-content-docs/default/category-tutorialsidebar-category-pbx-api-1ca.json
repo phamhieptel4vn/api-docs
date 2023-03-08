@@ -5,8 +5,8 @@
   "permalink": "/category/pbx-api",
   "navigation": {
     "previous": {
-      "title": "Customer",
-      "permalink": "/callcenter-api/customer"
+      "title": "Statistic",
+      "permalink": "/callcenter-api/statistic"
     },
     "next": {
       "title": "Authentication",

@@ -2,7 +2,7 @@
   "unversionedId": "callcenter-api/autocall",
   "id": "callcenter-api/autocall",
   "title": "Autocall",
-  "description": "Nhận dữ liệu queue",
+  "description": "Create Campaign Autocall",
   "source": "@site/docs/callcenter-api/autocall.md",
   "sourceDirName": "callcenter-api",
   "slug": "/callcenter-api/autocall",
@@ -22,7 +22,7 @@
     "permalink": "/callcenter-api/autodial"
   },
   "next": {
-    "title": "Event",
-    "permalink": "/callcenter-api/event"
+    "title": "Carrier",
+    "permalink": "/callcenter-api/carrier"
   }
 }

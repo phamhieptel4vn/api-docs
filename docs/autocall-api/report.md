@@ -267,7 +267,14 @@ API này dùng  để lấy kết quả thống kê cuộc gọi theo khách hà
 ### HTTP Request
 
 `GET https://{{API_HOST}}/v3/report/call/lead`
+### Query Parameters
 
+| Parameter     | Description                                           | Example                              | Required |
+| ------------- | ----------------------------------------------------- | ------------------------------------ | -------- |
+| campaign_uuid | UUID Chiến dịch thực hiện cuộc gọi                    | fdccdbf2-bc4b-4a0f-a7ea-cb0239daaa7d | x        |
+| start_time    | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2000%3A00%3A00            |          |
+| end_time      | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2023%3A59%3A59            |          |
+| list_uuid     | UUID của danh sách khách hàng được gán với chiến dịch | 5ec47358-d062-4385-9fe7-b5e571055f01 |          |
 ## Report Lead of Campaign by Campaign ID
 
 ```shell

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "callcenter-portal-admin-guide/import-lead",
+  "id": "callcenter-portal-admin-guide/import-lead",
+  "title": "import-lead",
+  "description": "",
+  "source": "@site/docs/callcenter-portal-admin-guide/import-lead.md",
+  "sourceDirName": "callcenter-portal-admin-guide",
+  "slug": "/callcenter-portal-admin-guide/import-lead",
+  "permalink": "/callcenter-portal-admin-guide/import-lead",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/callcenter-portal-admin-guide/import-lead.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "create-user",
+    "permalink": "/callcenter-portal-admin-guide/create-user"
+  },
+  "next": {
+    "title": "manager-lead",
+    "permalink": "/callcenter-portal-admin-guide/manager-lead"
+  }
+}

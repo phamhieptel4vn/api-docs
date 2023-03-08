@@ -18,8 +18,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Autocall",
-    "permalink": "/callcenter-api/autocall"
+    "title": "Carrier",
+    "permalink": "/callcenter-api/carrier"
   },
   "next": {
     "title": "User",

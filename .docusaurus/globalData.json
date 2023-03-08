@@ -66,6 +66,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "callcenter-api/agent",
+              "path": "/callcenter-api/agent",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "callcenter-api/auth",
               "path": "/callcenter-api/auth",
               "sidebar": "tutorialSidebar"
@@ -83,6 +88,11 @@
             {
               "id": "callcenter-api/call",
               "path": "/callcenter-api/call",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/carrier",
+              "path": "/callcenter-api/carrier",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -106,8 +116,168 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "callcenter-api/group",
+              "path": "/callcenter-api/group",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/lead",
+              "path": "/callcenter-api/lead",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/list",
+              "path": "/callcenter-api/list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/report",
+              "path": "/callcenter-api/report",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/statistic",
+              "path": "/callcenter-api/statistic",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-api/template",
+              "path": "/callcenter-api/template",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "callcenter-api/user",
               "path": "/callcenter-api/user",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/add-user-to-group",
+              "path": "/callcenter-portal-admin-guide/add-user-to-group",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/blacklist",
+              "path": "/callcenter-portal-admin-guide/blacklist",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/cdrs",
+              "path": "/callcenter-portal-admin-guide/cdrs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-campaign",
+              "path": "/callcenter-portal-admin-guide/create-campaign",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-category",
+              "path": "/callcenter-portal-admin-guide/create-category",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-customfield",
+              "path": "/callcenter-portal-admin-guide/create-customfield",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-department",
+              "path": "/callcenter-portal-admin-guide/create-department",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-disposition",
+              "path": "/callcenter-portal-admin-guide/create-disposition",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-group",
+              "path": "/callcenter-portal-admin-guide/create-group",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-list",
+              "path": "/callcenter-portal-admin-guide/create-list",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-role",
+              "path": "/callcenter-portal-admin-guide/create-role",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/create-user",
+              "path": "/callcenter-portal-admin-guide/create-user",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/dashboard",
+              "path": "/callcenter-portal-admin-guide/dashboard",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/import-lead",
+              "path": "/callcenter-portal-admin-guide/import-lead",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/login-account",
+              "path": "/callcenter-portal-admin-guide/login-account",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/manager-lead",
+              "path": "/callcenter-portal-admin-guide/manager-lead",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/manager-user",
+              "path": "/callcenter-portal-admin-guide/manager-user",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/monitor-agent",
+              "path": "/callcenter-portal-admin-guide/monitor-agent",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/monitor-callcenter",
+              "path": "/callcenter-portal-admin-guide/monitor-callcenter",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/monitor-campaign",
+              "path": "/callcenter-portal-admin-guide/monitor-campaign",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/monitor-queue",
+              "path": "/callcenter-portal-admin-guide/monitor-queue",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/qc",
+              "path": "/callcenter-portal-admin-guide/qc",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/recordings",
+              "path": "/callcenter-portal-admin-guide/recordings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/report",
+              "path": "/callcenter-portal-admin-guide/report",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/speech-to-text",
+              "path": "/callcenter-portal-admin-guide/speech-to-text",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "callcenter-portal-admin-guide/voicemail",
+              "path": "/callcenter-portal-admin-guide/voicemail",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -213,6 +383,11 @@
             {
               "id": "/category/pbx-api",
               "path": "/category/pbx-api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/callcenter-portal-admin-guide",
+              "path": "/category/callcenter-portal-admin-guide",
               "sidebar": "tutorialSidebar"
             }
           ],

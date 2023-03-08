@@ -3,11 +3,10 @@ title: Click-to-call
 sidebar_position: 7
 ---
 
-
-## Synchronous - GET
+## Synchronous
 
 ```shell
-curl -L -X GET 'http://{{API_HOST}}/v1/click2call?ext=101&phone=0899098899' \
+curl -L -X GET 'https://{{API_HOST}}/v1/click2call?ext=101&phone=0899098899' \
 -H 'Authorization: Bearer {{TOKEN}}'
 ```
 
@@ -31,19 +30,22 @@ curl -L -X GET 'http://{{API_HOST}}/v1/click2call?ext=101&phone=0899098899' \
 
 API dùng để thực hiện click-to-call.
 
-Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension của domain, sau khi extension pickup cuộc gọi thì có một cuộc gọi đẩy ra số mobile dựa vào parameter của API.
+:::note
+- Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension của domain, sau khi extension pickup cuộc gọi thì có một cuộc gọi đẩy ra số mobile dựa vào parameter của API.
+- Nếu Extension đã login thì API Click-to-call Synchronous sẽ chờ tới khi extension nhấc máy hoặc ngắt máy.
+- Nếu như giá trị is_encode = true thì phía client sẽ gửi phone đã được encode Base64 tới API, API sẽ decode và thực hiện cuộc gọi.
+:::
 
-Nếu Extension đã login thì API Click-to-call Synchronous sẽ chờ tới khi extension nhấc máy hoặc ngắt máy.
-
+:::tip
 Đầu số hotline dùng để gọi ra ngoài bạn vui lòng liên hệ team TEL4VN để được cung cấp và cài đặt.
-
+:::
 ### HTTP Request
 
-`GET http://{{API_HOST}}/v1/click2call?ext=<EXTENSION>&phone=<PHONE>`
+`GET https://{{API_HOST}}/v1/click2call?ext=<EXTENSION>&phone=<PHONE>`
 
 ### URL Parameters
 
-| Parameter       | Mô tả                                                     | Required |
+| Parameter       | Description                                               | Required |
 | --------------- | --------------------------------------------------------- | -------- |
 | ext             | Extension thực hiện cuộc gọi                              | true     |
 | phone           | Số điện thoại sẽ được gọi tới                             | true     |
@@ -53,12 +55,12 @@ Nếu Extension đã login thì API Click-to-call Synchronous sẽ chờ tới k
 | dest_cid_number | Số điện thoại sẽ chèn vào bản tin SIP                     | false    |
 | auto_answer     | Tự động nhấc máy phía extension. Default: false           | false    |
 | hotline         | Đầu số hotline để thực hiện cuộc gọi ra ngoài             | false    |
-| customer_id     | Mã khách hàng                                             | false    |
+| is_encode       | Mã hoá số điện thoại đầu vào                              | false    |
 
-## Asynchronous - GET
+## Asynchronous
 
 ```shell
-curl -L -X GET 'http://{{API_HOST}}/v1/click2call/async?ext=101&phone=0899098899' \
+curl -L -X GET 'https://{{API_HOST}}/v1/click2call/async?ext=101&phone=0899098899' \
 -H 'Authorization: Bearer {{TOKEN}}'
 ```
 
@@ -83,19 +85,24 @@ curl -L -X GET 'http://{{API_HOST}}/v1/click2call/async?ext=101&phone=0899098899
 
 API dùng để thực hiện click-to-call.
 
-Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension của domain, sau khi extension pickup cuộc gọi thì có một cuộc gọi đẩy ra số mobile dựa vào parameter của API.
+:::note
+- Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension của domain, sau khi extension pickup cuộc gọi thì có một cuộc gọi đẩy ra số mobile dựa vào parameter của API.
+- API Click-to-call Asynchronous sẽ không chờ tới khi extension nhấc máy hoặc ngắt máy, mà sẽ trả về call_id nếu extension đã login và trả về mã lỗi nếu extension không login.
+- Nếu như giá trị is_encode = true thì phía client sẽ gửi phone đã được encode Base64 tới API, API sẽ decode và thực hiện cuộc gọi.
+:::
 
-API Click-to-call Asynchronous sẽ không chờ tới khi extension nhấc máy hoặc ngắt máy, mà sẽ trả về call_id nếu extension đã login và trả về mã lỗi nếu extension không login.
-
+:::tip
 Đầu số hotline dùng để gọi ra ngoài bạn vui lòng liên hệ team TEL4VN để được cung cấp và cài đặt.
+:::
+
 
 ### HTTP Request
 
-`GET http://{{API_HOST}}/v1/click2call/async?ext=<EXTENSION>&phone=<PHONE>`
+`GET https://{{API_HOST}}/v1/click2call/async?ext=<EXTENSION>&phone=<PHONE>`
 
 ### URL Parameters
 
-| Parameter       | Mô tả                                                     | Required |
+| Parameter       | Description                                               | Required |
 | --------------- | --------------------------------------------------------- | -------- |
 | ext             | Extension thực hiện cuộc gọi                              | true     |
 | phone           | Số điện thoại sẽ được gọi tới                             | true     |
@@ -105,63 +112,11 @@ API Click-to-call Asynchronous sẽ không chờ tới khi extension nhấc máy
 | dest_cid_number | Số điện thoại sẽ chèn vào bản tin SIP                     | false    |
 | auto_answer     | Tự động nhấc máy phía extension. Default: false           | false    |
 | hotline         | Đầu số hotline để thực hiện cuộc gọi ra ngoài             | false    |
-| customer_id     | Mã khách hàng                                             | false    |
-
-## Asynchronous - POST
-
-```shell
-curl -L -X POST 'http://{{API_HOST}}/v2/click2call' \
--H 'Authorization: Bearer {{TOKEN}}'
--H 'Content-Type: application/json' \
---data-raw '{
-  "id": "KH1",
-  "mobile": "0899098899",
-  "agent": "101"
-}'
-```
-
-> Response trả về:
-
-```json
-{
-  "code": "0",
-  "call_id": "50038035-0717-40f1-b7af-eb92021b012e",
-  "status": "success"
-}
-```
-
-> Error Response trả về:
-
-```json
-{
-  "code": "1",
-  "status": "fail",
-  "message": "User not registered extension with Softphone or IP Phone",
-  "error": "USER_NOT_REGISTERED"
-}
-```
-
-API dùng để thực hiện click-to-call.
-
-Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension của domain, sau khi extension pickup cuộc gọi thì có một cuộc gọi đẩy ra số mobile dựa vào parameter của API.
-
-API Click-to-call Asynchronous sẽ không chờ tới khi extension nhấc máy hoặc ngắt máy, mà sẽ trả về call_id nếu extension đã login và trả về mã lỗi nếu extension không login.
-
-### HTTP Request
-
-`POST http://{{API_HOST}}/v2/click2call`
-
-### Body
-
-| Parameter | Mô tả                                |
-| --------- | ------------------------------------ |
-| id        | ID của khách hàng.                   |
-| mobile    | Số điện thoại cần gọi của khách hàng |
-| agent     | Số máy lẻ của chuyên viên            |
+| is_encode       | Mã hoá số điện thoại đầu vào                              | false    |
 
 ## Error
 
-| Parameter           | Mô tả                                         |
+| Parameter           | Description                                   |
 | ------------------- | --------------------------------------------- |
 | USER_BUSY           | Người dùng hiện tại đang bận                  |
 | USER_NOT_REGISTERED | Người dùng chưa login Softphone hoặc IP Phone |
