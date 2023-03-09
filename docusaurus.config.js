@@ -77,7 +77,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'overview',
+            docId: 'pbx-api/auth',
             position: 'left',
             label: 'PBX APIs',
           },
