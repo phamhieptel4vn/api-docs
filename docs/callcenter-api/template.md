@@ -142,14 +142,15 @@ Tốc độ đọc tăng dần từ 0 đến 2. Với 1 là tốc độ đọc b
 
 Các giọng đọc kịch bản đang hỗ trợ
 
-| Id         | Description            |
-| ---------- | ---------------------- |
-| north-m-01 | Miền Bắc 1 - Giọng nam |
-| north-f-01 | Miền Bắc 1 - Giọng nữ  |
-| north-m-02 | Miền Bắc 2 - Giọng nam |
-| north-f-02 | Miền Bắc 2 - Giọng nữ  |
-| south-m-03 | Miền Nam 1 - Giọng nam |
-| south-f-03 | Miền Nam 1 - Giọng nữ  |
+| Id         | Description                     |
+| ---------- | ------------------------------- |
+| north-m-01 | Miền Bắc 1 - Giọng nam (Google) |
+| north-f-01 | Miền Bắc 1 - Giọng nữ (Google)  |
+| north-m-02 | Miền Bắc 2 - Giọng nam (Zalo)   |
+| north-f-02 | Miền Bắc 2 - Giọng nữ  (Zalo)   |
+| south-m-03 | Miền Nam 1 - Giọng nam (Zalo)   |
+| south-f-03 | Miền Nam 1 - Giọng nữ  (Zalo)   |
+
 
 ## Create Template Audio File
 

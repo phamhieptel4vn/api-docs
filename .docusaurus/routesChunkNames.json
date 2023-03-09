@@ -49,7 +49,7 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/-347": {
+  "/-b88": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---c-87-aee"
@@ -59,10 +59,6 @@
   "/-dc5": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---1-db-6ee"
-  },
-  "/auth/-ec0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---auth-de-1-a3f"
   },
   "/autocall-api/audio-feb": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -172,114 +168,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---callcenter-api-user-5-b-5-02f"
   },
-  "/callcenter-portal-admin-guide/add-user-to-group-3f0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-add-user-to-group-4-f-8-22c"
-  },
-  "/callcenter-portal-admin-guide/blacklist-384": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-blacklist-9-cf-848"
-  },
-  "/callcenter-portal-admin-guide/cdrs-f81": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-cdrsd-98-004"
-  },
-  "/callcenter-portal-admin-guide/create-campaign-51d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-campaign-142-a12"
-  },
-  "/callcenter-portal-admin-guide/create-category-351": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-category-631-1bc"
-  },
-  "/callcenter-portal-admin-guide/create-customfield-2eb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-customfield-25-a-922"
-  },
-  "/callcenter-portal-admin-guide/create-department-134": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-department-938-ad6"
-  },
-  "/callcenter-portal-admin-guide/create-disposition-1a8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-dispositionc-2-d-312"
-  },
-  "/callcenter-portal-admin-guide/create-group-d83": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-groupf-8-d-11a"
-  },
-  "/callcenter-portal-admin-guide/create-list-734": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-list-541-9b6"
-  },
-  "/callcenter-portal-admin-guide/create-role-36f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-role-3-aa-fb1"
-  },
-  "/callcenter-portal-admin-guide/create-user-fb9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-create-usere-45-197"
-  },
-  "/callcenter-portal-admin-guide/dashboard-394": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-dashboard-452-941"
-  },
-  "/callcenter-portal-admin-guide/import-lead-285": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-import-leadf-7-b-621"
-  },
-  "/callcenter-portal-admin-guide/login-account-144": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-login-account-4-e-8-b17"
-  },
-  "/callcenter-portal-admin-guide/manager-lead-226": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-manager-lead-500-51b"
-  },
-  "/callcenter-portal-admin-guide/manager-user-03d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-manager-usera-04-226"
-  },
-  "/callcenter-portal-admin-guide/monitor-agent-cba": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-monitor-agentd-54-d6b"
-  },
-  "/callcenter-portal-admin-guide/monitor-callcenter-c2f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-monitor-callcenterebb-24b"
-  },
-  "/callcenter-portal-admin-guide/monitor-campaign-3b5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-monitor-campaign-1-ba-407"
-  },
-  "/callcenter-portal-admin-guide/monitor-queue-28f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-monitor-queueb-51-100"
-  },
-  "/callcenter-portal-admin-guide/qc-950": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-qcdae-e6b"
-  },
-  "/callcenter-portal-admin-guide/recordings-1ec": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-recordingsf-68-331"
-  },
-  "/callcenter-portal-admin-guide/report-b06": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-reportd-38-bee"
-  },
-  "/callcenter-portal-admin-guide/speech-to-text-b2f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-speech-to-text-14-e-856"
-  },
-  "/callcenter-portal-admin-guide/voicemail-c08": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---callcenter-portal-admin-guide-voicemailb-46-f46"
-  },
-  "/category/authentication-f1a": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-authentication-4-b-7-a5c"
-  },
   "/category/autocall-api-365": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---category-autocall-api-8-b-4-efa"
@@ -288,17 +176,9 @@
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---category-callcenter-apibc-0-138"
   },
-  "/category/callcenter-portal-admin-guide-92a": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-callcenter-portal-admin-guide-843-50a"
-  },
   "/category/pbx-api-3b7": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---category-pbx-api-0-df-24b"
-  },
-  "/intro-283": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-0-e-3-7b8"
   },
   "/pbx-api/auth-a95": {
     "__comp": "__comp---theme-doc-item-178-a40",

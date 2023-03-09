@@ -18,12 +18,8 @@
     "title": "Overview"
   },
   "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Tutorial Intro",
-    "permalink": "/intro"
-  },
   "next": {
-    "title": "Authentication",
-    "permalink": "/category/authentication"
+    "title": "Autocall API",
+    "permalink": "/category/autocall-api"
   }
 }

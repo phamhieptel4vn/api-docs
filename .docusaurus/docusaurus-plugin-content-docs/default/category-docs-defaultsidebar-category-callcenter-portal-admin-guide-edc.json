@@ -1,0 +1,16 @@
+{
+  "title": "CallCenter Portal Admin Guide",
+  "description": "5 minutes to learn the most important PITEL concepts.",
+  "slug": "/category/callcenter-portal-admin-guide",
+  "permalink": "/docs/category/callcenter-portal-admin-guide",
+  "navigation": {
+    "previous": {
+      "title": "Voicemail",
+      "permalink": "/docs/pbx-api/voicemail"
+    },
+    "next": {
+      "title": "Login Account",
+      "permalink": "/docs/callcenter-portal-admin-guide/login-account"
+    }
+  }
+}

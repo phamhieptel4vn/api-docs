@@ -21,6 +21,12 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+  "markdown": {
+    "mermaid": true
+  },
+  "themes": [
+    "@docusaurus/theme-mermaid"
+  ],
   "presets": [
     [
       "classic",
@@ -53,6 +59,18 @@ export default {
           "docId": "overview",
           "position": "left",
           "label": "PBX APIs"
+        },
+        {
+          "type": "doc",
+          "docId": "autocall-api/auth",
+          "position": "left",
+          "label": "Autocall APIs"
+        },
+        {
+          "type": "doc",
+          "docId": "callcenter-api/auth",
+          "position": "left",
+          "label": "CallCenter APIs"
         }
       ],
       "hideOnScroll": false
@@ -266,6 +284,13 @@ export default {
         }
       ]
     },
+    "mermaid": {
+      "theme": {
+        "dark": "dark",
+        "light": "default"
+      },
+      "options": {}
+    },
     "colorMode": {
       "defaultMode": "light",
       "disableSwitch": false,
@@ -291,14 +316,10 @@ export default {
   ],
   "customFields": {},
   "plugins": [],
-  "themes": [],
   "scripts": [],
   "headTags": [],
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "mermaid": false
-  }
+  "noIndex": false
 };

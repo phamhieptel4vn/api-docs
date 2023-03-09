@@ -35,7 +35,7 @@ Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension
 
 Nếu Extension đã login thì API Click-to-call Synchronous sẽ chờ tới khi extension nhấc máy hoặc ngắt máy.
 
-:::tip
+:::tip My tip
 Đầu số hotline dùng để gọi ra ngoài bạn vui lòng liên hệ team TEL4VN để được cung cấp và cài đặt.
 Nếu như giá trị is_encode = true thì phía client sẽ gửi phone đã được encode Base64 tới API, API sẽ decode và thực hiện cuộc gọi.
 :::
@@ -90,7 +90,7 @@ Sau khi thực hiện click-to-call, hệ thống sẽ gọi vào số extension
 
 API Click-to-call Asynchronous sẽ không chờ tới khi extension nhấc máy hoặc ngắt máy, mà sẽ trả về call_id nếu extension đã login và trả về mã lỗi nếu extension không login.
 
-:::tip
+:::tip My tip
 Đầu số hotline dùng để gọi ra ngoài bạn vui lòng liên hệ team TEL4VN để được cung cấp và cài đặt.
 Nếu như giá trị is_encode = true thì phía client sẽ gửi phone đã được encode Base64 tới API, API sẽ decode và thực hiện cuộc gọi.
 :::

@@ -36,7 +36,7 @@ API dùng để thực hiện click-to-call.
 - Nếu như giá trị is_encode = true thì phía client sẽ gửi phone đã được encode Base64 tới API, API sẽ decode và thực hiện cuộc gọi.
 :::
 
-:::tip
+:::tip My tip
 Đầu số hotline dùng để gọi ra ngoài bạn vui lòng liên hệ team TEL4VN để được cung cấp và cài đặt.
 :::
 ### HTTP Request
@@ -91,7 +91,7 @@ API dùng để thực hiện click-to-call.
 - Nếu như giá trị is_encode = true thì phía client sẽ gửi phone đã được encode Base64 tới API, API sẽ decode và thực hiện cuộc gọi.
 :::
 
-:::tip
+:::tip My tip
 Đầu số hotline dùng để gọi ra ngoài bạn vui lòng liên hệ team TEL4VN để được cung cấp và cài đặt.
 :::
 

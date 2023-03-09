@@ -4,6 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Pitel',
@@ -31,7 +32,10 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       'classic',
@@ -76,6 +80,18 @@ const config = {
             docId: 'overview',
             position: 'left',
             label: 'PBX APIs',
+          },
+          {
+            type: 'doc',
+            docId: 'autocall-api/auth',
+            position: 'left',
+            label: 'Autocall APIs',
+          },
+          {
+            type: 'doc',
+            docId: 'callcenter-api/auth',
+            position: 'left',
+            label: 'CallCenter APIs',
           },
         ],
       },

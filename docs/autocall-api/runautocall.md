@@ -88,7 +88,7 @@ API này dùng để nhận thông tin và đẩy cuộc gọi autocall theo k�
 | phone_number   | Số điện thoại nhận cuộc gọi | x        |
 | params.ten,sdt | key_field                   | x        |
 
-:::tip
+:::tip My tip
 Một số lưu ý:
 - Nếu muốn đọc đúng khoản tiền (Không đọc từng số) - truyền dữ liệu theo format: “10410000”
 - Nếu muốn đọc từng số (Ví dụ số điện thoại) - truyền dữ liệu theo format: 1 2 3 4 5 6 hoặc “0 9 8 7 6 5 4 3 2 1”
