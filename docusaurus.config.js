@@ -63,6 +63,27 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'autocall',
+        path: 'autocall',
+        routeBasePath: 'autocall',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'callcenter',
+        path: 'callcenter',
+        routeBasePath: 'callcenter',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -82,16 +103,16 @@ const config = {
             label: 'PBX APIs',
           },
           {
-            type: 'doc',
-            docId: 'autocall-api/auth',
+            to: '/autocall',
             position: 'left',
-            label: 'Autocall APIs',
+            label: 'Autocall',
+            activeBaseRegex: `/autocall/`,
           },
           {
-            type: 'doc',
-            docId: 'callcenter-api/auth',
+            to: '/callcenter',
             position: 'left',
-            label: 'CallCenter APIs',
+            label: 'Call Center',
+            activeBaseRegex: `/callcenter/`,
           },
         ],
       },
