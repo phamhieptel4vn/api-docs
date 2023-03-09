@@ -18,7 +18,7 @@ Access Token sẽ có giá trị trong vòng 24h. Hết hạn thì tiến hành 
 
 Lấy API Key và xác thực.
 
-[Authentication](/callcenter-api/auth)
+[Authentication](/callcenter/auth)
 
 :::
 
@@ -44,10 +44,10 @@ Sau khi kết thúc cuộc gọi, có thể lấy data cuộc gọi thông qua 2
 
 Webhook : Nhận data cuộc gọi chủ động, lưu bên thứ 3
 
-[Event Hook](/callcenter-api/event)
+[Event Hook](/callcenter/event)
 
 API lịch sử : Nhận dữ liệu qua API của Pitel
 
-[Call Detail Records](/callcenter-api/cdr)
+[Call Detail Records](/callcenter/cdr)
 
 :::

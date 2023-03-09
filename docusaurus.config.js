@@ -98,7 +98,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'pbx-api/auth',
+            docId: 'auth',
             position: 'left',
             label: 'PBX APIs',
           },
@@ -113,6 +113,12 @@ const config = {
             position: 'left',
             label: 'Call Center',
             activeBaseRegex: `/callcenter/`,
+          },
+          {
+            to: 'https://portal.tel4vn.com/docs',
+            position: 'left',
+            label: 'SDK',
+            activeBaseRegex: `https://portal.tel4vn.com/docs`,
           },
         ],
       },
