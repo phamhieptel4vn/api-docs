@@ -1,5 +1,5 @@
 ---
-title: Backlist
+title: Blacklist
 sidebar_position: 3
 ---
 
