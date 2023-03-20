@@ -82,6 +82,15 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'portal_autocall_guide',
+        path: 'portal_autocall_guide',
+        routeBasePath: 'portal_autocall_guide',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
   ],
 
   themeConfig:
@@ -105,14 +114,20 @@ const config = {
           {
             to: '/autocall',
             position: 'left',
-            label: 'Autocall',
+            label: 'Autocall APIs',
             activeBaseRegex: `/autocall/`,
           },
           {
             to: '/callcenter',
             position: 'left',
-            label: 'Call Center',
+            label: 'Call Center APIs',
             activeBaseRegex: `/callcenter/`,
+          },
+          {
+            to: '/portal_autocall_guide',
+            position: 'left',
+            label: 'Autocall Portal Guide',
+            activeBaseRegex: `/portal_autocall_guide/`,
           },
           {
             to: 'https://portal.tel4vn.com/docs',
