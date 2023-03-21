@@ -42,3 +42,15 @@ Hệ thống sẽ popup thông báo thêm mới thành công
 Menu sau khi đã thêm số DNC mới
 
 ![PITEL](./img/before_add_dnc.png)
+
+### Bước 4: Để xóa một số ra khỏi danh sách DNC ta ấn vào biểu tượng thùng rác ở cột Thao Tác
+
+![PITEL](./img/delete_dnc1.png)
+
+Chọn xóa để xác nhận
+
+![PITEL](./img/delete_dnc2.png)
+
+Hệ thống sẽ popup thông báo xóa thành công
+
+![PITEL](./img/delete_dnc3.png)
