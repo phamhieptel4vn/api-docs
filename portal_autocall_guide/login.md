@@ -1,5 +1,6 @@
 ---
 title: Login
+slug: /
 sidebar_position: 1
 ---
 

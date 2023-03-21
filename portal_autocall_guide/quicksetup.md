@@ -74,3 +74,49 @@ Tải lên thành công hệ thống sẽ hiển thị dữ liệu upload ngay t
 
 ### Bước 8: Ở S3 Kịch Bản Gọi được dùng để cấu hình kịch bản tuần tự các file âm thanh, Text To Speech (chuyển đổi thoại) sẽ phát nội dung như thế nào, thứ tự ra làm sao để khi thuê bao nhấc máy lên có thể nghe được những nội dung đã thiết lập. Điền đầy đủ các thông số cấu hình sau đó ấn Kế Tiếp.
 ![PITEL](./img/Script_QuickSetup1.png)
+```jsx title="Giải thích thông số"
+- Tên kịch bản: tên của kịch bản gọi
+- Giọng nói: giọng nói của Text To Speech (chuyển đổi thoại), hệ thống hỗ trợ giọng Bắc, Nam từ Google và Zalo AI.
+ + Male (North) - Google: giọng nam Bắc Google
+ + Female (North) - Google: giọng nữ Bắc Google
+ + Male (North) -  Zalo: giọng nam Bắc Zalo
+ + Female (North) - Zalo: giọng nữ Bắc Zalo
+ + Male (South) - Zalo: giọng nam Nam Zalo
+ + Female (South) - Zalo: giọng nữ Nam Zalo
+- Thời gian chờ nhấn phím: thời gian đợi cho thuê bao nhấn phím sử dụng trong các kịch bản có cấu hình nhấn phím phát file hoặc Text To Speech (chuyển đổi thoại).
+- Tốc độ: tốc độ đọc của Text To Speech (chuyển đổi thoại)
+- Số lần lặp lại IVR:
+- Kịch bản lời thoại: bao gồm 4 kiểu phát tương ứng với các thao tác người dùng. Khi người dùng thao tác hành động nào thì hệ thống sẽ thực hiện phát file phù hợp với hành động đó.
+ + Lời thoại khi mobile nghe máy: là lời thoại được phát ngay sau khi thuê bao nhấc máy.
+ + Lời thoại khi bấm sai phím: là lời thoại được phát nếu thuê bao ấn chưa đúng các phím hệ thống ghi nhận được như * và # vì hệ thống chỉ ghi nhận phím bấm từ 0 đến 9. Ví dụ kịch bản ấn phím 1 phát cảm ơn quý khách, thuê bao ấn phím *, # thì hệ thống sẽ phát nội dung bấm sai phím. Enable được dùng để bật tắt hoạt động kịch bản này và nghe thử để nghe thử giọng đọc có đọc đúng chỉnh tả, tốc độ cài đặt.
+ + Lời thoại khi kết thúc cuộc gọi: là lời thoại sẽ được phát sau khi lời thoại nhấc máy kết thúc.Enable được dùng để bật tắt hoạt động kịch bản này và nghe thử để nghe thử giọng đọc có đọc đúng chỉnh tả, tốc độ cài đặt.
+ ```
+![PITEL](./img/wrong_presskey.png)
+
+![PITEL](./img/script_endcall.png)
+```jsx title="Thêm phím điều hướng"
+- Thêm các phím để thuê bao có thể tương tác trực tiếp tuỳ vào mong muốn của người thiết lập kịch bản. Có thể thêm điều hướng lấy sự quan tâm của của khách hàng, ấn phím để chuyển tiếp cuộc gọi về tổng đài viên trực hotline,…
+- Thêm phím điều hướng có tổng cộng các phím từ 0 đến 9 và không thể thêm các kí tự đặc biệt như phím #, *. Ở phần Loại Thêm Phím Điều Hướng sẽ có thể lựa chọn Transfer dùng để chuyển hướng cuộc gọi vào các tổng đài viên trực hotline.
+```
+![PITEL](./img/Script_QuickSetup2.png)
+
+Có thể chỉnh sửa số phím bấm để rút ngắn thời gian lựa chọn số phím bấm phù hợp. Ví dụ khi ấn Thêm Phím Điều Hướng mặc định sẽ tạo Num0, ấn vào biểu tượng bút chì để chỉnh sửa Num 0 thành bất kỳ số nào từ 1 đến 9. Sau đó nhấn Enter để lưu lại.
+
+![PITEL](./img/add_presskey.png)
+
+```jsx
+Loại: gồm 2 loại là Audio và Text To Speech
+Audio: là một file âm thanh đã chuyển đổi theo đúng các thông số 16 Bit, 8000Hz, Mono có sẵn trong thiết bị hoặc download từ một nguồn âm thanh cụ thể.
+Text to speech: là một đoạn văn bản được chuyển đổi thành dạng thoại với các giọng đọc khác nhau theo vùng miền và AI được sử dụng là Google, Zalo….
+Nội dung: là nội dung của Text To Speech sẽ phát.
+```
+
+### Bước 9: Ở màn hình này sẽ hiển thị đầy đủ thông tin của chiến dịch gồm tên, trạng thái, nhà mạng, chế độ gọi…. Kiểm tra sau khi đúng các thông tin đã tạo thì ấn Lưu để thoát ra giao diện Thiết Lập Nhanh hoặc ấn Lưu và Chạy Ngay để thoát ra giao diện Thiết Lập Nhanh đồng thời bắt đầu chạy chiến dịch
+![PITEL](./img/thongtinchiendich_S4.png)
+
+Hệ thống sẽ popup hiển thị thông báo lưu thông tin thành công
+
+![PITEL](./img/quicksetup_succes.png)
+
+### Bước 10: Ấn nút Start để bắt đầu chạy chiến dịch nếu trước đó ấn Lưu. Nếu trước đó ấn Lưu và Chạy Ngay thì không cần phải ấn Start
+![PITEL](./img/run_campaign_quick_setup.png)
