@@ -107,7 +107,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'auth',
+            docId: 'overview',
             position: 'left',
             label: 'PBX APIs',
           },
