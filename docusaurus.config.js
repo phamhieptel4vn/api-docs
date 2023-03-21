@@ -30,7 +30,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'vn'],
   },
   markdown: {
     mermaid: true,
@@ -125,15 +125,14 @@ const config = {
           },
           {
             to: '/portal_autocall_guide',
-            position: 'left',
+            position: 'right',
             label: 'Autocall Portal Guide',
             activeBaseRegex: `/portal_autocall_guide/`,
           },
           {
-            to: 'https://portal.tel4vn.com/docs',
-            position: 'left',
+            href: 'https://portal.tel4vn.com/docs',
             label: 'SDK',
-            activeBaseRegex: `https://portal.tel4vn.com/docs`,
+            position: 'left',
           },
         ],
       },
