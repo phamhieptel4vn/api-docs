@@ -30,7 +30,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'vn'],
+    locales: ['en'],
   },
   markdown: {
     mermaid: true,
