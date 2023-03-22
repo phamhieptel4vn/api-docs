@@ -372,3 +372,11 @@ curl --location --request DELETE 'https://{{API_HOST}}/v3/carrier/0ec43e8c-0f83-
 
 `DELETE https://{{API_HOST}}/v3/carrier/{{carrier_uuid}}`
 
+## Dial Type For Carrier
+| Type                    | Description                        |
+| ----------------------- | ---------------------------------- |
+| sip_one_for_all         | Một số SIP cho tất cả              |
+| random_for_all          | Ngẫu nhiên đầu số gọi ra           |
+| random_by_network_group | Ngẫu nhiên đầu số gọi ra theo mạng |
+| channel_one_for_all     | Một kênh cho tất cả                |
+| channel_prefix          | Thêm kênh với prefix tuỳ chọn      |
