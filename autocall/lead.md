@@ -126,6 +126,86 @@ API này dùng để upload lead qua file csv và gán vào danh sách đã có 
 | list_uuid | UUID của danh sách cần gán lead vào     | x        |
 | file      | Đường dẫn file cần upload lại máy local | x        |
 
+## Post Lead Multiple
+
+```shell
+curl --location 'https://{{API_HOST}}/v3/lead/multi' \
+--header 'Authorization: Bearer {{TOKEN}}' \
+--header 'Content-Type: application/json' \
+--data '{
+    "list_uuid": "a7d4d5d8-751f-4502-b175-a988ac022717",
+    "data": [
+        {
+            "lead_name": "Phùng Phùng",
+            "phone_number": "0949719066",
+            "contract_number": "ABC123",
+            "after_day": 0
+        },
+        {
+            "lead_name": "Luân Luân",
+            "phone_number": "0934567489",
+            "contract_number": "ABCXYZ",
+            "after_day": 0
+        }
+    ]
+}'
+```
+
+> Response trả về:
+
+```json
+{
+    "message": "success",
+    "total_insert": 2
+}
+```
+
+> Error Response trả về:
+
+```json
+{
+    "error": "list_uuid is missing"
+}
+```
+
+API này dùng để tạo cùng lúc nhiều lead bằng một request và gán vào danh sách đã có sẵn.
+
+### HTTP Request
+
+`POST https://{{API_HOST}}/v3/lead`
+
+### Body
+
+> Sample data:
+
+```json
+{
+    "list_uuid": "a7d4d5d8-751f-4502-b175-a988ac022717",
+    "data": [
+        {
+            "lead_name": "Phùng Phùng",
+            "phone_number": "0949719066",
+            "contract_number": "ABC123",
+            "after_day": 0
+        },
+        {
+            "lead_name": "Luân Luân",
+            "phone_number": "0934567489",
+            "contract_number": "ABCXYZ",
+            "after_day": 0
+        }
+    ]
+}
+```
+
+| Parameter            | Description                          | Required |
+| -------------------- | ------------------------------------ | -------- |
+| list_uuid            | UUID của danh sách cần gán lead vào  | x        |
+| data                 | Các dữ liệu cần truyền vào           | x        |
+| data.lead_name       | Tên khách hàng                       |          |
+| data.phone_number    | Số điện thoại khách hàng             | x        |
+| data.contract_number | Số hợp đồng khách hàng               |          |
+| data.after_day       | Số ngày sau khi tạo lead sẽ được gọi |          |
 ## Get Lead
 
 ```shell

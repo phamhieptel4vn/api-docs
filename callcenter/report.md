@@ -765,3 +765,47 @@ API này dùng  để lấy kết quả thống kê cuộc gọi của extension
 | ------------- | ----------------------------------------------------- | ------------------------------------ | -------- |
 | start_time    | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2000%3A00%3A00            |          |
 | end_time      | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2023%3A59%3A59            |          |
+
+## Report Extension Summary With Day
+
+```shell
+curl --location 'https://{{API_HOST}}/v2/report/agent/time' \
+--header 'content-type: application/json' \
+--header 'authorization: Bearer {{TOKEN}}''
+```
+
+> Response trả về:
+
+```json
+{
+    "data": [
+        {
+            "user_uuid": "341cc092-d2ae-482c-88ec-8f2e76fa6533",
+            "domain_uuid": "c275b950-9885-4775-b1bd-09fc865afa48",
+            "username": "Agent04Internal",
+            "last_name": "",
+            "middle_name": "",
+            "first_name": "Agent04Internal",
+            "latest_time": "2023-03-08 13:49:00.249915+07",
+            "earliest_time": "2023-03-08 11:55:35.792545+07",
+            "total_pause_sec": 85011,
+            "total_wait_sec": 0,
+            "total_talk_sec": 0,
+            "total_dispo_sec": 0
+        }
+    ]
+}
+```
+
+API này dùng  để lấy kết quả thống kê cuộc gọi của extension theo ngày.
+
+### HTTP Request
+
+`GET https://{{API_HOST}}/v2/report/agent/time`
+
+### Query Parameters
+
+| Parameter     | Description                                           | Example                              | Required |
+| ------------- | ----------------------------------------------------- | ------------------------------------ | -------- |
+| start_time    | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2000%3A00%3A00            |          |
+| end_time      | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2023%3A59%3A59            |          |
