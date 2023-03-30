@@ -766,7 +766,7 @@ API này dùng  để lấy kết quả thống kê cuộc gọi của extension
 | start_time    | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2000%3A00%3A00            |          |
 | end_time      | Tìm kiếm cdrs theo khoảng thời gian                   | 2023-03-07%2023%3A59%3A59            |          |
 
-## Report Extension Summary With Day
+## Report Agent Time
 
 ```shell
 curl --location 'https://{{API_HOST}}/v2/report/agent/time' \
