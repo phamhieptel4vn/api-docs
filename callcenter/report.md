@@ -797,7 +797,7 @@ curl --location 'https://{{API_HOST}}/v2/report/agent/time' \
 }
 ```
 
-API này dùng  để lấy kết quả thống kê cuộc gọi của extension theo ngày.
+API này dùng  để lấy kết quả thống kê thời gian pause, thời gian chờ cuộc gọi, thời gian đàm thoại và thời gian ở bảng chọn trạng thái sau cuộc gọi.
 
 ### HTTP Request
 

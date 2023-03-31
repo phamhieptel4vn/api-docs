@@ -91,6 +91,15 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'portal_callcenter_guide',
+        path: 'portal_callcenter_guide',
+        routeBasePath: 'portal_callcenter_guide',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
   ],
 
   themeConfig:
@@ -124,15 +133,26 @@ const config = {
             activeBaseRegex: `/callcenter/`,
           },
           {
-            to: '/portal_autocall_guide',
-            position: 'right',
-            label: 'Autocall Portal Guide',
-            activeBaseRegex: `/portal_autocall_guide/`,
-          },
-          {
             href: 'https://portal.tel4vn.com/docs',
             label: 'SDK',
             position: 'left',
+          },
+          {
+            type: 'dropdown',
+            label: 'UserGuide',
+            position: 'right',
+            items: [
+              {
+                label: 'CallCenter Portal Admin Guide',
+                to: '/portal_callcenter_guide',
+                activeBaseRegex: '/portal_callcenter_guide/',
+              },
+              {
+                to: '/portal_autocall_guide',
+                label: 'Autocall Portal Admin Guide',
+                activeBaseRegex: `/portal_autocall_guide/`,
+              }
+            ]
           },
         ],
       },
