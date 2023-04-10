@@ -69,13 +69,23 @@ API này dùng để tạo lead và gán vào danh sách đã có sẵn.
 }
 ```
 
-| Parameter    | Description                         | Required |
-| ------------ | ----------------------------------- | -------- |
-| list_uuid    | UUID của danh sách cần gán lead vào | x        |
-| lead_name    | Tên khách hàng                      |          |
-| lead_code    | Mã khách hàng                       |          |
-| phone_number | Số điện thoại khách hàng            | x        |
-
+| Parameter          | Description                         | Required |
+| ------------------ | ----------------------------------- | -------- |
+| list_uuid          | UUID của danh sách cần gán lead vào | x        |
+| lead_name          | Tên khách hàng                      |          |
+| lead_code          | Mã khách hàng                       |          |
+| phone_number       | Số điện thoại khách hàng            | x        |
+| contract_number    | Số hợp đồng                         |          |
+| identity_number    | Số CMND                             |          |
+| identity_issued_at | Nơi cấp CMND                        |          |
+| identity_issued_on | Ngày cấp CMND                       |          |
+| address            | Địa chỉ                             |          |
+| province           | Tỉnh/Thành phố                      |          |
+| district           | Quận/Huyện                          |          |
+| ward               | Phường/Xã                           |          |
+| date_of_birth      | Ngày sinh                           |          |
+| additional         | Thông tin bổ sung                   |          |
+| gender             | Giới tính                           |          |
 ## Post Lead With CSV File
 
 ```shell
@@ -470,6 +480,7 @@ API này dùng để cập nhật thông tin lead.
 | ward               | Phường/Xã                |          |
 | date_of_birth      | Ngày sinh                |          |
 | additional         | Thông tin bổ sung        |          |
+| gender             | Giới tính                |          |
 
 ## Delete Lead
 
