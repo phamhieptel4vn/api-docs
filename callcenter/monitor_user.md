@@ -72,3 +72,39 @@ API dùng để giám sát trạng thái các máy nhánh trên hệ thống.
 ### HTTP Request
 
 `GET https://{{API_HOST}}/v3/monitor?=null`
+
+## Check Status Register Of Extension
+
+```shell
+curl --location 'https://{{API_HOST}}/v3/extension/{{id}}/loggedin \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{API_HOST}}'
+```
+
+> Response trả về:
+
+```json
+{
+    "extension": "107",
+    "is_logged_in": true
+}
+```
+
+> Response Error trả về:
+
+```json
+{
+    "error": "Extension not found"
+}
+```
+
+API dùng để kiểm tra trạng thái register của một máy nhánh trên hệ thống.
+
+| Parameter | Description                          |
+| --------- | ------------------------------------ |
+| id        | uuid của máy nhánh hoặc số máy nhánh |
+
+
+### HTTP Request
+
+`GET https://{{API_HOST}}/v3/extension/{{id}}/loggedin`
