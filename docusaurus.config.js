@@ -100,6 +100,15 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'pitel_app_voip',
+        path: 'pitel_app_voip',
+        routeBasePath: 'pitel_app_voip',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
   ],
 
   themeConfig:
@@ -131,6 +140,12 @@ const config = {
             position: 'left',
             label: 'Call Center APIs',
             activeBaseRegex: `/callcenter/`,
+          },
+          {
+            to: '/pitel_app_voip',
+            position: 'left',
+            label: 'Pitel VoIP',
+            activeBaseRegex: `/pitel_app_voip/`,
           },
           {
             href: 'https://portal.tel4vn.com/docs',
