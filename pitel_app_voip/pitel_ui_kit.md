@@ -2,15 +2,19 @@
 title: Example
 sidebar_position: 3
 ---
+
 ### Pitel UI Kit Demo
 
 pitel_ui_kit is demo project. Check out from [pitel_ui_kit](https://github.com/tel4vn/pitel-ui-kit/tree/feature/v1.0.2).
 
 ## Installation
->**Note** 
->Pitel UI Kit requires flutter version 3.7.7, dart version 2.19.4
+
+> **Note**
+> Pitel UI Kit requires flutter version 3.7.7, dart version 2.19.4
+
 - **Setup to wake up app**: please follow guide in [here](https://github.com/tel4vn/flutter-pitel-voip/blob/main/PUSH_NOTIF.md) to setting push notification (FCM for android), Pushkit (for IOS).
-- In file ```firebase_options.dart```, fill information from your google_service.json
+- In file `firebase_options.dart`, fill information from your google_service.json
+
 ```js
   // Replace information from your google_service.json
   static const FirebaseOptions android = FirebaseOptions(
@@ -30,9 +34,11 @@ pitel_ui_kit is demo project. Check out from [pitel_ui_kit](https://github.com/t
     iosBundleId: '${iosBundleId}',
   );
 ```
+
 - Replace com.pitel.uikit.demo with your bundleId/ packageId in
   - IOS: Open Xcode -> Signing & Capabilities -> Select Team & Replace your bundleId in field Bundle Identifier
-  - Android: In file ```android/app/build.gradle```. Replace com.pitel.uikit.demo with your packageId
+  - Android: In file `android/app/build.gradle`. Replace com.pitel.uikit.demo with your packageId
+
 ```js
 defaultConfig {
         applicationId "com.pitel.uikit.demo"            // Replace your packageId
@@ -42,7 +48,9 @@ defaultConfig {
         versionName flutterVersionName
     }
 ```
-- In file ```app.dart``` fill sip info data 
+
+- In file `app.dart` fill sip info data
+
 ```js
 final sipInfoData = SipInfoData.fromJson({
     "authPass": "${Password}",
@@ -60,7 +68,9 @@ final sipInfoData = SipInfoData.fromJson({
     "apiDomain": "${URL API}"
 });
 ```
-- In file ```app.dart``` fill sip info data 
+
+- In file `app.dart` fill sip info data
+
 ```js
   final pnPushParams = PnPushParams(
       pnProvider: Platform.isAndroid ? 'fcm' : 'apns',
@@ -71,10 +81,13 @@ final sipInfoData = SipInfoData.fromJson({
   );
   pitelService.setExtensionInfo(sipInfoData, pnPushParams);
 ```
-- In file ```home_screen.dart``` please enter the information for sending notifications.
+
+- In file `home_screen.dart` please enter the information for sending notifications.
+
 ```js
  // Register Device token when SIP register success (state REGISTER)
  void _registerDeviceToken() async {
+    final fcmToken = await PushVoipNotif.getFCMToken();
     final response = await pitelClient.registerDeviceToken(
       deviceToken: "${device_token}",
       platform: '${platform}',          // android or ios
@@ -82,6 +95,7 @@ final sipInfoData = SipInfoData.fromJson({
       domain: '${Domain}',
       extension: '${UUser}',
       appMode: kReleaseMode ? 'production' : 'dev',
+      fcmToken: fcmToken,
     );
   }
   // Remove Device token when user logout (state UNREGISTER)
@@ -93,15 +107,21 @@ final sipInfoData = SipInfoData.fromJson({
     );
   }
 ```
+
 - Get device token from function
+
 ```js
 await PushVoipNotif.getDeviceToken();
 ```
+
 - Get package
+
 ```js
 flutter pub get
 ```
+
 - Run source code
+
 ```js
 flutter run
 ```
