@@ -138,34 +138,35 @@ API này dùng để update chiến dịch autocall.
 }
 ```
 
-| Parameter                | Description                                                                                | Required |
-| ------------------------ | ------------------------------------------------------------------------------------------ | -------- |
-| campaign_name            | Tên chiến dịch                                                                             | x        |
-| concurrent_call          | Số lượng cuộc gọi đồng thời                                                                |          |
-| type                     | Loại chiến dich, bao gồm autodialer, autocall, inbound, manual                             | x        |
-| template_uuid            | Kịch bản gọi autocall                                                                      |          |
-| description              | Mô tả chiến dịch                                                                           |          |
-| type_autocall            | Loại chiến dịch autocall, bao gồm autocall_voice_tts, autocall_audio va autocall_voice_otp |          |
-| carrier_uuid             | UUID của carrier hay đầu số thực hiện cuộc gọi                                             |          |
-| recall_times             | Số lần gọi lại                                                                             |          |
-| limit_recall_duration    | Thời gian giới hạn gọi lại, tính theo giây                                                 |          |
-| schedule_recall          | Lịch gọi lại                                                                               |          |
-| schedule_recall_duration | Thời gian lịch gọi lại, tính theo phút                                                     |          |
-| status                   | Trạng thái của chiến dịch, bao gồm stop, start, pause                                      |          |
-| created_at               | Thời gian tạo chiến dịch                                                                   |          |
-| updated_at               | Thời gian cập nhật chiến dịch                                                              |          |
-| template_name            | Tên kịch bản gọi autocall                                                                  |          |
-| carrier_name             | Tên carrier hay đầu số thực hiện cuộc gọi                                                  |          |
-| mode_call                | Chế độ gọi, bao gồm direct, serial, parralel                                               |          |
-| network                  | Gọi theo mạng di động, bao gồm viettel, mobi, vina, tel, offnet                            |          |
-| run_id                   | ID của chiến dịch đang chạy                                                                |          |
-| type_autocall            | Loại chiến dịch autocall, bao gồm autocall_voice_tts, autocall_audio va autocall_voice_otp |          |
-| call_timeout             | Thời gian timeout cuộc gọi, tính theo giây                                                 |          |
-| schedules                | Lịch gọi mỗi ngày của campaign, tính theo đơn vị nanosecond giây                           |          |
-| priority_recall          | Độ ưu tiên gọi lại của campaign, bao gồm normal, recall                                    |          |
-| recall_status            | Các trạng thái gọi lại của campaign                                                        |          |
-| callback_url             | URL callback khi có CDR cuộc gọi                                                           |          |
-
+| Parameter                  | Description                                                                                                           | Required |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------- |
+| campaign_name              | Tên chiến dịch                                                                                                        | x        |
+| concurrent_call            | Số lượng cuộc gọi đồng thời                                                                                           |          |
+| type                       | Loại chiến dich, bao gồm autodialer, autocall, inbound, manual                                                        | x        |
+| template_uuid              | Kịch bản gọi autocall                                                                                                 |          |
+| description                | Mô tả chiến dịch                                                                                                      |          |
+| active                     | Trạng thái active của chiến dịch (true/false)                                                                         | x        |
+| ratio                      | Tỉ lệ, tốc độ gọi autodial của chiến dịch, bao gồm: 100, 150, 200, 300, 400                                           | x        |
+| carrier_uuid               | UUID của carrier hay đầu số thực hiện cuộc gọi                                                                        |          |
+| recall_times               | Số lần gọi lại                                                                                                        |          |
+| limit_recall_duration      | Thời gian giới hạn gọi lại, tính theo giây                                                                            |          |
+| schedule_recall            | Lịch gọi lại, bao gồm after (gọi lại ngay) và minute (gọi lại sau bao nhiêu phút)                                     |          |
+| hopper                     | Số lượng lead đẩy vào hàng chờ, bắt buộc đặt trong khoảng từ 10 đến 100                                               | x        |
+| schedule_recall_duration   | Thời gian lịch gọi lại, tính theo phút. Require khi schedule_recall là minute                                         | x        |
+| call_center_queue_strategy | Chế độ đổ chuông các agent trong callcenter, bao gồm ring-all, top-down, agent-with-fewest-calls, round-robin, random | x        |
+| local_start_time           | Thời gian bắt đầu gọi của chiến dịch autodial. Example: 08:00:00                                                      | x        |
+| local_end_time             | Thời gian kết thúc gọi của chiến dịch autodial. Example: 17:30:00                                                     | x        |
+| allow_manual_dial          | Cho phép agent gọi manual (true/false)                                                                                |          |
+| enable_callback_alert      | Cho phép gửi thông báo callback cho agent khi có cuộc gọi đến (true/false)                                            |          |
+| mode_call                  | Chế độ gọi, bao gồm direct, serial, parralel                                                                          |          |
+| network                    | Gọi theo mạng di động, bao gồm viettel, mobi, vina, tel, offnet                                                       |          |
+| call_timeout               | Thời gian timeout cuộc gọi, tính theo giây                                                                            |          |
+| statuses_selectable        | Các call result cho phép agent chọn trong chiến dịch                                                                  |          |
+| users                      | Danh sách các user được assign vào chiến dịch (type: array)                                                           |          |
+| groups                     | Danh sách các group được assign vào chiến dịch (type: array)ß                                                         |          |
+| priority_recall            | Độ ưu tiên gọi lại của campaign, bao gồm normal, recall                                                               |          |
+| recall_status              | Các trạng thái gọi lại của campaign. Example: ['not-available', 'phone-block', 'congestion']                          |          |
+| callback_url               | URL callback khi có CDR cuộc gọi                                                                                      |          |
 ## Get Campaign
 
 ```shell
