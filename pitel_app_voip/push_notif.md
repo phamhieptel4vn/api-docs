@@ -15,39 +15,16 @@ When user make call from Pitel Connect app, Pitel Server pushes a notification f
 
 ## Image callkit
 
-<table>
-  <tr>
-    <td>iOS(Alert)</td>
-    <td>iOS(Lockscreen)</td>
-    <td>iOS(full screen)</td>
-  </tr>
-  <tr>
-    <td>
-      <img src="img/images/call_kit_1.png" width="220">
-    </td>
-    <td>
-      <img src="img/images/call_kit_2.png" width="220">
-    </td>
-    <td>
-      <img src="img/images/call_kit_3.png" width="220">
-    </td>
-  </tr>
-  <tr>	  
-    <td>Android(Alert) - Audio</td>
-    <td>Android(Lockscreen | Fullscreen) - Audio</td>
-  </tr>
-  <tr>
-    <td>
-      <img src="img/images/call_kit_android_1.png" width="220">
-    </td>
-    <td>
-      <img src="img/images/call_kit_android_2.png" width="220">
-    </td>
-  </tr>
- </table>
- 
+![space-1.jpg](img/images/call_kit_android_1.png)
+![space-1.jpg](img/images/call_kit_android_2.png)
+![space-1.jpg](img/images/call_kit_1.png)
+![space-1.jpg](img/images/call_kit_2.png)
+![space-1.jpg](img/images/call_kit_3.png)
+
 # Setup & Certificate
+
 #### IOS
+
 If you are making VoIP application than you definitely want to update your application in the background & terminate state as well as wake your application when any VoIP call is being received.
 
 **1. Create Apple Push Notification certificate.**
@@ -115,7 +92,7 @@ Using FCM (Firebase Cloud Message) to handle push notification wake up app when 
   ![push_img_3](img/push_img/push_img_3.png)
 
 > **Note**
-> After complete all step Setup. Please send information to dev of Tel4vn in [here](https://portal-sdkdev.tel4vn.com/login)
+> After complete all step Setup. Please send information to dev of Tel4vn in [here](https://portal-sdk.tel4vn.com/)
 
 # Installation (your project)
 
