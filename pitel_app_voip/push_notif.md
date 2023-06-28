@@ -15,16 +15,39 @@ When user make call from Pitel Connect app, Pitel Server pushes a notification f
 
 ## Image callkit
 
-![space-1.jpg](img/images/call_kit_android_1.png)
-![space-1.jpg](img/images/call_kit_android_2.png)
-![space-1.jpg](img/images/call_kit_1.png)
-![space-1.jpg](img/images/call_kit_2.png)
-![space-1.jpg](img/images/call_kit_3.png)
-
+<table>
+  <tr>
+    <td>iOS(Alert)</td>
+    <td>iOS(Lockscreen)</td>
+    <td>iOS(full screen)</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="img/images/call_kit_1.png" width="220">
+    </td>
+    <td>
+      <img src="img/images/call_kit_2.png" width="220">
+    </td>
+    <td>
+      <img src="img/images/call_kit_3.png" width="220">
+    </td>
+  </tr>
+  <tr>	  
+    <td>Android(Alert) - Audio</td>
+    <td>Android(Lockscreen | Fullscreen) - Audio</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="img/images/call_kit_android_1.png" width="220">
+    </td>
+    <td>
+      <img src="img/images/call_kit_android_2.png" width="220">
+    </td>
+  </tr>
+ </table>
+ 
 # Setup & Certificate
-
 #### IOS
-
 If you are making VoIP application than you definitely want to update your application in the background & terminate state as well as wake your application when any VoIP call is being received.
 
 **1. Create Apple Push Notification certificate.**
@@ -56,6 +79,25 @@ Follow the instructions to [create a certificate signing request](https://devel
 - In Tab Signing & Capabilities. Enable Push notifications & Background Modes
 
 ![push_img_5](img/push_img/push_img_5.png)
+
+- Create APNs key and upload in firebase project. In your apple developer account.
+  ![apns_key](img/push_img/apns_key.png)
+- Upload APNs key to your firebase
+  - Create new your IOS App in Firebase project.
+    ![ios_app](img/push_img/ios_app.png)
+  - Download file .p8 to upload to firebase
+    ![download_apns_key](img/push_img/download_apns_key.png)
+  - Select IOS app -> upload Apns key
+    ![upload_key_firebase](img/push_img/upload_key_firebase.png)
+  - Fill information in upload Apns key popup
+    ![upload_key_firebase_popup](img/push_img/upload_key_firebase_popup.png)
+
+##### Installing your Firebase configuration file
+
+- Next you must add the file to the project using Xcode (adding manually via the filesystem won't link the file to the project). Using Xcode, open the project's ios/{projectName}.xcworkspace file. Right click Runner from the left-hand side project navigation within Xcode and select "Add files", as seen below:
+  ![ios_google_service_1](img/push_img/ios_google_service_1.png)
+- Select the GoogleService-Info.plist file you downloaded, and ensure the "Copy items if needed" checkbox is enabled:
+  ![ios_google_service_2](img/push_img/ios_google_service_2.png)
 
 #### Android
 
@@ -117,31 +159,46 @@ dependencies:
 </array>
 ```
 
-Replace your file ios/Runner/AppDelegate.swift with [AppDelegate.swift](https://github.com/tel4vn/pitel-ui-kit/blob/dev/ios/Runner/AppDelegate.swift)
+Replace your file ios/Runner/AppDelegate.swift with
+
+[https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/ios/Runner/AppDelegate.swift](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/ios/Runner/AppDelegate.swift)
 
 ## **Usage**
 
 - Before handle Incoming call, you should import package in home screen
 
-```js
+```dart
 import "package:plugin_pitel/flutter_pitel_voip.dart";
 ```
 
+- Initialize firebase
+
+```dart
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await PushNotifAndroid.initFirebase(DefaultFirebaseOptions.currentPlatform); // add here
+
+  runApp(MyApp());
+}
+```
+
+- Config firebase_options.dart. [example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/firebase_options.dart).
+
 - Get device push token VoIP.
 
-```js
+```dart
 await PushVoipNotif.getDeviceToken();
 ```
 
 - Get fcm token.
 
-```js
+```dart
 await PushVoipNotif.getFcmToken();
 ```
 
 - Register device token after user login success
 
-```js
+```dart
 void _registerDeviceToken() async {
     final fcmToken = await PushVoipNotif.getFCMToken();
     final deviceToken = await PushVoipNotif.getDeviceToken();
@@ -159,39 +216,20 @@ void _registerDeviceToken() async {
 
 - Remove Device toke when user logout success
 
-```js
-void _removeDeviceToken() async {
-    final deviceToken = await PushVoipNotif.getDeviceToken();
-    final response = await pitelClient.removeDeviceToken(
-      deviceToken: deviceToken, // Device token
-      domain: '${Domain}',
-      extension: '${UUser}',
-    );
-}
+```dart
+    void _removeDeviceToken() async {
+        final deviceToken = await PushVoipNotif.getDeviceToken();
+        final response = await pitelClient.removeDeviceToken(
+          deviceToken: deviceToken, // Device token
+          domain: '${Domain}',
+          extension: '${UUser}',
+      );
+  }
 
-void _logout() {
-    _removeDeviceToken();      // Remove device token
-    pitelCall.unregister();    // Disconnect SIP call when user logout
-}
-```
-
-- Listen events from Push notification for wake up app (top level function. Example app.dart)
-
-```js
-final pitelService = PitelServiceImpl();
-final PitelCall pitelCall = PitelClient.getInstance().pitelCall;
-
-VoipNotifService.listenerEvent(
-      callback: (event) {},
-      onCallAccept: () {
-        // Hanlde success when user press Accept button
-        // Re-register to handle incoming call.
-        handleRegisterCall();
-      },
-      onCallDecline: () {
-        pitelCall.hangup();	// Hanlde decline when user press Decline button
-      },
-    );
+    void _logout() {
+        _removeDeviceToken();      // Remove device token
+        pitelCall.unregister();    // Disconnect SIP call when user logout
+  }
 ```
 
 ## How to test
@@ -219,7 +257,7 @@ Voip push Bundle Id: com.pitel.uikit.demo.voip
 
 cURL
 
-```json
+```dart
 curl --location 'https://fcm.googleapis.com/fcm/send' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: key=${server_key}' \
@@ -230,7 +268,8 @@ curl --location 'https://fcm.googleapis.com/fcm/send' \
         "nameCaller": "Anh Quang",
         "avatar": "Anh Quang",
         "phoneNumber": "0341111111",
-        "appName": "Pitel Connnect"
+        "appName": "Pitel Connnect",
+        "callType": "CALL"
     },
     "content_available": true,
     "priority": "high"
