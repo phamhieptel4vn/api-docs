@@ -37,19 +37,19 @@ When user make call from Pitel Connect app, Pitel Server pushes a notification f
 plugin_pitel:
     git:
       url: https://github.com/tel4vn/flutter-pitel-voip.git
-      ref: 1.0.2 # branch name
+      ref: 1.0.3 # branch name
 ```
 
 2. Get package
 
-```xml
+```
 flutter pub get
 ```
 
 3. Import
 
-```js
-import "package:plugin_pitel/flutter_pitel_voip.dart";
+```
+import 'package:plugin_pitel/flutter_pitel_voip.dart';
 ```
 
 4. Configure Project
@@ -76,9 +76,7 @@ import "package:plugin_pitel/flutter_pitel_voip.dart";
 
 - Request permission in file `Info.plist`
 
-```xml
-<key>NSCameraUsageDescription</key>
-<string>This app needs camera access to scan QR codes</string>
+```
 <key>NSMicrophoneUsageDescription</key>
 <string>Use microphone</string>
 <key>UIBackgroundModes</key>
@@ -96,22 +94,40 @@ import "package:plugin_pitel/flutter_pitel_voip.dart";
 platform :ios, '12.0'
 ```
 
-5. Pushkit - Received VoIP and Wake app from Terminated State (only for IOS).
+5. Pushkit/ Push notification - Received VoIP and Wake app from Terminated State.
    > **Note**
-   > Please check [PUSH_NOTIF.md](https://github.com/tel4vn/flutter-pitel-voip/blob/main/PUSH_NOTIF.md). setup Pushkit for IOS
+   > Please check [PUSH_NOTIF.md](https://github.com/tel4vn/flutter-pitel-voip/blob/main/PUSH_NOTIF.md). setup Pushkit (for IOS), push notification (for Android).
+
+## Troubleshooting
+
+[Android only]: If you give a error flutter_webrtc when run app in android. Please update code in file
+
+```
+$HOME/.pub-cache/hosted/pub.dartlang.org/flutter_webrtc-{version}/android/build.gradle
+```
+
+```xml
+dependencies {
+  // Remove
+  // implementation 'com.github.webrtc-sdk:android:104.5112.03'
+
+  // Replace
+  implementation 'io.github.webrtc-sdk:android:104.5112.09'
+}
+```
 
 ## Example
 
-Please checkout repo github to get [example](https://github.com/tel4vn/pitel-ui-kit)
+Please checkout repo github to get [example](https://github.com/tel4vn/pitel-ui-kit/tree/1.0.3)
 
 ## Usage
 
 - In file `app.dart`, Wrap MaterialApp with PitelVoip widget
-  Please follow [example](https://github.com/tel4vn/pitel-ui-kit/blob/feature/v1.0.2/lib/features/home/home_screen.dart)
+  Please follow [example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/app.dart)
 
-> Note: handleRegisterCall, handleRegister in [here](https://github.com/tel4vn/pitel-ui-kit/blob/feature/v1.0.2/lib/features/home/home_screen.dart)
+> Note: handleRegisterCall, handleRegister, registerFunc in [here](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/app.dart)
 
-```js
+```dart
 Widget build(BuildContext context) {
     return PitelVoip(                           // Wrap with PitelVoip
       handleRegister: handleRegister,           // Handle register
@@ -124,10 +140,10 @@ Widget build(BuildContext context) {
 ```
 
 - In file `home_screen.dart`.
-  Please follow [example](https://github.com/tel4vn/pitel-ui-kit/blob/feature/v1.0.2/lib/features/home/home_screen.dart).
+  Please follow [example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/features/home/home_screen.dart).
   Add WidgetsBindingObserver to handle AppLifecycleState change
 
-```js
+```dart
 ...
 Widget build(BuildContext context) {
     return PitelVoipCall(                       // Wrap with PitelVoipCall
@@ -138,7 +154,7 @@ Widget build(BuildContext context) {
             // go to call screen
         },
         onCallState: (callState) {
-            // Set callState to your global state management. Example: bloc, getX, riverpod,..
+            // IMPORTANT: Set callState to your global state management. Example: bloc, getX, riverpod,..
             // Example riverpod
             // ref.read(callStateController.notifier).state = callState;
         },
@@ -152,16 +168,17 @@ Widget build(BuildContext context) {
 
 #### Properties
 
-| Prop        | Description                   | Type                      | Default  |
-| ----------- | ----------------------------- | ------------------------- | -------- |
-| goBack      | goback navigation             | () {}                     | Required |
-| goToCall    | navigation, go to call screen | () {}                     | Required |
-| onCallState | get extension register status | (String registerState) {} | Required |
-| child       | child widget                  | Widget                    | Required |
+| Prop            | Description                   | Type                      | Default  |
+| --------------- | ----------------------------- | ------------------------- | -------- |
+| goBack          | goback navigation             | () {}                     | Required |
+| goToCall        | navigation, go to call screen | () {}                     | Required |
+| onCallState     | set call status               | (callState) {}            | Required |
+| onRegisterState | get extension register status | (String registerState) {} | Required |
+| child           | child widget                  | Widget                    | Required |
 
 Register extension from data of Tel4vn provide. Example: 101, 102,… Create 1 button to fill data to register extension.
 
-```js
+```dart
 ElevatedButton(
         onPressed: () asyns {
           final fcmToken = await PushVoipNotif.getFCMToken();
@@ -177,6 +194,7 @@ ElevatedButton(
             "authPass": "${Password}",
             "registerServer": "${Domain}",
             "outboundServer": "${Outbound Proxy}",
+            "port": PORT,
             "userID": UUser,                // Example 101
             "authID": UUser,                // Example 101
             "accountName": "${UUser}",      // Example 101
@@ -190,22 +208,30 @@ ElevatedButton(
           });
 
           final pitelClient = PitelServiceImpl();
-          pitelClient.setExtensionInfo(sipInfo, pnPushParams);
+          final pitelSetting = await pitelClient.setExtensionInfo(sipInfo, pnPushParams);
+          // IMPORTANT: Set pitelSetting to your global state management. Example: bloc, getX, riverpod,..
+          // Example riverpod
+          // ref.read(pitelSettingProvider.notifier).state = pitelSettingRes;
         },
         child: const Text("Register"),),
 ```
 
 - In file `call_screen.dart`
-  [Example](https://github.com/tel4vn/pitel-ui-kit/blob/main/lib/features/call_screen/call_screen.dart)
+  [Example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/features/call_screen/call_page.dart)
 
-```js
+```dart
 import 'package:flutter/material.dart';
 import 'package:plugin_pitel/flutter_pitel_voip.dart';
 class CallPage extends StatelessWidget {
   const CallPage({super.key});
   @override
   Widget build(BuildContext context) {
+    // IMPORTANT: Get callState from your global state management. Example: bloc, getX, riverpod,..
+    // Example riverpod
+    // final callState = ref.watch(callStateController);
+
     return CallScreen(
+      callState: callState, // callState from state management you set before
       goBack: () {
         // Call your go back function in here
       },
@@ -217,16 +243,20 @@ class CallPage extends StatelessWidget {
 
 #### Properties
 
-| Prop        | Description                          | Type      | Default  |
-| ----------- | ------------------------------------ | --------- | -------- |
-| goBack      | go back navigation                   | () {}     | Required |
-| bgColor     | background color                     | Color     | Required |
-| txtMute     | Text display of micro mute           | String    | Optional |
-| txtUnMute   | Text display of micro unmute         | String    | Optional |
-| txtSpeaker  | Text display speaker                 | String    | Optional |
-| txtOutgoing | Text display direction outgoing call | String    | Optional |
-| txtIncoming | Text display direction incoming call | String    | Optional |
-| textStyle   | Custom text style                    | TextStyle | Optional |
+| Prop               | Description                          | Type      | Default  |
+| ------------------ | ------------------------------------ | --------- | -------- |
+| goBack             | go back navigation                   | () {}     | Required |
+| bgColor            | background color                     | Color     | Required |
+| txtMute            | Text display of micro mute           | String    | Optional |
+| txtUnMute          | Text display of micro unmute         | String    | Optional |
+| txtSpeaker         | Text display speaker                 | String    | Optional |
+| txtOutgoing        | Text display direction outgoing call | String    | Optional |
+| txtIncoming        | Text display direction incoming call | String    | Optional |
+| textStyle          | Style for mic/speaker text           | TextStyle | Optional |
+| titleTextStyle     | Style for display phone number text  | TextStyle | Optional |
+| timerTextStyle     | Style for timer text                 | TextStyle | Optional |
+| directionTextStyle | Style for direction text             | TextStyle | Optional |
+| userName           | Custom title text                    | String    | Optional |
 
 ## How to test
 
