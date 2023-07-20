@@ -146,6 +146,7 @@ API dùng để xoá một event_domain.
 | duration      | Tổng thời lượng cuộc gọi. (Riêng sự kiện hangup)                    |
 | billsec       | Thời lượng tính từ khi hai bên kết nối. (Riêng sự kiện hangup)      |
 | recording_url | URL public để play file ghi âm. (Riêng sự kiện cdr)                 |
+| ref_id        | Mã tham chiếu cuộc gọi autocall nếu có truyền theo khi gọi          |
 | status        | Trạng thái cuộc gọi. (Riêng sự kiện cdr)                            |
 | time_started  | Thời gian bắt đầu cuộc gọi                                          |
 | time_answered | Thời gian khi cuộc gọi kết nối                                      |
