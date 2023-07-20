@@ -132,20 +132,24 @@ API dùng để xoá một event_domain.
 
 ### Mô tả
 
-| Parameter     | Mô tả                                                          |
-| ------------- | -------------------------------------------------------------- |
-| call_id       | Id định danh cuộc gọi                                          |
-| sip_call_id   | SIP Call Id                                                    |
-| domain        | Domain nhận hoặc thực hiện cuộc gọi                            |
-| direction     | Hướng cuộc gọi (inbound / outbound)                            |
-| from_number   | Số gọi. Sẽ là số ext nếu cuộc gọi là outbound                  |
-| to_number     | Số nhận. Sẽ là số ext nếu cuộc gọi là inbound                  |
-| hotline       | Đầu số nhận hoặc thực hiện cuộc gọi                            |
-| state         | ringing / answered / hangup / cdr                              |
-| duration      | Tổng thời lượng cuộc gọi. (Riêng sự kiện hangup)               |
-| billsec       | Thời lượng tính từ khi hai bên kết nối. (Riêng sự kiện hangup) |
-| recording_url | URL public để play file ghi âm. (Riêng sự kiện cdr)            |
-| status        | Trạng thái cuộc gọi. (Riêng sự kiện cdr)                       |
+| Parameter     | Mô tả                                                               |
+| ------------- | ------------------------------------------------------------------- |
+| application   | Phương thức gọi. (bao gồm dial, click2call, autodialer và autocall) |
+| call_id       | Id định danh cuộc gọi                                               |
+| sip_call_id   | SIP Call Id                                                         |
+| domain        | Domain nhận hoặc thực hiện cuộc gọi                                 |
+| direction     | Hướng cuộc gọi (inbound / outbound)                                 |
+| from_number   | Số gọi. Sẽ là số ext nếu cuộc gọi là outbound                       |
+| to_number     | Số nhận. Sẽ là số ext nếu cuộc gọi là inbound                       |
+| hotline       | Đầu số nhận hoặc thực hiện cuộc gọi                                 |
+| state         | ringing / answered / hangup / cdr                                   |
+| duration      | Tổng thời lượng cuộc gọi. (Riêng sự kiện hangup)                    |
+| billsec       | Thời lượng tính từ khi hai bên kết nối. (Riêng sự kiện hangup)      |
+| recording_url | URL public để play file ghi âm. (Riêng sự kiện cdr)                 |
+| status        | Trạng thái cuộc gọi. (Riêng sự kiện cdr)                            |
+| time_started  | Thời gian bắt đầu cuộc gọi                                          |
+| time_answered | Thời gian khi cuộc gọi kết nối                                      |
+| time_ended    | Thời gian kết thúc cuộc gọi                                         |
 
 ## Note\*
 

@@ -148,6 +148,9 @@ API dùng để xoá một event_domain.
 | recording_url | URL public để play file ghi âm. (Riêng sự kiện cdr)               |
 | press_key     | Phím bấm của mobile nếu có (Riêng sự kiện cdr_autocall)           |
 | customer_id   | Id của customer khi import vào queue (Riêng sự kiện cdr_autocall) |
+| time_started  | Thời gian bắt đầu cuộc gọi                                        |
+| time_answered | Thời gian khi cuộc gọi kết nối                                    |
+| time_ended    | Thời gian kết thúc cuộc gọi                                       |
 
 ## Note\*
 
