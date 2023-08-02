@@ -15,11 +15,12 @@ When user make call from Pitel app, Pitel Server pushes a notification for all u
 
 ## Image callkit
 
-![space-1.jpg](img/images/call_kit_android_1.png)
-![space-1.jpg](img/images/call_kit_android_2.png)
 ![space-1.jpg](img/images/call_kit_1.png)
 ![space-1.jpg](img/images/call_kit_2.png)
 ![space-1.jpg](img/images/call_kit_3.png)
+![space-1.jpg](img/images/call_kit_android_1.png)
+![space-1.jpg](img/images/call_kit_android_2.png)
+![space-1.jpg](img/images/call_kit_android_3.png)
 
 # Setup & Certificate
 
@@ -96,118 +97,8 @@ Using FCM (Firebase Cloud Message) to handle push notification wake up app when 
 
 # Installation (your project)
 
-- Install Packages
-
-```xml
-flutter pub add flutter_callkit_incoming
-```
-
-- Add pubspec.yaml:
-
-```xml
-dependencies:
-      flutter_callkit_incoming: any
-```
-
-**Config your project**
-
-- Android
-  In android/app/src/main/AndroidManifest.xml
-
-```xml
-<manifest...>
-     ...
-     <!--
-         Using for load image from internet
-     -->
-     <uses-permission android:name="android.permission.INTERNET"/>
- </manifest>
-```
-
-- IOS
-  In ios/Runner/Info.plist
-
-```xml
-<key>UIBackgroundModes</key>
-<array>
-    <string>processing</string>
-    <string>remote-notification</string>
-    <string>voip</string>
-</array>
-```
-
-Replace your file ios/Runner/AppDelegate.swift with
-
-[https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/ios/Runner/AppDelegate.swift](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/ios/Runner/AppDelegate.swift)
-
-## **Usage**
-
-- Before handle Incoming call, you should import package in home screen
-
-```dart
-import "package:plugin_pitel/flutter_pitel_voip.dart";
-```
-
-- Initialize firebase
-
-```dart
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await PushNotifAndroid.initFirebase(DefaultFirebaseOptions.currentPlatform); // add here
-
-  runApp(MyApp());
-}
-```
-
-- Config firebase_options.dart. [example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/firebase_options.dart).
-
-- Get device push token VoIP.
-
-```dart
-await PushVoipNotif.getDeviceToken();
-```
-
-- Get fcm token.
-
-```dart
-await PushVoipNotif.getFcmToken();
-```
-
-- Register device token after user login success
-
-```dart
-void _registerDeviceToken() async {
-    final fcmToken = await PushVoipNotif.getFCMToken();
-    final deviceToken = await PushVoipNotif.getDeviceToken();
-    final response = await pitelClient.registerDeviceToken(
-      deviceToken: deviceToken,
-      platform: 'ios',
-      bundleId: '${BundleId}',     // BundleId/packageId
-      domain: '${Domain}',
-      extension: '${UUser}',
-      appMode: kReleaseMode ? 'production' : 'dev', // check APNs certificate of Apple run production or dev mode
-      fcmToken: fcmToken,
-    );
-  }
-```
-
-- Remove Device toke when user logout success
-
-```dart
-    void _removeDeviceToken() async {
-        final deviceToken = await PushVoipNotif.getDeviceToken();
-        final response = await pitelClient.removeDeviceToken(
-          deviceToken: deviceToken, // Device token
-          domain: '${Domain}',
-          extension: '${UUser}',
-      );
-  }
-
-    void _logout() {
-        _removeDeviceToken();      // Remove device token
-        pitelCall.unregister();    // Disconnect SIP call when user logout
-  }
-```
+- IOS: Replace your file ios/${YOUR_PROJECT_NAME}/AppDelegate.mm with
+  [AppDelegate](https://github.com/anhquangmobile/rn-pitel-demo/blob/main/ios/rn_pitel_demo/AppDelegate.mm)
 
 ## How to test
 
