@@ -117,6 +117,15 @@ const config = {
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "portal_sdk",
+        path: "portal_sdk",
+        routeBasePath: "portal_sdk",
+        sidebarPath: require.resolve("./sidebars.js"),
+      },
+    ],
   ],
 
   themeConfig:
@@ -162,10 +171,16 @@ const config = {
             activeBaseRegex: `/react_native_pitel_voip/`,
           },
           {
-            href: "https://portal.tel4vn.com/docs",
-            label: "SDK",
+            to: "/portal_sdk",
             position: "left",
+            label: "PitelSDK",
+            activeBaseRegex: `/portal_sdk/`,
           },
+          // {
+          //   href: "https://portal.tel4vn.com/docs",
+          //   label: "SDK",
+          //   position: "left",
+          // },
           {
             type: "dropdown",
             label: "UserGuide",
@@ -196,5 +211,4 @@ const config = {
       },
     }),
 };
-
 module.exports = config;
