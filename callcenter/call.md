@@ -6,7 +6,7 @@ sidebar_position: 4
 ## List Calls
 
 ```shell
-curl -L -X GET 'http://{{API_HOST}}/v2/call' \
+curl -L -X GET 'http://{{API_HOST}}/v1/call' \
 -H 'Authorization: Bearer {{TOKEN}}'
 -H 'Content-Type: application/json'
 ```
@@ -36,12 +36,12 @@ API dùng để lấy danh sách các cuộc gọi theo thời gian thực.
 
 ### HTTP Request
 
-`GET http://{{API_HOST}}/v2/call`
+`GET http://{{API_HOST}}/v1/call`
 
 ## Transfer a call
 
 ```shell
-curl -L -X POST 'http://{{API_HOST}}/v2/call/01b7d166-b564-42ec-80a1-4ad343225934/transfer' \
+curl -L -X POST 'http://{{API_HOST}}/v1/call/01b7d166-b564-42ec-80a1-4ad343225934/transfer' \
 -H 'Authorization: Bearer {{TOKEN}}'
 -H 'Content-Type: application/json' \
 --data-raw '{
@@ -72,7 +72,7 @@ API dùng để thực hiện chuyển cuộc gọi sang extension khác.
 
 ### HTTP Request
 
-`POST http://{{API_HOST}}/v2/call/<CALL_ID>/transfer`
+`POST http://{{API_HOST}}/v1/call/<CALL_ID>/transfer`
 
 ### Body
 
@@ -83,7 +83,7 @@ API dùng để thực hiện chuyển cuộc gọi sang extension khác.
 ## Listen a call
 
 ```shell
-curl -L -X POST 'http://{{API_HOST}}/v2/call/01b7d166-b564-42ec-80a1-4ad343225934/listen' \
+curl -L -X POST 'http://{{API_HOST}}/v1/call/01b7d166-b564-42ec-80a1-4ad343225934/listen' \
 -H 'Authorization: Bearer {{TOKEN}}'
 -H 'Content-Type: application/json' \
 --data-raw '{
@@ -114,7 +114,7 @@ API dùng để thực hiện nghe lén cuộc gọi của một extension khác
 
 ### HTTP Request
 
-`POST http://{{API_HOST}}/v2/call/<CALL_ID>/listen`
+`POST http://{{API_HOST}}/v1/call/<CALL_ID>/listen`
 
 ### Body
 
@@ -125,7 +125,7 @@ API dùng để thực hiện nghe lén cuộc gọi của một extension khác
 ## Whisper a call
 
 ```shell
-curl -L -X POST 'http://{{API_HOST}}/v2/call/01b7d166-b564-42ec-80a1-4ad343225934/whisper' \
+curl -L -X POST 'http://{{API_HOST}}/v1/call/01b7d166-b564-42ec-80a1-4ad343225934/whisper' \
 -H 'Authorization: Bearer {{TOKEN}}'
 -H 'Content-Type: application/json' \
 --data-raw '{
@@ -156,7 +156,7 @@ API dùng để thực hiện cuộc gọi với extension, mobile sẽ không n
 
 ### HTTP Request
 
-`POST http://{{API_HOST}}/v2/call/<CALL_ID>/whisper`
+`POST http://{{API_HOST}}/v1/call/<CALL_ID>/whisper`
 
 ### Body
 
@@ -167,7 +167,7 @@ API dùng để thực hiện cuộc gọi với extension, mobile sẽ không n
 ## Barge a call
 
 ```shell
-curl -L -X POST 'http://{{API_HOST}}/v2/call/01b7d166-b564-42ec-80a1-4ad343225934/barge' \
+curl -L -X POST 'http://{{API_HOST}}/v1/call/01b7d166-b564-42ec-80a1-4ad343225934/barge' \
 -H 'Authorization: Bearer {{TOKEN}}'
 -H 'Content-Type: application/json' \
 --data-raw '{
@@ -198,7 +198,7 @@ API dùng để thực hiện cuộc gọi 3 bên với extension và mobile.
 
 ### HTTP Request
 
-`POST http://{{API_HOST}}/v2/call/<CALL_ID>/barge`
+`POST http://{{API_HOST}}/v1/call/<CALL_ID>/barge`
 
 ### Body
 
