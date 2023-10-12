@@ -112,8 +112,6 @@ API dùng để kiểm tra trạng thái register của một máy nhánh trên 
 ## Monitor Queue Inbound Call
 
 ```shell
-
-```shell
 curl --location 'https://{{API_HOST}}/v3/monitor/callcenter/queue? \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{API_HOST}}'
