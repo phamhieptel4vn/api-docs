@@ -108,3 +108,56 @@ API dùng để kiểm tra trạng thái register của một máy nhánh trên 
 ### HTTP Request
 
 `GET https://{{API_HOST}}/v3/extension/{{id}}/loggedin`
+
+## Monitor Queue Inbound Call
+
+```shell
+
+```shell
+curl --location 'https://{{API_HOST}}/v3/monitor/callcenter/queue? \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {{API_HOST}}'
+```
+
+> Response trả về:
+
+```json
+{
+    "data": [
+        {
+            "call_center_queue_uuid": "7bc3db7b-e95e-4afe-a345-a8385dfb31b7",
+            "call_center_queue_name": "Nhi_Test_39989220",
+            "call_center_agent_uuid": "1c1b04d6-f155-48b2-a9b5-e85ca683097b",
+            "call_center_agent_name": "agent_nhi",
+            "mobile": "0865662711",
+            "status": "Answered",
+            "joined_time": "2023-10-12T17:48:19+07:00",
+            "abandoned_time": "1970-01-01T08:00:00+08:00",
+            "bridged_time": "2023-10-12T17:48:26+07:00",
+            "rejoined_time": "1970-01-01T08:00:00+08:00",
+            "call_uuid": "34f6a205-121c-4fa3-bb94-414c5aff5995"
+        }
+    ]
+}
+```
+
+API dùng để giám sát trạng thái cuộc gọi đang trong hàng chờ trên hệ thống.
+
+| Parameter              | Description                                              |
+| ---------------------- | -------------------------------------------------------- |
+| call_center_queue_uuid | UUID của Queue CallCenter                                |
+| call_center_queue_name | Tên của Queue CallCenter                                 |
+| call_center_agent_uuid | UUID Agent CallCenter                                    |
+| call_center_agent_name | Tên Agent CallCenter                                     |
+| mobile                 | Số điện thoại của khách hàng                             |
+| status                 | Trạng thái cuộc gọi, bao gồm Trying, Answered, Abandoned |
+| joined_time            | Thời gian khách hàng vào hàng chờ                        |
+| abandoned_time         | Thời gian khách hàng hủy cuộc gọi                        |
+| bridged_time           | Thời gian khách hàng được chuyển sang Agent              |
+| rejoined_time          | Thời gian khách hàng vào lại hàng chờ                    |
+| call_uuid              | UUID của cuộc gọi                                        |
+
+
+### HTTP Request
+
+`GET https://{{API_HOST}}/v3/monitor/callcenter/queue?`
