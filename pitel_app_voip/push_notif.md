@@ -138,19 +138,19 @@ dependencies:
 
 Replace your file ios/Runner/AppDelegate.swift with
 
-[https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/ios/Runner/AppDelegate.swift](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/ios/Runner/AppDelegate.swift)
+[https://github.com/tel4vn/pitel-ui-kit/blob/1.0.6/ios/Runner/AppDelegate.swift](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.6/ios/Runner/AppDelegate.swift)
 
 ## **Usage**
 
 - Before handle Incoming call, you should import package in home screen
 
-```dart
+```js
 import "package:plugin_pitel/flutter_pitel_voip.dart";
 ```
 
 - Initialize firebase
 
-```dart
+```js
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await PushNotifAndroid.initFirebase(DefaultFirebaseOptions.currentPlatform); // add here
@@ -159,54 +159,18 @@ void main() async {
 }
 ```
 
-- Config firebase_options.dart. [example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.3/lib/firebase_options.dart).
+- Config firebase_options.dart. [example](https://github.com/tel4vn/pitel-ui-kit/blob/1.0.6/lib/firebase_options.dart).
 
 - Get device push token VoIP.
 
-```dart
+```js
 await PushVoipNotif.getDeviceToken();
 ```
 
 - Get fcm token.
 
-```dart
+```js
 await PushVoipNotif.getFcmToken();
-```
-
-- Register device token after user login success
-
-```dart
-void _registerDeviceToken() async {
-    final fcmToken = await PushVoipNotif.getFCMToken();
-    final deviceToken = await PushVoipNotif.getDeviceToken();
-    final response = await pitelClient.registerDeviceToken(
-      deviceToken: deviceToken,
-      platform: 'ios',
-      bundleId: '${BundleId}',     // BundleId/packageId
-      domain: '${Domain}',
-      extension: '${UUser}',
-      appMode: kReleaseMode ? 'production' : 'dev', // check APNs certificate of Apple run production or dev mode
-      fcmToken: fcmToken,
-    );
-  }
-```
-
-- Remove Device toke when user logout success
-
-```dart
-    void _removeDeviceToken() async {
-        final deviceToken = await PushVoipNotif.getDeviceToken();
-        final response = await pitelClient.removeDeviceToken(
-          deviceToken: deviceToken, // Device token
-          domain: '${Domain}',
-          extension: '${UUser}',
-      );
-  }
-
-    void _logout() {
-        _removeDeviceToken();      // Remove device token
-        pitelCall.unregister();    // Disconnect SIP call when user logout
-  }
 ```
 
 ## How to test
@@ -234,7 +198,7 @@ Voip push Bundle Id: com.pitel.uikit.demo.voip
 
 cURL
 
-```dart
+```js
 curl --location 'https://fcm.googleapis.com/fcm/send' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: key=${server_key}' \
