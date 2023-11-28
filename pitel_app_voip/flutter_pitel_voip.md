@@ -41,7 +41,7 @@ flutter pub add flutter_pitel_voip
 - Add pubspec.yaml:
 
 ```js
-flutter_pitel_voip: ^1.0.6+2
+flutter_pitel_voip: ^1.0.6+3
 ```
 
 2. Get package
@@ -213,6 +213,12 @@ ElevatedButton(
           // ref.read(pitelSettingProvider.notifier).state = pitelSettingRes;
         },
         child: const Text("Register"),),
+```
+
+- Logout extension
+
+```js
+pitelClient.logoutExtension(sipInfoData);
 ```
 
 - In file `call_screen.dart`
